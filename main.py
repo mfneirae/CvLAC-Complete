@@ -14,10 +14,13 @@
 #
 
 import openpyxl
+import Eventos
+import init
+
 wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
-total = sheet.max_row
-import init
+total = sheet.max_row +1
+
 init.inicio()
 for x in range(2,total):
     doc = sheet['A'+str(x)].value
@@ -26,18 +29,19 @@ for x in range(2,total):
     my_url = sheet['E'+str(x)].value
     depar = sheet['D'+str(x)].value
     if my_url != '-':
-        import Eventos
-        import pubeven
-        import pubarti
-        import publib
-        import pubsoft
-        import pubcaplib
+        # import pubeven
+        # import pubarti
+        # import publib
+        # import pubsoft
+        # import pubcaplib
+        print("antes")
         Eventos.evenextract()
-        pubeven.pubextract()
-        pubarti.pubextract()
-        publib.pubextract()
-        pubcaplib.pubextract()
-        pubsoft.pubextract()
+        print("Despues")
+        # pubeven.pubextract()
+        # pubarti.pubextract()
+        # publib.pubextract()
+        # pubcaplib.pubextract()
+        # pubsoft.pubextract()
     else:
         pass
 
@@ -48,11 +52,11 @@ for item in init.dbact:
     except UnicodeEncodeError:
         pass
 f.close()
-f = open ("./Resultados/Publicaciones.csv", "w")
-for item in init.dbpub:
-    try:
-        f.write(item)
-    except UnicodeEncodeError:
-        pass
-f.close()
+# f = open ("./Resultados/Publicaciones.csv", "w")
+# for item in init.dbpub:
+#     try:
+#         f.write(item)
+#     except UnicodeEncodeError:
+#         pass
+# f.close()
 print ("Done! :]")

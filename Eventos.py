@@ -39,7 +39,6 @@ def evenextract():
             pass
 
     if all != 0:
-        pass
         containerb = containers[all]
         container = containerb.findAll("table")
         for x in range(0, len(container)):
