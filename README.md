@@ -19,6 +19,7 @@ This project corresponds to an open source tool to webscraping CvLAC - Colcienci
 The entire project is associated to the
 [Unidad de Apoyo a Procesos de Autoevaluación y Acreditación](http://ingenieria.unal.edu.co/dependencias/vicedecanatura-academica/autoevaluacion) of the [Universidad Nacional de Colombia](http://unal.edu.co/).
 
+Previows version used to extract some products in UAPA format is available [Here](https://github.com/mfneirae/Cvlac).
 
 ## Instructions
 1. Requirements:
