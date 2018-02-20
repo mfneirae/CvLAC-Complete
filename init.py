@@ -25,9 +25,15 @@ def inicio():
     Tipo_Producto; \
     Nombre_Producto_Asociado;\
     Evento; \
-    Año; \
+    Año_Inicio; \
+    Mes_Inicio; \
+    Fecha_Inicio; \
+    Año_Fin; \
+    Mes_Fin; \
+    Fecha_Fin; \
     País; \
     Ciudad; \
+    Ambito; \
     Financiación; \
     Observaciones\n"]
     dbpub = [ "Departamento; \

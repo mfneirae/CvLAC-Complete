@@ -34,9 +34,7 @@ for x in range(2,total):
         # import publib
         # import pubsoft
         # import pubcaplib
-        print("antes")
         Eventos.evenextract()
-        print("Despues")
         # pubeven.pubextract()
         # pubarti.pubextract()
         # publib.pubextract()

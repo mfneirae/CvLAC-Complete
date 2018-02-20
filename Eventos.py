@@ -14,8 +14,8 @@
 #
 def evenextract():
     from main import my_url, name, doc, last, depar
-    import bs4
     import init
+    import bs4
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
     uClient = uReq(my_url)
@@ -44,22 +44,58 @@ def evenextract():
         for x in range(0, len(container)):
             cont = container[x]
             info_evento = cont.td.text
+            #Nombre del evento
             index1 = info_evento.find("Nombre del evento:") + 18
             index2 = info_evento.find("Tipo de evento:")
             NombreEvento = info_evento[index1:index2]
+            # Tipo de Evento
             index1 = info_evento.find("Tipo de evento:") + 15
             index2 = info_evento.find("Ámbito:")
             TipoEvento = info_evento[index1:index2]
+            #Ambito
+            index1 = info_evento.find("\xa0\r\n                                        Ámbito: ") + 51
+            index2 = info_evento.find("\xa0                \r\n                                        Realizado el:")
+            Ambito = info_evento[index1:index2]
+            #Fecha de Realización inicio y fin
             index1 = info_evento.find("Realizado el:") + 13
             index2 = index1 + 4
-            AnoEvento = info_evento[index1:index2]
-            if AnoEvento == ",":
-                AnoEvento = "-"
+            AnoEventoini = info_evento[index1:index2]
+            if AnoEventoini == ",":
+                MesEventoini = "-"
+                AnoEventoini = "-"
+                FechaEventoini = "-"
+                MesEventofin = "-"
+                AnoEventofin = "-"
+                FechaEventofin = "-"
+            else:
+                index1 = index1 + 5
+                index2 = index1 + 2
+                MesEventoini = info_evento[index1:index2]
+                index1 = info_evento.find("Realizado el:") + 13
+                index2 = index1 + 10
+                FechaEventoini = info_evento[index1:index2]
+                index1 = info_evento.find(",",index1,index1 + 58) + 48
+                index2 = index1 + 4
+                AnoEventofin = info_evento[index1:index2]
+                if AnoEventofin == " \xa0\r\n":
+                    MesEventofin = "-"
+                    AnoEventofin = "-"
+                    FechaEventofin = "-"
+                else:
+                    index1 = index1 + 5
+                    index2 = index1 + 2
+                    MesEventofin = info_evento[index1:index2]
+                    index1 = info_evento.find("Realizado el:") + 13
+                    index1 = info_evento.find(",",index1,index1 + 58) + 48
+                    index2 = index1 + 10
+                    FechaEventofin = info_evento[index1:index2]
+            #Lugar Evento
             index1 = info_evento.find(" \xa0\r\n                                            en ") + 51
             index2 = info_evento.find(" \xa0 -  \xa0\r\n")
             LugarEvento = info_evento[index1:index2]
-            b_productos = cont.findAll("td")
-            productos = b_productos[1].findAll("li")
+            #Productos Asociados
+            b_eventos = cont.findAll("td")
+            productos = b_eventos[1].findAll("li")
             if len(productos) == 0:
                 init.dbact.append(depar + ";"\
                 + str(doc) + ";" \
@@ -69,9 +105,15 @@ def evenextract():
                 + TipoEvento.strip() + ";" \
                 + "-" + ";" \
                 + NombreEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                + AnoEvento.strip() + ";" \
+                + AnoEventoini.strip() + ";" \
+                + MesEventoini.strip() + ";" \
+                + FechaEventoini.strip() + ";" \
+                + AnoEventofin.strip() + ";" \
+                + MesEventofin.strip() + ";" \
+                + FechaEventofin.strip() + ";" \
                 + "-" + ";" \
                 + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                + Ambito.strip().replace(";" , "|").replace("\r\n","") + ";"
                 + "Sin Información" + ";" \
                 + "-" \
                 + "\n")
@@ -89,9 +131,15 @@ def evenextract():
                     + TipoEvento.strip() + ";" \
                     + NombreProducto.strip().replace(";" , "|").replace("\r\n","") + ";" \
                     + NombreEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                    + AnoEvento.strip() + ";" \
+                    + AnoEventoini.strip() + ";" \
+                    + MesEventoini.strip() + ";" \
+                    + FechaEventoini.strip() + ";" \
+                    + AnoEventofin.strip() + ";" \
+                    + MesEventofin.strip() + ";" \
+                    + FechaEventofin.strip() + ";" \
                     + "-" + ";" \
                     + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                    + Ambito.strip().replace(";" , "|").replace("\r\n","") + ";"
                     + "Sin Información" + ";" \
                     + "-" \
                     + "\n")

@@ -1,7 +1,9 @@
-Departamento;     Documento;     Nombres;     Apellidos;     Observaciones;     Tipo_Producto;     Nombre_Producto_Asociado;    Evento;     Año;     País;     Ciudad;     Financiación;     Observaciones
-Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test;Autoevaluación;2018;-;PALMIRA   - Universidad de prueba;Sin Información;-
-Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test 2;Autoevaluación;2018;-;PALMIRA   - Universidad de prueba;Sin Información;-
-Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test;Autoevaluación;2018;-;PALMIRA   - Universidad de prueba;Sin Información;-
-Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test;Autoevaluación;2018;-;PALMIRA   - Universidad de prueba;Sin Información;-
-Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test 2;Autoevaluación;2018;-;PALMIRA   - Universidad de prueba;Sin Información;-
-Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test;Autoevaluación;2018;-;PALMIRA   - Universidad de prueba;Sin Información;-
+Departamento;     Documento;     Nombres;     Apellidos;     Observaciones;     Tipo_Producto;     Nombre_Producto_Asociado;    Evento;     Año_Inicio;     Mes_Inicio;     Fecha_Inicio;     Año_Fin;     Mes_Fin;     Fecha_Fin;     País;     Ciudad;     Ambito;     Financiación;     Observaciones
+Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Otro;-;Evento test 2;2018;02;2018-02-19;-;-;-;-;BELLO;Nacional;Sin Información;-
+Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test;Autoevaluación;2018;02;2018-02-01;2018;02;2018-02-02;-;PALMIRA   - Universidad de prueba;Nacional;Sin Información;-
+Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test 2;Autoevaluación;2018;02;2018-02-01;2018;02;2018-02-02;-;PALMIRA   - Universidad de prueba;Nacional;Sin Información;-
+Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test;Autoevaluación;2018;02;2018-02-01;2018;02;2018-02-02;-;PALMIRA   - Universidad de prueba;Nacional;Sin Información;-
+Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Otro;-;Evento test 2;2018;02;2018-02-19;-;-;-;-;BELLO;Nacional;Sin Información;-
+Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test;Autoevaluación;2018;02;2018-02-01;2018;02;2018-02-02;-;PALMIRA   - Universidad de prueba;Nacional;Sin Información;-
+Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test 2;Autoevaluación;2018;02;2018-02-01;2018;02;2018-02-02;-;PALMIRA   - Universidad de prueba;Nacional;Sin Información;-
+Departamento de Ingeniería de Sistemas e Industrial;123;Manuel;Embus;-;Congreso;Test;Autoevaluación;2018;02;2018-02-01;2018;02;2018-02-02;-;PALMIRA   - Universidad de prueba;Nacional;Sin Información;-
