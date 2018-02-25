@@ -23,6 +23,7 @@ def inicio():
     Apellidos; \
     Observaciones; \
     Otros Autores; \
+    Vinculación_Otros_Autores; \
     Tipo_Producto; \
     Nombre_Producto_Asociado;\
     Evento; \

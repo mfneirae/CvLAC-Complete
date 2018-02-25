@@ -26,6 +26,7 @@ def evenextract():
     x = 0
     y = 0
     auto = ""
+    vincula = ""
     page_soup = soup(page_html,"html.parser")
     containers = page_soup.findAll("table")
     for a in range(0,len(containers)):
@@ -99,12 +100,22 @@ def evenextract():
             autores = b_eventos[3].findAll("li")
             if len(autores) == 0:
                 auto = "-";
+                vincula = "-";
             else:
                 for z in range(0, len(autores)):
                     autor = autores[z].text
                     index1 = autor.find("Nombre:") + 8
                     index2= autor.find("\r\n                                                Rol en el evento: ")
-                    auto = auto + ", " + autor[index1:index2]
+                    if len(auto) == 0:
+                        auto = autor[index1:index2]
+                    else:
+                        auto = auto + ", " + autor[index1:index2]
+                    index1 = autor.find("Rol en el evento: ") + 18
+                    index2= autor.find("\r\n ",index1,len(autor))
+                    if len(vincula) == 0:
+                        vincula = autor[index1:index2]
+                    else:
+                        vincula = vincula + ", " + autor[index1:index2]
             #Instituciones
             #Instituciones = b_eventos[2].findAll("li")
             #Productos Asociados
@@ -116,6 +127,7 @@ def evenextract():
                 + last + ";" \
                 + "-" + ";" \
                 + auto.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                + vincula.strip().replace(";" , "|").replace("\r\n","") + ";" \
                 + TipoEvento.strip() + ";" \
                 + "-" + ";" \
                 + NombreEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
@@ -143,6 +155,7 @@ def evenextract():
                     + last + ";" \
                     + "-" + ";" \
                     + auto.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                    + vincula.strip().replace(";" , "|").replace("\r\n","") + ";" \
                     + TipoEvento.strip() + ";" \
                     + NombreProducto.strip().replace(";" , "|").replace("\r\n","").replace("\n","") + ";" \
                     + NombreEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","") + ";" \
@@ -160,5 +173,6 @@ def evenextract():
                     + "\n")
 
             auto = ""
+            vincula = ""
     else:
         print("El Docente no tiene Eventos Asociados")
