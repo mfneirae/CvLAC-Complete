@@ -85,10 +85,10 @@ def pubextract():
                 + last + ";" \
                 + "-" + ";" \
                 + Tipopub.strip().replace("\n","") + ";" \
-                + NombreProducto.replace("\r\n","").replace("\n","").strip().replace(";" , "|") + ";" \
+                + NombreProducto.replace("\r\n","").replace("\n","").replace("\r","").strip().replace(";" , "|") + ";" \
                 + "-".replace("\n","") + ";" \
                 + "-".replace("\n","") + ";" \
-                + NombreEvento.strip().replace("\r\n","").replace(";" , "|") + ";" \
+                + NombreEvento.strip().replace("\r\n","").replace("\n","").replace("\r","").replace(";" , "|") + ";" \
                 + LugarEvento.strip().replace("\r\n","").replace(";" , "|") + ";" \
                 + AnoEvento.strip() + ";" \
                 + "-" + ";" \

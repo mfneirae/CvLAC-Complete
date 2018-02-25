@@ -157,8 +157,8 @@ def evenextract():
                     + auto.strip().replace(";" , "|").replace("\r\n","") + ";" \
                     + vincula.strip().replace(";" , "|").replace("\r\n","") + ";" \
                     + TipoEvento.strip() + ";" \
-                    + NombreProducto.strip().replace(";" , "|").replace("\r\n","").replace("\n","") + ";" \
-                    + NombreEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","") + ";" \
+                    + NombreProducto.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+                    + NombreEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
                     + AnoEventoini.strip() + ";" \
                     + MesEventoini.strip() + ";" \
                     + FechaEventoini.strip() + ";" \
