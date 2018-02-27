@@ -27,6 +27,8 @@ def evenextract():
     y = 0
     auto = ""
     vincula = ""
+    insti = ""
+    vinculain = ""
     page_soup = soup(page_html,"html.parser")
     containers = page_soup.findAll("table")
     for a in range(0,len(containers)):
@@ -117,7 +119,25 @@ def evenextract():
                     else:
                         vincula = vincula + ", " + autor[index1:index2]
             #Instituciones
-            #Instituciones = b_eventos[2].findAll("li")
+            Instituciones = b_eventos[2].findAll("li")
+            if len(Instituciones) == 0:
+                insti = "-";
+                vinculain = "-";
+            else:
+                for z in range(0, len(Instituciones)):
+                    institu = Instituciones[z].text
+                    index1 = institu.find("Nombre de la institución:") + 25
+                    index2= institu.find("\r\n                                                Tipo de vinculación")
+                    if len(insti) == 0:
+                        insti = institu[index1:index2]
+                    else:
+                        insti = insti + ", " + institu[index1:index2]
+                    index1 = institu.find("Tipo de vinculación") + 19
+                    index2 = institu.find("'",index1,len(institu))
+                    if len(vinculain) == 0:
+                        vinculain = institu[index1:index2]
+                    else:
+                        vinculain = vinculain + ", " + institu[index1:index2]
             #Productos Asociados
             productos = b_eventos[1].findAll("li")
             if len(productos) == 0:
@@ -141,6 +161,8 @@ def evenextract():
                 + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
                 + Ambito.strip().replace(";" , "|").replace("\r\n","") + ";"
                 + "Sin Información" + ";" \
+                + insti.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
+                + vinculain.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
                 + "-" \
                 + "\n")
             else:
@@ -169,10 +191,14 @@ def evenextract():
                     + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
                     + Ambito.strip().replace(";" , "|").replace("\r\n","") + ";"
                     + "Sin Información" + ";" \
+                    + insti.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
+                    + vinculain.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
                     + "-" \
                     + "\n")
 
             auto = ""
             vincula = ""
+            insti = ""
+            vinculain = ""
     else:
         print("El Docente no tiene Eventos Asociados")

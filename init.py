@@ -37,6 +37,8 @@ def inicio():
     Ciudad; \
     Ambito; \
     Financiación; \
+    Instituciones; \
+    Vinculación_Instituciones; \
     Observaciones\n"]
     dbpub = [ "Departamento; \
     Documento; \
