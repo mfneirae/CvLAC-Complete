@@ -42,6 +42,7 @@ def evenextract():
         except AttributeError:
             pass
 
+
     if all != 0:
         containerb = containers[all]
         container = containerb.findAll("table")
@@ -64,7 +65,7 @@ def evenextract():
             index1 = info_evento.find("Realizado el:") + 13
             index2 = index1 + 4
             AnoEventoini = info_evento[index1:index2]
-            if AnoEventoini == ",":
+            if AnoEventoini == "," or AnoEventoini == ",\xa0\r\n":
                 MesEventoini = "-"
                 AnoEventoini = "-"
                 FechaEventoini = "-"
@@ -81,7 +82,7 @@ def evenextract():
                 index1 = info_evento.find(",",index1,index1 + 58) + 48
                 index2 = index1 + 4
                 AnoEventofin = info_evento[index1:index2]
-                if AnoEventofin == " \xa0\r\n":
+                if AnoEventofin == " \xa0\r\n" or AnoEventofin == ",":
                     MesEventofin = "-"
                     AnoEventofin = "-"
                     FechaEventofin = "-"
@@ -118,6 +119,8 @@ def evenextract():
                         vincula = autor[index1:index2]
                     else:
                         vincula = vincula + ", " + autor[index1:index2]
+
+
             #Instituciones
             Instituciones = b_eventos[2].findAll("li")
             if len(Instituciones) == 0:
@@ -138,6 +141,8 @@ def evenextract():
                         vinculain = institu[index1:index2]
                     else:
                         vinculain = vinculain + ", " + institu[index1:index2]
+
+
             #Productos Asociados
             productos = b_eventos[1].findAll("li")
             if len(productos) == 0:
@@ -172,8 +177,9 @@ def evenextract():
                 + MesEventoini.strip() + ";" \
                 + FechaEventofin.strip() + ";" \
                 + AnoEventofin.strip() + ";" \
-                + MesEventofin.strip() + ";" \
+                + MesEventofin.strip() \
                 + "\n")
+                COD_PRODUCTO = COD_PRODUCTO + 1
             else:
                 for y in range(0, len(productos)):
                     prod = productos[y].text
@@ -214,11 +220,16 @@ def evenextract():
                     + MesEventoini.strip() + ";" \
                     + FechaEventofin.strip() + ";" \
                     + AnoEventofin.strip() + ";" \
-                    + MesEventofin.strip() + ";" \
+                    + MesEventofin.strip() \
                     + "\n")
+                    COD_PRODUCTO = COD_PRODUCTO + 1
+
+                    
             auto = ""
             vincula = ""
             insti = ""
             vinculain = ""
+
+
     else:
         print("El Docente ",name," ",last," ","no tiene Eventos Asociados")

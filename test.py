@@ -24,9 +24,14 @@ for a in range(0,len(containers)):
             break
     except AttributeError:
         pass
+
+
 containerb = containers[all]
 container = containerb.findAll("table")
-cont = container[6]
+cont = container[11]
 info_evento = cont.td.text
 b_eventos = cont.findAll("td")
 autores = b_eventos[3].findAll("li")
+index1 = info_evento.find("Realizado el:") + 13
+index2 = index1 + 4
+AnoEventoini = info_evento[index1:index2]
