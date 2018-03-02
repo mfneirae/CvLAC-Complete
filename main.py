@@ -14,28 +14,33 @@
 #
 
 import openpyxl
-import Eventos
 import init
+import dnirh
+import pubeventos
+import pubarti
+import publib
+import pubsoft
+import pubcaplib
 
 wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
 total = sheet.max_row +1
+COD_PRODUCTO = 0;
 
 init.inicio()
 for x in range(2,total):
+    COD_PRODUCTO = COD_PRODUCTO + 1
     doc = sheet['A'+str(x)].value
     name = sheet['B'+str(x)].value
     last = sheet['C'+str(x)].value
     my_url = sheet['E'+str(x)].value
     depar = sheet['D'+str(x)].value
+    index1 = my_url.find("cod_rh=") + 7
+    index2 = len(my_url)
+    RH = my_url[index1:index2]
     if my_url != '-':
-        # import pubeven
-        # import pubarti
-        # import publib
-        # import pubsoft
-        # import pubcaplib
-        Eventos.evenextract()
-        # pubeven.pubextract()
+        pubeventos.evenextract()
+        COD_PRODUCTO = 0;
         # pubarti.pubextract()
         # publib.pubextract()
         # pubcaplib.pubextract()
@@ -43,18 +48,20 @@ for x in range(2,total):
     else:
         pass
 
-f = open ("./Resultados/Eventos.csv", "w")
-for item in init.dbact:
+f = open ("./Resultados/RE_PERSONA_PRODUCTO.csv", "w")
+for item in init.RE_PERSONA_PRODUCTO:
     try:
         f.write(item)
     except UnicodeEncodeError:
         pass
 f.close()
-# f = open ("./Resultados/Publicaciones.csv", "w")
-# for item in init.dbpub:
-#     try:
-#         f.write(item)
-#     except UnicodeEncodeError:
-#         pass
-# f.close()
+
+f = open ("./Resultados/APROPIACION.csv", "w")
+for item in init.APROPIACION:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()
+
 print ("Done! :]")

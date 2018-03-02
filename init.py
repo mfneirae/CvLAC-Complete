@@ -12,52 +12,38 @@
 # #############################################################################
 #
 #
-#Eventos
-#f = open ("./Resultados/Actividades.csv", "w")
+
 def inicio():
-    global dbact
-    global dbpub
-    dbact = ["Departamento; \
-    Documento; \
-    Nombres; \
-    Apellidos; \
-    Observaciones; \
-    Otros Autores; \
-    Vinculación_Otros_Autores; \
-    Tipo_Producto; \
-    Nombre_Producto_Asociado;\
-    Evento; \
-    Año_Inicio; \
-    Mes_Inicio; \
-    Fecha_Inicio; \
-    Año_Fin; \
-    Mes_Fin; \
-    Fecha_Fin; \
-    País; \
-    Ciudad; \
-    Ambito; \
-    Financiación; \
-    Instituciones; \
-    Vinculación_Instituciones; \
-    Observaciones\n"]
-    dbpub = [ "Departamento; \
-    Documento; \
-    Nombres; \
-    Apellidos; \
-    Observaciones; \
-    Tipo_Producto; \
-    Nombre_Producto;\
-    ISBN/ISSN; \
-    Tipo_Obra; \
-    Publicado_en; \
-    País; \
-    Año; \
-    Idioma; \
-    Volumen; \
-    Página; \
-    Nombre_del_Capítulo; \
-    Carácter; \
-    Idioma_Destino; \
-    Entidad; \
-    Número/Código_Registro; \
-    Observaciones_Extra\n"]
+    global RE_PERSONA_PRODUCTO
+    global APROPIACION
+    RE_PERSONA_PRODUCTO = ["COD_RH; \
+    COD_PRODUCTO; \
+    COD_TIPO_PRODUCTO; \
+    NOMPRE_PRODUCTO; \
+    EVENTO_ASOCIADO; \
+    DATOS_COMPLEMENTARIOS; \
+    LUGAR; \
+    AÑO; \
+    AMBITO; \
+    PALABRAS_CLAVE; \
+    ÁREAS; \
+    SECTORES; \
+    COAUTORES; \
+    VINCULA_COAUTORES; \
+    EDITORIAL; \
+    VOLUMEN; \
+    PAGINAS; \
+    DOI; \
+    FINALIDAD; \
+    INSTITUCIONES_ASOCIADAS; \
+    TIPO_VINCULACION_INSTITUCION\n"]
+    APROPIACION = [ "COD_RH; \
+    COD_PRODUCTO; \
+    TIPO_EVENTO;\
+    TIPO_RED; \
+    FECHA_INI; \
+    AÑO_INI; \
+    MES_INI; \
+    FECHA_FIN; \
+    AÑO_FIN; \
+    MES_FIN\n"]

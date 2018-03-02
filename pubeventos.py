@@ -13,7 +13,7 @@
 #
 #
 def evenextract():
-    from main import my_url, name, doc, last, depar
+    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
     import init
     import bs4
     from urllib.request import urlopen as uReq
@@ -141,29 +141,38 @@ def evenextract():
             #Productos Asociados
             productos = b_eventos[1].findAll("li")
             if len(productos) == 0:
-                init.dbact.append(depar + ";"\
-                + str(doc) + ";" \
-                + name + ";" \
-                + last + ";" \
-                + "-" + ";" \
+                init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+                + str(COD_PRODUCTO) + ";"\
+                + "" + ";"\
+                + "" + ";"\
+                + NombreEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                + "" + ";" \
+                + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                + AnoEventoini.strip() + ";" \
+                + Ambito.strip().replace(";" , "|").replace("\r\n","") + ";"
+                + "" + ";" \
+                + "" + ";" \
+                + "" + ";" \
                 + auto.strip().replace(";" , "|").replace("\r\n","") + ";" \
                 + vincula.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                + "" + ";" \
+                + "" + ";" \
+                + "" + ";" \
+                + "" + ";" \
+                + "" + ";" \
+                + insti.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
+                + vinculain.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") \
+                + "\n")
+                init.APROPIACION.append(RH + ";"\
+                + str(COD_PRODUCTO) + ";"\
                 + TipoEvento.strip() + ";" \
-                + "-" + ";" \
-                + NombreEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                + "" + ";" \
+                + FechaEventoini.strip() + ";" \
                 + AnoEventoini.strip() + ";" \
                 + MesEventoini.strip() + ";" \
-                + FechaEventoini.strip() + ";" \
+                + FechaEventofin.strip() + ";" \
                 + AnoEventofin.strip() + ";" \
                 + MesEventofin.strip() + ";" \
-                + FechaEventofin.strip() + ";" \
-                + "-" + ";" \
-                + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                + Ambito.strip().replace(";" , "|").replace("\r\n","") + ";"
-                + "Sin Información" + ";" \
-                + insti.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
-                + vinculain.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
-                + "-" \
                 + "\n")
             else:
                 for y in range(0, len(productos)):
@@ -171,34 +180,45 @@ def evenextract():
                     index1 = prod.find("Nombre del producto:") + 20
                     index2 = prod.find("Tipo de producto:")
                     NombreProducto = prod[index1:index2]
-                    init.dbact.append(depar + ";"\
-                    + str(doc) + ";" \
-                    + name + ";" \
-                    + last + ";" \
-                    + "-" + ";" \
-                    + auto.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                    + vincula.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                    + TipoEvento.strip() + ";" \
+                    index1 = prod.find("Tipo de producto:") + 17
+                    index2 = prod.find("\r\n",index1,len(prod))
+                    Tipopub = prod[index1:index2]
+                    init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+                    + str(COD_PRODUCTO) + ";"\
+                    + Tipopub.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
                     + NombreProducto.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
                     + NombreEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
+                    + "" + ";" \
+                    + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                    + AnoEventofin.strip() + ";" \
+                    + Ambito.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                    + "" + ";" \
+                    + "" + ";" \
+                    + "" + ";" \
+                    + auto.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                    + vincula.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                    + "" + ";" \
+                    + "" + ";" \
+                    + "" + ";" \
+                    + "" + ";" \
+                    + "" + ";" \
+                    + insti.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
+                    + vinculain.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") \
+                    + "\n")
+                    init.APROPIACION.append(RH + ";"\
+                    + str(COD_PRODUCTO) + ";"\
+                    + TipoEvento.strip() + ";" \
+                    + "" + ";" \
+                    + FechaEventoini.strip() + ";" \
                     + AnoEventoini.strip() + ";" \
                     + MesEventoini.strip() + ";" \
-                    + FechaEventoini.strip() + ";" \
+                    + FechaEventofin.strip() + ";" \
                     + AnoEventofin.strip() + ";" \
                     + MesEventofin.strip() + ";" \
-                    + FechaEventofin.strip() + ";" \
-                    + "-" + ";" \
-                    + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                    + Ambito.strip().replace(";" , "|").replace("\r\n","") + ";"
-                    + "Sin Información" + ";" \
-                    + insti.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
-                    + vinculain.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
-                    + "-" \
                     + "\n")
-
             auto = ""
             vincula = ""
             insti = ""
             vinculain = ""
     else:
-        print("El Docente no tiene Eventos Asociados")
+        print("El Docente ",name," ",last," ","no tiene Eventos Asociados")
