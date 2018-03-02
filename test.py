@@ -1,7 +1,7 @@
 #cvlac profe roman
-my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000228958'
+#my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000228958'
 #mi cvlac
-#my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001545295'
+my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001545295'
 import bs4
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
@@ -18,7 +18,7 @@ for a in range(0,len(containers)):
     buscaeventos = containers[a].h3
     #print(buscaeventos)
     try:
-        if buscaeventos.text == "Eventos científicos":
+        if buscaeventos.text == "Redes de conocimiento especializado":
             all = a
             #print(all)
             break

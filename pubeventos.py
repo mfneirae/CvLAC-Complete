@@ -41,8 +41,6 @@ def evenextract():
                 break
         except AttributeError:
             pass
-
-
     if all != 0:
         containerb = containers[all]
         container = containerb.findAll("table")
@@ -119,8 +117,6 @@ def evenextract():
                         vincula = autor[index1:index2]
                     else:
                         vincula = vincula + ", " + autor[index1:index2]
-
-
             #Instituciones
             Instituciones = b_eventos[2].findAll("li")
             if len(Instituciones) == 0:
@@ -141,8 +137,6 @@ def evenextract():
                         vinculain = institu[index1:index2]
                     else:
                         vinculain = vinculain + ", " + institu[index1:index2]
-
-
             #Productos Asociados
             productos = b_eventos[1].findAll("li")
             if len(productos) == 0:
@@ -223,13 +217,9 @@ def evenextract():
                     + MesEventofin.strip() \
                     + "\n")
                     COD_PRODUCTO = COD_PRODUCTO + 1
-
-                    
             auto = ""
             vincula = ""
             insti = ""
             vinculain = ""
-
-
     else:
         print("El Docente ",name," ",last," ","no tiene Eventos Asociados")
