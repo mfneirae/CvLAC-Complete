@@ -18,6 +18,7 @@ def redesextract():
     import bs4
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
+    global contredes
     uClient = uReq(my_url)
     page_html = uClient.read()
     uClient.close()
@@ -95,4 +96,37 @@ def redesextract():
             init.RE_PERSONA_PRODUCTO.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "1" + ";"\
+            + Nombrered.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + LugarRed.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "" + ";"\
+            + "\n")
+            init.APROPIACION.append(RH + ";"\
+            + str(COD_PRODUCTO) + ";"\
+            + FechaRedini.strip() + ";" \
+            + AnoRedini.strip() + ";" \
+            + MesRedini.strip() + ";" \
+            + FechaRedfin.strip() + ";" \
+            + AnoRedfin.strip() + ";" \
+            + MesRedfin.strip() \
+            + "\n")
+            COD_PRODUCTO = COD_PRODUCTO + 1
+
+    else:
+        print("El Docente ",name," ",last," ","no tiene Redes Asociadas")
+    contredes = [COD_PRODUCTO]

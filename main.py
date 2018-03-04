@@ -19,12 +19,14 @@ import pubarti
 import publib
 import pubsoft
 import pubcaplib
+import redes
+global COD_PRODUCTO
 wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
-total = sheet.max_row +1
+total = sheet.max_row + 2
 COD_PRODUCTO = 1;
 init.inicio()
-for x in range(2,total):
+for x in range(2,total-1):
     doc = sheet['A'+str(x)].value
     name = sheet['B'+str(x)].value
     last = sheet['C'+str(x)].value
@@ -38,8 +40,11 @@ for x in range(2,total):
     + "\n")
     if my_url != '-':
         pubeventos.evenextract()
-        #redes.redesextract()
-        COD_PRODUCTO = COD_PRODUCTO + 1
+        from pubeventos import conteventos
+        COD_PRODUCTO = int("".join(str(x) for x in conteventos))
+        redes.redesextract()
+        from redes import contredes
+        COD_PRODUCTO = int("".join(str(x) for x in contredes))
         # pubarti.pubextract()
         # publib.pubextract()
         # pubcaplib.pubextract()
@@ -47,45 +52,7 @@ for x in range(2,total):
     else:
         pass
     COD_PRODUCTO = 1;
-f = open ("./Resultados/RE_PERSONA_PRODUCTO.csv", "w")
-for item in init.RE_PERSONA_PRODUCTO:
-    try:
-        f.write(item)
-    except UnicodeEncodeError:
-        pass
-f.close()
-f = open ("./Resultados/APROPIACION.csv", "w")
 
-for item in init.APROPIACION:
-    try:
-        f.write(item)
-    except UnicodeEncodeError:
-        pass
-f.close()
-
-f = open ("./Resultados/RE_DNI_CODRH.csv", "w")
-for item in init.RE_DNI_CODRH:
-    try:
-        f.write(item)
-    except UnicodeEncodeError:
-        pass
-f.close()
-
-f = open ("./Resultados/TIPO_PRODUCTO.csv", "w")
-for item in init.TIPO_PRODUCTO:
-    try:
-        f.write(item)
-    except UnicodeEncodeError:
-        pass
-f.close()
-
-f = open ("./Resultados/TIPO_EVENTO.csv", "w")
-for item in init.TIPO_EVENTO:
-    try:
-        f.write(item)
-    except UnicodeEncodeError:
-        pass
-f.close()
-
+import printcsv
 
 print ("Done! :]")

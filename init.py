@@ -80,6 +80,17 @@ def inicio():
     Demás trabajos; \
     Poster; \
     ;\
+    ;\
+    5; \
+    Producción técnica - Presentación de trabajo - Conferencia; \
+    Presentación de trabajo; \
+    Conferencia; \
+    ;\
+    ;\n \
+    6; \
+    Producción técnica - Presentación de trabajo - Ponencia; \
+    Presentación de trabajo; \
+    Ponencia; \
     ;\n"]
 
     TIPO_EVENTO = [ "COD_TIPO_EVENTO; \

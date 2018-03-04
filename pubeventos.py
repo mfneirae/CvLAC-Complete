@@ -16,6 +16,7 @@ def evenextract():
     from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
     import init
     import bs4
+    global conteventos
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
     uClient = uReq(my_url)
@@ -25,6 +26,7 @@ def evenextract():
     a = 0
     x = 0
     y = 0
+    conteventos = 0
     auto = ""
     vincula = ""
     insti = ""
@@ -202,6 +204,10 @@ def evenextract():
                         Tipopub = "3"
                     elif Tipopub == "Demás trabajos - Demás trabajos - Póster":
                         Tipopub = "4"
+                    elif Tipopub == "Producción técnica - Presentación de trabajo - Conferencia":
+                        Tipopub = "5"
+                    elif Tipopub == "Producción técnica - Presentación de trabajo - Ponencia":
+                        Tipopub = "6"
                     else:
                         print(Tipopub)
                     init.RE_PERSONA_PRODUCTO.append(RH + ";"\
@@ -243,3 +249,4 @@ def evenextract():
             vinculain = ""
     else:
         print("El Docente ",name," ",last," ","no tiene Eventos Asociados")
+    conteventos = [COD_PRODUCTO]
