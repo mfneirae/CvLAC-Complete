@@ -14,13 +14,11 @@
 #
 import openpyxl
 import init
-import pubeventos
+import apropiacion
 import pubarti
 import publib
 import pubsoft
 import pubcaplib
-import redes
-import estrategias
 global COD_PRODUCTO
 wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
@@ -40,14 +38,14 @@ for x in range(2,total-1):
     + str(RH) \
     + "\n")
     if my_url != '-':
-        pubeventos.evenextract()
-        from pubeventos import conteventos
+        apropiacion.evenextract()
+        from apropiacion import conteventos
         COD_PRODUCTO = int("".join(str(x) for x in conteventos))
-        redes.redesextract()
-        from redes import contredes
+        apropiacion.redesextract()
+        from apropiacion import contredes
         COD_PRODUCTO = int("".join(str(x) for x in contredes))
-        estrategias.estrategiaextract()
-        from estrategias import contEstrategia
+        apropiacion.estrategiaextract()
+        from apropiacion import contEstrategia
         COD_PRODUCTO = int("".join(str(x) for x in contEstrategia))
         # pubarti.pubextract()
         # publib.pubextract()
