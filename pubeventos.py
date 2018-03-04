@@ -53,8 +53,22 @@ def evenextract():
             NombreEvento = info_evento[index1:index2]
             # Tipo de Evento
             index1 = info_evento.find("Tipo de evento:") + 15
-            index2 = info_evento.find("Ámbito:")
+            index2 = info_evento.find(" Ámbito:")
             TipoEvento = info_evento[index1:index2]
+            if TipoEvento.strip() == "Otro":
+                TipoEvento = "E1"
+            elif TipoEvento.strip() == "Taller":
+                TipoEvento = "E2"
+            elif TipoEvento.strip() == "Congreso":
+                TipoEvento = "E3"
+            elif TipoEvento.strip() == "Encuentro":
+                TipoEvento = "E4"
+            elif TipoEvento.strip() == "Seminario":
+                TipoEvento = "E5"
+            elif TipoEvento.strip() == "Simposio":
+                TipoEvento = "E6"
+            else:
+                print(TipoEvento)
             #Ambito
             index1 = info_evento.find("\xa0\r\n                                        Ámbito: ") + 51
             index2 = info_evento.find("\xa0                \r\n                                        Realizado el:")
@@ -144,6 +158,7 @@ def evenextract():
                 + str(COD_PRODUCTO) + ";"\
                 + "" + ";"\
                 + "" + ";"\
+                + TipoEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
                 + NombreEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
                 + "" + ";" \
                 + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
@@ -164,8 +179,6 @@ def evenextract():
                 + "\n")
                 init.APROPIACION.append(RH + ";"\
                 + str(COD_PRODUCTO) + ";"\
-                + TipoEvento.strip() + ";" \
-                + "" + ";" \
                 + FechaEventoini.strip() + ";" \
                 + AnoEventoini.strip() + ";" \
                 + MesEventoini.strip() + ";" \
@@ -183,10 +196,19 @@ def evenextract():
                     index1 = prod.find("Tipo de producto:") + 17
                     index2 = prod.find("\r\n",index1,len(prod))
                     Tipopub = prod[index1:index2]
+                    if Tipopub == "Producción bibliográfica - Trabajos en eventos (Capítulos de memoria) - Completo":
+                        Tipopub = "2"
+                    elif Tipopub == "Producción técnica - Presentación de trabajo - Comunicación":
+                        Tipopub = "3"
+                    elif Tipopub == "Demás trabajos - Demás trabajos - Póster":
+                        Tipopub = "4"
+                    else:
+                        print(Tipopub)
                     init.RE_PERSONA_PRODUCTO.append(RH + ";"\
                     + str(COD_PRODUCTO) + ";"\
                     + Tipopub.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
                     + NombreProducto.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+                    + TipoEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
                     + NombreEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
                     + "" + ";" \
                     + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
@@ -207,8 +229,6 @@ def evenextract():
                     + "\n")
                     init.APROPIACION.append(RH + ";"\
                     + str(COD_PRODUCTO) + ";"\
-                    + TipoEvento.strip() + ";" \
-                    + "" + ";" \
                     + FechaEventoini.strip() + ";" \
                     + AnoEventoini.strip() + ";" \
                     + MesEventoini.strip() + ";" \

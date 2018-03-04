@@ -1,0 +1,5 @@
+COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UAPA;     TIPO_PREGRADO;     TIPO_POSGRADO
+     1;     Redes de conocimiento;     Redes de conocimiento;     Redes de conocimiento;     ;    ;
+     2;     Producción bibliográfica - Trabajos en eventos (Capítulos de memoria) - Completo;     Capítulos de memoria;     Capítulos de memoria;     ;    ;
+     3;     Producción técnica - Presentación de trabajo - Comunicación;     Presentación de trabajo;     Trabajo de Comunicación;     ;    ;
+     4;     Demás trabajos - Demás trabajos - Póster;     Demás trabajos;     Poster;     ;    ;

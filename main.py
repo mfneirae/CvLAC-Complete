@@ -38,6 +38,7 @@ for x in range(2,total):
     + "\n")
     if my_url != '-':
         pubeventos.evenextract()
+        #redes.redesextract()
         COD_PRODUCTO = COD_PRODUCTO + 1
         # pubarti.pubextract()
         # publib.pubextract()
@@ -69,5 +70,22 @@ for item in init.RE_DNI_CODRH:
     except UnicodeEncodeError:
         pass
 f.close()
+
+f = open ("./Resultados/TIPO_PRODUCTO.csv", "w")
+for item in init.TIPO_PRODUCTO:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()
+
+f = open ("./Resultados/TIPO_EVENTO.csv", "w")
+for item in init.TIPO_EVENTO:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()
+
 
 print ("Done! :]")
