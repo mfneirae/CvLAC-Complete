@@ -158,7 +158,7 @@ def evenextract():
             if len(productos) == 0:
                 init.RE_PERSONA_PRODUCTO.append(RH + ";"\
                 + str(COD_PRODUCTO) + ";"\
-                + "" + ";"\
+                + "0" + ";"\
                 + "" + ";"\
                 + TipoEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
                 + NombreEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \

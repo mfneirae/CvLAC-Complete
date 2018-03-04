@@ -53,3 +53,11 @@ for item in init.TIPO_EVENTO:
     except UnicodeEncodeError:
         pass
 f.close()
+
+f = open ("./Resultados/PROD_BIBLIOGRAFICA.csv", "w")
+for item in init.PROD_BIBLIOGRAFICA:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()

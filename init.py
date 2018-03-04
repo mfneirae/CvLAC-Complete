@@ -19,6 +19,7 @@ def inicio():
     global RE_DNI_CODRH
     global TIPO_PRODUCTO
     global TIPO_EVENTO
+    global PROD_BIBLIOGRAFICA
     RE_PERSONA_PRODUCTO = ["COD_RH; \
     COD_PRODUCTO; \
     COD_TIPO_PRODUCTO; \
@@ -51,12 +52,32 @@ def inicio():
     AÑO_FIN; \
     MES_FIN\n"]
 
+    PROD_BIBLIOGRAFICA = [ "COD_RH; \
+    COD_PRODUCTO; \
+    REVISTA; \
+    ISSN/ISBN; \
+    LIBRO/REVISTA_ORIGINAL_TRAD; \
+    NOMBRE_LIBRO/REVISTA_TRAD; \
+    NOMRE_AUTOR_ORIGINAL_TRAD; \
+    IDIOMA_ORIGINAL; \
+    IDIOMA_TRADUCCION; \
+    NOMBRE_CAPITULO; \
+    FASCICULO; \
+    PAGINA_INICIAL; \
+    PAGINA_FINAL\n"]
+
     TIPO_PRODUCTO = [ "COD_TIPO_PRODUCTO; \
     TIPO_PRODUCTO_COL; \
     SUB_TIPO_PRODUCTO_COL; \
     TIPO_UAPA; \
     TIPO_PREGRADO; \
     TIPO_POSGRADO\n \
+    0; \
+    Evento sin producto asociado; \
+    Evento sin producto asociado; \
+    Evento sin producto asociado; \
+    ;\
+    ;\n \
     1; \
     Redes de conocimiento; \
     Redes de conocimiento; \
@@ -97,6 +118,37 @@ def inicio():
     Estrategias pedagógicas para el fomento a la CTI; \
     Estrategias pedagógicas; \
     Estrategias pedagógicas; \
+    ;\
+    ;\n \
+    8; \
+    Producción bibliográfica - Artículo - Publicado en revista especializada; \
+    Publicado en revista especializada; \
+    Artículo; \
+    ;\
+    ;\n \
+    9; \
+    Producción bibliográfica - Artículo - Corto (Resumen); \
+    Corto (Resumen); \
+    Artículo; \
+    ;\
+    ;\n \
+    10; \
+    Estrategias pedagógicas para el fomento a la CTI; \
+    Estrategias pedagógicas; \
+    Estrategias pedagógicas; \
+    ;\
+    ;\n \
+    11; \
+    Producción bibliográfica - Artículo - Caso clínico; \
+    Caso Clínico; \
+    Artículo; \
+    ;\
+    ;\n \
+    N; \
+    el final; \
+    el final; \
+    el final; \
+    ;\
     ;\n"]
 
     TIPO_EVENTO = [ "COD_TIPO_EVENTO; \

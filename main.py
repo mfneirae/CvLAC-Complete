@@ -15,10 +15,7 @@
 import openpyxl
 import init
 import apropiacion
-import pubarti
-import publib
-import pubsoft
-import pubcaplib
+import produccion_bibliografica
 global COD_PRODUCTO
 wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
@@ -47,7 +44,9 @@ for x in range(2,total-1):
         apropiacion.estrategiaextract()
         from apropiacion import contEstrategia
         COD_PRODUCTO = int("".join(str(x) for x in contEstrategia))
-        # pubarti.pubextract()
+        produccion_bibliografica.artiextract()
+        from produccion_bibliografica import contarticulo
+        COD_PRODUCTO = int("".join(str(x) for x in contarticulo))
         # publib.pubextract()
         # pubcaplib.pubextract()
         # pubsoft.pubextract()
