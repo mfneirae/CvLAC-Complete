@@ -91,6 +91,12 @@ def inicio():
     Producción técnica - Presentación de trabajo - Ponencia; \
     Presentación de trabajo; \
     Ponencia; \
+    ;\
+    ;\n \
+    7; \
+    Estrategias pedagógicas para el fomento a la CTI; \
+    Estrategias pedagógicas; \
+    Estrategias pedagógicas; \
     ;\n"]
 
     TIPO_EVENTO = [ "COD_TIPO_EVENTO; \

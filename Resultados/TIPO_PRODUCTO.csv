@@ -3,4 +3,5 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      2;     Producción bibliográfica - Trabajos en eventos (Capítulos de memoria) - Completo;     Capítulos de memoria;     Capítulos de memoria;     ;    ;
      3;     Producción técnica - Presentación de trabajo - Comunicación;     Presentación de trabajo;     Trabajo de Comunicación;     ;    ;
      4;     Demás trabajos - Demás trabajos - Póster;     Demás trabajos;     Poster;     ;    ;    5;     Producción técnica - Presentación de trabajo - Conferencia;     Presentación de trabajo;     Conferencia;     ;    ;
-     6;     Producción técnica - Presentación de trabajo - Ponencia;     Presentación de trabajo;     Ponencia;     ;
+     6;     Producción técnica - Presentación de trabajo - Ponencia;     Presentación de trabajo;     Ponencia;     ;    ;
+     7;     Estrategias pedagógicas para el fomento a la CTI;     Estrategias pedagógicas;     Estrategias pedagógicas;     ;

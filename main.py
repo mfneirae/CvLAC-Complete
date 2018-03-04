@@ -20,6 +20,7 @@ import publib
 import pubsoft
 import pubcaplib
 import redes
+import estrategias
 global COD_PRODUCTO
 wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
@@ -45,6 +46,9 @@ for x in range(2,total-1):
         redes.redesextract()
         from redes import contredes
         COD_PRODUCTO = int("".join(str(x) for x in contredes))
+        estrategias.estrategiaextract()
+        from estrategias import contEstrategia
+        COD_PRODUCTO = int("".join(str(x) for x in contEstrategia))
         # pubarti.pubextract()
         # publib.pubextract()
         # pubcaplib.pubextract()
