@@ -3,11 +3,17 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      1;     Redes de conocimiento;     Redes de conocimiento;     Redes de conocimiento;     ;    ;
      2;     Producción bibliográfica - Trabajos en eventos (Capítulos de memoria) - Completo;     Capítulos de memoria;     Capítulos de memoria;     ;    ;
      3;     Producción técnica - Presentación de trabajo - Comunicación;     Presentación de trabajo;     Trabajo de Comunicación;     ;    ;
-     4;     Demás trabajos - Demás trabajos - Póster;     Demás trabajos;     Poster;     ;    ;    5;     Producción técnica - Presentación de trabajo - Conferencia;     Presentación de trabajo;     Conferencia;     ;    ;
+     4;     Demás trabajos - Demás trabajos - Póster;     Demás trabajos;     Poster;     ;    ;
+     5;     Producción técnica - Presentación de trabajo - Conferencia;     Presentación de trabajo;     Conferencia;     ;    ;
      6;     Producción técnica - Presentación de trabajo - Ponencia;     Presentación de trabajo;     Ponencia;     ;    ;
      7;     Estrategias pedagógicas para el fomento a la CTI;     Estrategias pedagógicas;     Estrategias pedagógicas;     ;    ;
      8;     Producción bibliográfica - Artículo - Publicado en revista especializada;     Publicado en revista especializada;     Artículo;     ;    ;
      9;     Producción bibliográfica - Artículo - Corto (Resumen);     Corto (Resumen);     Artículo;     ;    ;
      10;     Estrategias pedagógicas para el fomento a la CTI;     Estrategias pedagógicas;     Estrategias pedagógicas;     ;    ;
      11;     Producción bibliográfica - Artículo - Caso clínico;     Caso Clínico;     Artículo;     ;    ;
+     12;     Producción bibliográfica - Trabajos en eventos (Capítulos de memoria) - Resumen;     Capítulo de Memoria;     Resumen;     ;    ;
+     13;     Producción técnica - Presentación de trabajo - Congreso;     Congreso;     Congreso;     ;    ;
+     14;     Producción técnica - Presentación de trabajo - Simposio;     Simposio;     Simposio;     ;    ;
+     15;     Producción técnica - Presentación de trabajo - Seminario;     Seminario;     Seminario;     ;    ;
+     16;     Producción técnica - Presentación de trabajo - Otro;     Otro;     Otro;     ;    ;
      N;     el final;     el final;     el final;     ;    ;

@@ -1,5 +1,5 @@
 #cvlac profe roman5690
-#my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000228958'
+#my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000105260'
 #mi cvlac
 my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001545295'
 import bs4
@@ -18,7 +18,7 @@ for a in range(0,len(containers)):
     buscaeventos = containers[a].h3
     #print(buscaeventos)
     try:
-        if buscaeventos.text == "Artículos":
+        if buscaeventos.text == "Eventos científicos":
             all = a
             #print(all)
             break
@@ -26,11 +26,12 @@ for a in range(0,len(containers)):
         pass
 
 containerb = containers[all]
-container = containerb.findAll("blockquote")
-cont = container[0]
-info_articulo = cont.text
-
-
-index1 = info_articulo.find("fasc.") + 5
-index2 = info_articulo.find("\r\n                    p.")
-fasciculo = info_articulo[index1:index2]
+container = containerb.findAll("table")
+cont = container[72]
+info_evento = cont.td.text
+b_eventos = cont.findAll("td")
+productos = b_eventos[1].findAll("li")
+prod = productos[0].text
+index1 = prod.find("Nombre del producto:") + 20
+index2 = prod.find("Tipo de producto:")
+NombreProducto = prod[index1:index2]

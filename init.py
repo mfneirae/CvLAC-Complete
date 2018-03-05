@@ -101,7 +101,7 @@ def inicio():
     Demás trabajos; \
     Poster; \
     ;\
-    ;\
+    ;\n \
     5; \
     Producción técnica - Presentación de trabajo - Conferencia; \
     Presentación de trabajo; \
@@ -142,6 +142,36 @@ def inicio():
     Producción bibliográfica - Artículo - Caso clínico; \
     Caso Clínico; \
     Artículo; \
+    ;\
+    ;\n \
+    12; \
+    Producción bibliográfica - Trabajos en eventos (Capítulos de memoria) - Resumen; \
+    Capítulo de Memoria; \
+    Resumen; \
+    ;\
+    ;\n \
+    13; \
+    Producción técnica - Presentación de trabajo - Congreso; \
+    Congreso; \
+    Congreso; \
+    ;\
+    ;\n \
+    14; \
+    Producción técnica - Presentación de trabajo - Simposio; \
+    Simposio; \
+    Simposio; \
+    ;\
+    ;\n \
+    15; \
+    Producción técnica - Presentación de trabajo - Seminario; \
+    Seminario; \
+    Seminario; \
+    ;\
+    ;\n \
+    16; \
+    Producción técnica - Presentación de trabajo - Otro; \
+    Otro; \
+    Otro; \
     ;\
     ;\n \
     N; \

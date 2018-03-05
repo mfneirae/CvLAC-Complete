@@ -208,6 +208,16 @@ def evenextract():
                         Tipopub = "5"
                     elif Tipopub == "Producción técnica - Presentación de trabajo - Ponencia":
                         Tipopub = "6"
+                    elif Tipopub == "Producción bibliográfica - Trabajos en eventos (Capítulos de memoria) - Resumen":
+                        Tipopub = "12"
+                    elif Tipopub == "Producción técnica - Presentación de trabajo - Congreso":
+                        Tipopub = "13"
+                    elif Tipopub == "Producción técnica - Presentación de trabajo - Simposio":
+                        Tipopub = "14"
+                    elif Tipopub == "Producción técnica - Presentación de trabajo - Seminario":
+                        Tipopub = "15"
+                    elif Tipopub == "Producción técnica - Presentación de trabajo - Otro":
+                        Tipopub = "16"
                     else:
                         print(Tipopub)
                     init.RE_PERSONA_PRODUCTO.append(RH + ";"\
