@@ -75,7 +75,7 @@ def artiextract():
             lugar = info_articulo[index1:index2]
             #Editorial
             index1 = info_articulo.find("\xa0\r\n                    ed:\xa0") + 27
-            index2 = info_articulo.find("\n",index1,index1 + 50)
+            index2 = info_articulo.find("\nv.",index1,index1 + 50)
             editorial = info_articulo[index1:index2]
             #DOI
             index1 = info_articulo.find("\xa0DOI:\xa0") + 6
@@ -95,11 +95,11 @@ def artiextract():
             AnoEvento = info_articulo[index1:index2]
             #Volumen
             index1 = info_articulo.find("\nv.") + 3
-            index2 = info_articulo.find("\r\n                    fasc.")
+            index2 = info_articulo.find("fasc.")
             Volumen = info_articulo[index1:index2]
             #Fasciculo
             index1 = info_articulo.find("fasc.") + 5
-            index2 = info_articulo.find("\r\n                    p.")
+            index2 = info_articulo.find("p.")
             fasciculo = info_articulo[index1:index2]
             #Páginas
             index1 = info_articulo.find("\r\n                    p.") + 24
@@ -124,27 +124,27 @@ def artiextract():
             + "" + ";" \
             + re.sub(' +',' ',coautores.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
-            + editorial.strip().strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + editorial.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + Volumen.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";" \
-            + doi.strip().strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + doi.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" \
             + "\n")
             init.PROD_BIBLIOGRAFICA.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + Revista.strip().strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-            + ISSN.strip().strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + Revista.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + ISSN.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + fasciculo.strip().strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-            + Pagini.strip().strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-            + Pagfin.strip().strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + re.sub(' +',' ',fasciculo.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + Pagini.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + Pagfin.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:

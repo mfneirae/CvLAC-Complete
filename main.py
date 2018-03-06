@@ -19,15 +19,15 @@ import produccion_bibliografica
 global COD_PRODUCTO
 wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
-total = sheet.max_row + 2
+total = sheet.max_row +1
 COD_PRODUCTO = 1;
 init.inicio()
-for x in range(2,total-1):
-    doc = sheet['A'+str(x)].value
-    name = sheet['B'+str(x)].value
-    last = sheet['C'+str(x)].value
-    my_url = sheet['E'+str(x)].value
-    depar = sheet['D'+str(x)].value
+for q in range(2,total):
+    doc = sheet['A'+str(q)].value
+    name = sheet['B'+str(q)].value
+    last = sheet['C'+str(q)].value
+    my_url = sheet['E'+str(q)].value
+    depar = sheet['D'+str(q)].value
     index1 = my_url.find("cod_rh=") + 7
     index2 = len(my_url)
     RH = my_url[index1:index2]
