@@ -17,7 +17,7 @@ import init
 import apropiacion
 import produccion_bibliografica
 global COD_PRODUCTO
-wb = openpyxl.load_workbook('./Base.xlsx')
+wb = openpyxl.load_workbook('./Base - completa.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
 total = sheet.max_row +1
 COD_PRODUCTO = 1;

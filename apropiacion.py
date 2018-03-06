@@ -80,12 +80,12 @@ def evenextract():
             index2 = index1 + 4
             AnoEventoini = info_evento[index1:index2]
             if AnoEventoini == "," or AnoEventoini == ",\xa0\r\n":
-                MesEventoini = "-"
-                AnoEventoini = "-"
-                FechaEventoini = "-"
-                MesEventofin = "-"
-                AnoEventofin = "-"
-                FechaEventofin = "-"
+                MesEventoini = ""
+                AnoEventoini = ""
+                FechaEventoini = ""
+                MesEventofin = ""
+                AnoEventofin = ""
+                FechaEventofin = ""
             else:
                 index1 = index1 + 5
                 index2 = index1 + 2
@@ -93,19 +93,19 @@ def evenextract():
                 index1 = info_evento.find("Realizado el:") + 13
                 index2 = index1 + 10
                 FechaEventoini = info_evento[index1:index2]
-                index1 = info_evento.find(",",index1,index1 + 58) + 48
+                index1 = info_evento.find(",",index1,len(info_evento)) + 48
                 index2 = index1 + 4
                 AnoEventofin = info_evento[index1:index2]
                 if AnoEventofin == " \xa0\r\n" or AnoEventofin == ",":
-                    MesEventofin = "-"
-                    AnoEventofin = "-"
-                    FechaEventofin = "-"
+                    MesEventofin = ""
+                    AnoEventofin = ""
+                    FechaEventofin = ""
                 else:
                     index1 = index1 + 5
                     index2 = index1 + 2
                     MesEventofin = info_evento[index1:index2]
                     index1 = info_evento.find("Realizado el:") + 13
-                    index1 = info_evento.find(",",index1,index1 + 58) + 48
+                    index1 = info_evento.find(",",index1,len(info_evento)) + 48
                     index2 = index1 + 10
                     FechaEventofin = info_evento[index1:index2]
             #Lugar Evento
@@ -116,8 +116,8 @@ def evenextract():
             #Autores
             autores = b_eventos[3].findAll("li")
             if len(autores) == 0:
-                auto = "-";
-                vincula = "-";
+                auto = "";
+                vincula = "";
             else:
                 for z in range(0, len(autores)):
                     autor = autores[z].text
@@ -136,8 +136,8 @@ def evenextract():
             #Instituciones
             Instituciones = b_eventos[2].findAll("li")
             if len(Instituciones) == 0:
-                insti = "-";
-                vinculain = "-";
+                insti = "";
+                vinculain = "";
             else:
                 for z in range(0, len(Instituciones)):
                     institu = Instituciones[z].text
@@ -302,16 +302,16 @@ def estrategiaextract():
             NombreEstrategia = info_Estrategia[index1:index2]
             #Fecha de Realización inicio y fin
             index1 = info_Estrategia.find("\xa0\r\n                                Inicio en") + 44
-            index1 = info_Estrategia.find(" - ",index1,index1+10) + 3
+            index1 = info_Estrategia.find(" - ",index1,len(info_Estrategia)) + 3
             index2 = index1 + 4
             AnoEstrategiaini = info_Estrategia[index1:index2]
             if AnoEstrategiaini == "," or AnoEstrategiaini == ",\xa0\r\n":
-                MesEstrategiaini = "-"
-                AnoEstrategiaini = "-"
-                FechaEstrategiaini = "-"
-                MesEstrategiafin = "-"
-                AnoEstrategiafin = "-"
-                FechaEstrategiafin = "-"
+                MesEstrategiaini = ""
+                AnoEstrategiaini = ""
+                FechaEstrategiaini = ""
+                MesEstrategiafin = ""
+                AnoEstrategiafin = ""
+                FechaEstrategiafin = ""
             else:
                 index1 = info_Estrategia.find("\xa0\r\n                                Inicio en") + 44
                 index2 = info_Estrategia.find(" - ")
@@ -320,13 +320,13 @@ def estrategiaextract():
                 index2 = info_Estrategia.find(",\xa0\r\n                                Finalizó en")
                 FechaEstrategiaini = info_Estrategia[index1:index2]
                 index1 = info_Estrategia.find(",\xa0\r\n                                Finalizó en :") + 49
-                index1 = info_Estrategia.find(" - ",index1,index1+10) + 3
+                index1 = info_Estrategia.find(" - ",index1,len(info_Estrategia)) + 3
                 index2 = info_Estrategia.find(",\xa0                \t\t\t\r\n")
                 AnoEstrategiafin = info_Estrategia[index1:index2]
-                if AnoEstrategiafin == "" or AnoEstrategiafin == "-":
-                    MesEstrategiafin = "-"
-                    AnoEstrategiafin = "-"
-                    FechaEstrategiafin = "-"
+                if AnoEstrategiafin == "" or AnoEstrategiafin == "":
+                    MesEstrategiafin = ""
+                    AnoEstrategiafin = ""
+                    FechaEstrategiafin = ""
                 else:
                     index1 = info_Estrategia.find(",\xa0\r\n                                Finalizó en :") + 49
                     index2 = info_Estrategia.find(" - ",index1,len(info_Estrategia))
@@ -426,12 +426,12 @@ def redesextract():
             index2 = index1 + 4
             AnoRedini = info_red[index1:index2]
             if AnoRedini == "," or AnoRedini == ",\xa0\r\n":
-                MesRedini = "-"
-                AnoRedini = "-"
-                FechaRedini = "-"
-                MesRedfin = "-"
-                AnoRedfin = "-"
-                FechaRedfin = "-"
+                MesRedini = ""
+                AnoRedini = ""
+                FechaRedini = ""
+                MesRedfin = ""
+                AnoRedfin = ""
+                FechaRedfin = ""
             else:
                 index1 = index1 + 5
                 index2 = index1 + 2
@@ -443,9 +443,9 @@ def redesextract():
                 index2 = index1 + 4
                 AnoRedfin = info_red[index1:index2]
                 if AnoRedfin == "    " or AnoRedfin == ",":
-                    MesRedfin = "-"
-                    AnoRedfin = "-"
-                    FechaRedfin = "-"
+                    MesRedfin = ""
+                    AnoRedfin = ""
+                    FechaRedfin = ""
                 else:
                     index1 = index1 + 5
                     index2 = index1 + 2

@@ -1,7 +1,7 @@
 #cvlac profe roman5690
 #my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000105260'
 #mi cvlac
-my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000006947'
+my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000418552'
 import bs4
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
@@ -15,10 +15,10 @@ y = 0
 page_soup = soup(page_html,"html.parser")
 containers = page_soup.findAll("table")
 for a in range(0,len(containers)):
-    buscaeventos = containers[a].h3
-    #print(buscaeventos)
+    buscaEstrategias = containers[a].h3
+    #print(buscaEstrategias)
     try:
-        if buscaeventos.text == "Artículos":
+        if buscaEstrategias.text == "Estrategias pedagógicas para el fomento a la CTI":
             all = a
             #print(all)
             break
@@ -27,9 +27,10 @@ for a in range(0,len(containers)):
 
 containerb = containers[all]
 container = containerb.findAll("blockquote")
-cont = container[1]
-info_articulo = cont.text
+cont = container[0]
+info_Estrategia = cont.text
 
-index1 = info_articulo.find("\xa0\r\n                    ed:\xa0") + 27
-index2 = info_articulo.find("\nv.")
-editorial = info_articulo[index1:index2]
+index1 = info_Estrategia.find("\xa0\r\n                                Inicio en") + 44
+index1 = info_Estrategia.find(" - ",index1,len(info_Estrategia)) + 3
+index2 = index1 + 4
+info_Estrategia[index1:index2]
