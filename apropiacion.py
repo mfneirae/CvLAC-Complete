@@ -160,8 +160,8 @@ def evenextract():
                 + str(COD_PRODUCTO) + ";"\
                 + "0" + ";"\
                 + "" + ";"\
-                + TipoEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-                + NombreEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                + TipoEvento.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+                + NombreEvento.strip().replace('"',"").replace(";" , "|").replace("\r\n","") + ";" \
                 + "" + ";" \
                 + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
                 + AnoEventoini.strip() + ";" \
@@ -223,9 +223,9 @@ def evenextract():
                     init.RE_PERSONA_PRODUCTO.append(RH + ";"\
                     + str(COD_PRODUCTO) + ";"\
                     + Tipopub.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-                    + NombreProducto.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+                    + NombreProducto.strip().replace(";" , "|").replace("\r\n","").replace('"',"").replace("\n","").replace("\r","") + ";" \
                     + TipoEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-                    + NombreEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
+                    + NombreEvento.strip().replace(";" , "|").replace('"',"").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
                     + "" + ";" \
                     + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
                     + AnoEventofin.strip() + ";" \
@@ -260,6 +260,8 @@ def evenextract():
     else:
         print("El Docente ",name," ",last," ","no tiene Eventos Asociados")
     conteventos = [COD_PRODUCTO]
+
+
 def estrategiaextract():
     from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
     import init
@@ -339,7 +341,7 @@ def estrategiaextract():
             init.RE_PERSONA_PRODUCTO.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "7" + ";"\
-            + NombreEstrategia.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + NombreEstrategia.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";"\
             + "" + ";"\
             + "" + ";"\
@@ -457,11 +459,11 @@ def redesextract():
             init.RE_PERSONA_PRODUCTO.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "1" + ";"\
-            + Nombrered.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + Nombrered.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";"\
             + "" + ";"\
             + "" + ";"\
-            + LugarRed.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + LugarRed.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";"\
             + "" + ";"\
             + "" + ";"\

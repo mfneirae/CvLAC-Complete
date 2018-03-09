@@ -112,7 +112,7 @@ def artiextract():
             init.RE_PERSONA_PRODUCTO.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
-            + NombreProducto.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -122,20 +122,20 @@ def artiextract():
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(' +',' ',coautores.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',coautores.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
-            + editorial.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-            + Volumen.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + editorial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + Volumen.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";" \
-            + doi.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + doi.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" \
             + "\n")
             init.PROD_BIBLIOGRAFICA.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + Revista.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-            + ISSN.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + Revista.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + ISSN.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -143,8 +143,8 @@ def artiextract():
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',fasciculo.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + Pagini.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-            + Pagfin.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + Pagini.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + Pagfin.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
