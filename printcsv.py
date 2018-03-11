@@ -11,7 +11,7 @@
 #       Or visit my webpage at https://mfneirae.com/
 # #############################################################################
 #
-#
+
 import init
 
 f = open ("./Resultados/RE_PERSONA_PRODUCTO.csv", "w")

@@ -11,7 +11,7 @@
 #       Or visit my webpage at https://mfneirae.com/
 # #############################################################################
 #
-#
+
 import openpyxl
 import init
 import apropiacion

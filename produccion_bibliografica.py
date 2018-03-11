@@ -11,7 +11,7 @@
 #       Or visit my webpage at https://mfneirae.com/
 # #############################################################################
 #
-#
+
 def artiextract():
     from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
     import bs4

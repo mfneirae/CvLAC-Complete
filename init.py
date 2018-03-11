@@ -11,7 +11,6 @@
 #       Or visit my webpage at https://mfneirae.com/
 # #############################################################################
 #
-#
 
 def inicio():
     global RE_PERSONA_PRODUCTO
