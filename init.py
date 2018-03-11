@@ -174,6 +174,24 @@ def inicio():
     Otro; \
     ;\
     ;\n \
+    17; \
+    Producción bibliográfica - Libro - Libro resultado de investigación; \
+    Libro resultado de investigación; \
+    Libro; \
+    ;\
+    ;\n \
+    18; \
+    Producción bibliográfica - Libro - Otro libro publicado; \
+    Otro libro publicado; \
+    Libro - Otro; \
+    ;\
+    ;\n \
+    19; \
+    Producción bibliográfica - Libro - Libro pedagógico y/o de divulgación; \
+    Libro pedagógico y/o de divulgación; \
+    Libro - pedagógico; \
+    ;\
+    ;\n \
     N; \
     el final; \
     el final; \

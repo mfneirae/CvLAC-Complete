@@ -16,4 +16,7 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      14;     Producción técnica - Presentación de trabajo - Simposio;     Simposio;     Simposio;     ;    ;
      15;     Producción técnica - Presentación de trabajo - Seminario;     Seminario;     Seminario;     ;    ;
      16;     Producción técnica - Presentación de trabajo - Otro;     Otro;     Otro;     ;    ;
+     17;     Producción bibliográfica - Libro - Libro resultado de investigación;     Libro resultado de investigación;     Libro;     ;    ;
+     18;     Producción bibliográfica - Libro - Otro libro publicado;     Otro libro publicado;     Libro - Otro;     ;    ;
+     19;     Producción bibliográfica - Libro - Libro pedagógico y/o de divulgación;     Libro pedagógico y/o de divulgación;     Libro - pedagógico;     ;    ;
      N;     el final;     el final;     el final;     ;    ;

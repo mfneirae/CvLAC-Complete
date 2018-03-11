@@ -1,4 +1,6 @@
-c#cvlac profe roman5690
+
+re.sub(' +',' ',AQUI.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+#cvlac profe roman5690
 #my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000105260'
 #mi cvlac
 my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000218430'
@@ -15,26 +17,26 @@ y = 0
 page_soup = soup(page_html,"html.parser")
 containers = page_soup.findAll("table")
 for a in range(0,len(containers)):
-    buscaEstrategias = containers[a].h3
-    #print(buscaEstrategias)
+    buscaeventos = containers[a].h3
+    #print(buscaeventos)
     try:
-        if buscaEstrategias.text == "Eventos científicos":
+        if buscaeventos.text == "Libros":
             all = a
             #print(all)
             break
     except AttributeError:
         pass
 
+
 containerb = containers[all]
-container = containerb.findAll("table")
-cont = container[19]
-info_evento = cont.td.text
+container = containerb.findAll("blockquote")
+tipolib = containerb.findAll("li")
 
-b_eventos = cont.findAll("td")
-productos = b_eventos[1].findAll("li")
-prod = productos[y].text
-index1 = prod.find("Nombre del producto:") + 20
-index2 = prod.find("Tipo de producto:")
-NombreProducto = prod[index1:index2]
+tipoli = tipolib[x]
+tipo = tipoli.text
+cont = container[2]
+info_libro = cont.text
 
-print(NombreProducto.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))
+index1 = info_libro.find('"\r\n                    En:') + 27
+index2 = info_libro.find('\r\n                    ',index1,len(info_libro))
+lugar = info_libro[index1:index2]
