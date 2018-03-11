@@ -5,6 +5,7 @@ re.sub(' +',' ',AQUI.replace('"',"").strip().replace(";" , "|").replace("\r\n","
 #mi cvlac
 my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000218430'
 import bs4
+import re
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 uClient = uReq(my_url)
