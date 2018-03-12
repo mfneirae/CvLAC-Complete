@@ -203,6 +203,36 @@ def inicio():
     Capítulo de libro; \
     ;\
     ;\n \
+    22; \
+    Producción bibliográfica - Otro artículo publicado - Periódico de noticias; \
+    Periódico de noticias; \
+    Otro; \
+    ;\
+    ;\n \
+    23; \
+    Producción bibliográfica - Otro artículo publicado - Revista de divulgación; \
+    Revista de divulgación; \
+    Otro; \
+    ;\
+    ;\n \
+    24; \
+    Producción bibliográfica - Otro artículo publicado - Cartas al editor; \
+    Cartas al editor; \
+    Otro; \
+    ;\
+    ;\n \
+    25; \
+    Producción bibliográfica - Otro artículo publicado - Reseñas de libros; \
+    Reseñas de libros; \
+    Otro; \
+    ;\
+    ;\n \
+    26; \
+    Producción bibliográfica - Otro artículo publicado - Columnas de opinión; \
+    Columnas de opinión; \
+    Otro; \
+    ;\
+    ;\n \
     N; \
     el final; \
     el final; \

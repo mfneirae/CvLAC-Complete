@@ -21,4 +21,9 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      19;     Producción bibliográfica - Libro - Libro pedagógico y/o de divulgación;     Libro pedagógico y/o de divulgación;     Libro - pedagógico;     ;    ;
      20;     Otro capítulo de libro publicado;     Otro capítulo de libro;     Capítulo de libro - Otro;     ;    ;
      21;     Capítulo de libro;     Capítulo de libro;     Capítulo de libro;     ;    ;
+     22;     Producción bibliográfica - Otro artículo publicado - Periódico de noticias;     Periódico de noticias;     Otro;     ;    ;
+     23;     Producción bibliográfica - Otro artículo publicado - Revista de divulgación;     Revista de divulgación;     Otro;     ;    ;
+     24;     Producción bibliográfica - Otro artículo publicado - Cartas al editor;     Cartas al editor;     Otro;     ;    ;
+     25;     Producción bibliográfica - Otro artículo publicado - Reseñas de libros;     Reseñas de libros;     Otro;     ;    ;
+     26;     Producción bibliográfica - Otro artículo publicado - Columnas de opinión;     Columnas de opinión;     Otro;     ;    ;
      N;     el final;     el final;     el final;     ;    ;
