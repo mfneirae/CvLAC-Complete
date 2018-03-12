@@ -3,6 +3,7 @@ re.sub(' +',' ',AQUI.replace('"',"").strip().replace(";" , "|").replace("\r\n","
 #cvlac profe roman5690
 #my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000105260'
 #mi cvlac
+
 my_url = 'http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000218430'
 import bs4
 import re
