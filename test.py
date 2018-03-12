@@ -19,26 +19,20 @@ y = 0
 page_soup = soup(page_html,"html.parser")
 containers = page_soup.findAll("table")
 for a in range(0,len(containers)):
-    buscaeventos = containers[a].h3
-    #print(buscaeventos)
+    buscacaplibros = containers[a].h3
+    #print(buscacaplibros)
     try:
-        if buscaeventos.text == "Libros":
+        if buscacaplibros.text == "Capitulos de libro":
             all = a
             #print(all)
             break
     except AttributeError:
         pass
 
-
 containerb = containers[all]
 container = containerb.findAll("blockquote")
-tipolib = containerb.findAll("li")
-
-tipoli = tipolib[x]
-tipo = tipoli.text
-cont = container[2]
-info_libro = cont.text
-
-index1 = info_libro.find('"\r\n                    En:') + 27
-index2 = info_libro.find('\r\n                    ',index1,len(info_libro))
-lugar = info_libro[index1:index2]
+tipocaplib = containerb.findAll("li")
+tipo = tipocapli.text
+tipocapli = tipocaplib[0]
+cont = container[0]
+info_caplibro = cont.text

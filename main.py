@@ -18,7 +18,7 @@ import apropiacion
 import produccion_bibliografica
 global COD_PRODUCTO
 # wb = openpyxl.load_workbook('./Base - completa.xlsx')
-wb = openpyxl.load_workbook('./Base - completa.xlsx')
+wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
 total = sheet.max_row +1
 COD_PRODUCTO = 1;
@@ -56,8 +56,10 @@ for q in range(2,total):
         produccion_bibliografica.libextract()
         from produccion_bibliografica import contlibro
         COD_PRODUCTO = int("".join(str(x) for x in contlibro))
-        # publib.pubextract()
-        # pubcaplib.pubextract()
+        #Libros
+        produccion_bibliografica.caplibroextract()
+        from produccion_bibliografica import contcaplibro
+        COD_PRODUCTO = int("".join(str(x) for x in contcaplibro))
         # pubsoft.pubextract()
     else:
         pass

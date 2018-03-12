@@ -297,3 +297,158 @@ def libextract():
     else:
         print("El Docente ",name," ",last," ","no tiene Artículos Asociados")
     contlibro = [COD_PRODUCTO]
+
+def caplibroextract():
+    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
+    import bs4
+    import init
+    import re
+    global contcaplibro
+    from urllib.request import urlopen as uReq
+    from bs4 import BeautifulSoup as soup
+    uClient = uReq(my_url)
+    page_html = uClient.read()
+    uClient.close()
+    all = 0
+    a = 0
+    x = 0
+    y = 0
+    page_soup = soup(page_html,"html.parser")
+    containers = page_soup.findAll("table")
+    for a in range(0,len(containers)):
+        buscacaplibros = containers[a].h3
+        #print(buscacaplibros)
+        try:
+            if buscacaplibros.text == "Capitulos de libro":
+                all = a
+                #print(all)
+                break
+        except AttributeError:
+            pass
+    if all != 0:
+        containerb = containers[all]
+        container = containerb.findAll("blockquote")
+        for x in range(0, len(container)):
+            cont = container[x]
+            info_caplibro = cont.text
+            #Tipo Capítulos
+            index1 = info_caplibro.find('Tipo:') + 6
+            index2 = info_caplibro.find('\r\n                            ',index1,len(info_caplibro))
+            Tipo = info_caplibro[index1:index2]
+            #Coautores
+            remthis = "Tipo: "+ Tipo
+            index1 = info_caplibro.find('Tipo:')
+            index2 = info_caplibro.find('\n                            "')
+            coautores = info_caplibro[index1:index2]
+            coautores = coautores.replace(remthis,"")
+            if Tipo == "Capítulo de libro":
+                Tipo = "21"
+            elif Tipo == "Otro capítulo de libro publicado":
+                Tipo = "20"
+            else:
+                print(Tipo)
+            #Nombre Producto
+            index1 = info_caplibro.find(',                    \r\n                            \r\n\r\n                            "') + 84
+            index2 = info_caplibro.find('"\r\n                            ')
+            NombreProducto = info_caplibro[index1:index2]
+            #Nombre Libro
+            index = info_caplibro.find(',                    \r\n                            \r\n\r\n                            "') + 84
+            index1 = info_caplibro.find('\r\n                    ', index , len(info_caplibro)) + 30
+            index2 = info_caplibro.find('\r\n                            . En:')
+            Libro = info_caplibro[index1:index2]
+            #Lugar
+            index1 = info_caplibro.find('En: ') + 4
+            index2 = info_caplibro.find('\xa0\r\n                    ',index1,len(info_caplibro))
+            lugar = info_caplibro[index1:index2]
+            #Editorial
+            index1 = info_caplibro.find("ed:\xa0") + 4
+            index2 = info_caplibro.find(", v.",index1,len(info_caplibro))
+            Editorial = info_caplibro[index1:index2]
+            #Año
+            index1 = info_caplibro.find('\xa0\r\n                            \r\n                            ,') + 62
+            index2 = index1 + 4
+            Anocaplibro = info_caplibro[index1:index2]
+            if Anocaplibro == '\n   ':
+                index1 = info_caplibro.find('\xa0\r\n                            1\r\n                            ,') + 63
+                index2 = index1 + 4
+                Anocaplibro = info_caplibro[index1:index2]
+            #Páginas
+            index1 = info_caplibro.find(", p.") + 4
+            index2 = info_caplibro.find("\r\n                            -",index1,len(info_caplibro))
+            Pagini = info_caplibro[index1:index2]
+            index1 = info_caplibro.find("-",index1,len(info_caplibro)) + 2
+            index2 = info_caplibro.find("\xa0",index1,len(info_caplibro))
+            Pagfin = info_caplibro[index1:index2]
+            paginas = Pagini + " - " + Pagfin
+            #Palabras
+            index1 = info_caplibro.find("Palabras:")
+            index2 = info_caplibro.find("Areas:")
+            index3 = info_caplibro.find("Sectores:")
+            if index1 == -1:
+                palabras = ""
+            elif index2 != -1:
+                palabras = info_caplibro[index1 + 9:index2]
+            elif index2 == -1 and index3 != -1:
+                palabras = info_caplibro[index1 + 9:index3]
+            else:
+                palabras = info_caplibro[index1 + 9:len(info_caplibro)]
+            #Areas
+            index1 = info_caplibro.find("Areas:")
+            index2 = info_caplibro.find("Sectores:")
+            if index1 == -1:
+                areas = ""
+            elif index2 != -1:
+                areas = info_caplibro[index1 + 6:index2]
+            else:
+                areas = info_caplibro[index1 + 6:len(info_caplibro)]
+            #Sectores
+            index1 = info_caplibro.find("Sectores:")
+            if index1 == -1:
+                sectores = ""
+            else:
+                sectores = info_caplibro[index1 + 9:len(info_caplibro)]
+            #Volumen
+            index1 = info_caplibro.find(", v.") + 4
+            index2 = info_caplibro.find(", p.")
+            Volumen = info_caplibro[index1:index2]
+            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            + str(COD_PRODUCTO) + ";"\
+            + Tipo + ";"\
+            + re.sub(' +',' ',Libro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Anocaplibro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',palabras.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',areas.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',sectores.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',coautores.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',Editorial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Volumen.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',paginas.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" \
+            + "\n")
+            init.PROD_BIBLIOGRAFICA.append(RH + ";"\
+            + str(COD_PRODUCTO) + ";"\
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',Pagini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Pagfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "\n")
+            COD_PRODUCTO = COD_PRODUCTO + 1
+    else:
+        print("El Docente no tiene Capítulos de libros Asociados")
+    contcaplibro = [COD_PRODUCTO]

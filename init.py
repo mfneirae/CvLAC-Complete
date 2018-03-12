@@ -191,6 +191,18 @@ def inicio():
     Libro - pedagógico; \
     ;\
     ;\n \
+    20; \
+    Otro capítulo de libro publicado; \
+    Otro capítulo de libro; \
+    Capítulo de libro - Otro; \
+    ;\
+    ;\n \
+    21; \
+    Capítulo de libro; \
+    Capítulo de libro; \
+    Capítulo de libro; \
+    ;\
+    ;\n \
     N; \
     el final; \
     el final; \

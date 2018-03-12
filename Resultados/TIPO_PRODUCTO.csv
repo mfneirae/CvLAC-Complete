@@ -19,4 +19,6 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      17;     Producción bibliográfica - Libro - Libro resultado de investigación;     Libro resultado de investigación;     Libro;     ;    ;
      18;     Producción bibliográfica - Libro - Otro libro publicado;     Otro libro publicado;     Libro - Otro;     ;    ;
      19;     Producción bibliográfica - Libro - Libro pedagógico y/o de divulgación;     Libro pedagógico y/o de divulgación;     Libro - pedagógico;     ;    ;
+     20;     Otro capítulo de libro publicado;     Otro capítulo de libro;     Capítulo de libro - Otro;     ;    ;
+     21;     Capítulo de libro;     Capítulo de libro;     Capítulo de libro;     ;    ;
      N;     el final;     el final;     el final;     ;    ;
