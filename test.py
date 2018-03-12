@@ -19,10 +19,10 @@ y = 0
 page_soup = soup(page_html,"html.parser")
 containers = page_soup.findAll("table")
 for a in range(0,len(containers)):
-    buscaworkp = containers[a].h3
-    #print(buscaworkp)
+    buscatraduccion = containers[a].h3
+    #print(buscatraduccion)
     try:
-        if buscaworkp.text == "Documentos de trabajo":
+        if buscatraduccion.text == "Traducciones":
             all = a
             #print(all)
             break
@@ -34,24 +34,10 @@ container = containerb.findAll("blockquote")
 tipotexno = containerb.findAll("li")
 
 cont = container[0]
-info_workp = cont.text
+info_traduccion = cont.text
 tipotex = tipotexno[0]
 
-#Lugar
-index1 = info_workp.find('En: ') + 4
-index2 = info_workp.find('\r\n                    ',index1,len(info_workp))
-lugar = info_workp[index1:index2]
-if lugar == ". ":
-    lugar = ""
-
-index1 = info_workp.find("Palabras:")
-index2 = info_workp.find("Areas:")
-index3 = info_workp.find("Sectores:")
-if index1 == -1:
-    palabras = ""
-elif index2 != -1:
-    palabras = info_workp[index1 + 9:index2]
-elif index2 == -1 and index3 != -1:
-    palabras = info_workp[index1 + 9:index3]
-else:
-    palabras = info_workp[index1 + 9:len(info_workp)]
+index = info_traduccion.find("En:")
+index1 = info_traduccion.find('\r\n                    ',index,len(info_traduccion)) + 22
+index2 = info_traduccion.find('.               \r\n',index1,len(info_traduccion))
+Anotraduccion = info_traduccion[index1:index2]

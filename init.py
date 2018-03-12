@@ -233,10 +233,28 @@ def inicio():
     Otro; \
     ;\
     ;\n \
-    26; \
+    27; \
     Producción bibliográfica - Documento de trabajo (Working Paper); \
     Documento de trabajo (Working Paper); \
     Otro; \
+    ;\
+    ;\n \
+    28; \
+    Producción bibliográfica - Traducciones - Artículo; \
+    Traducciones - Artículo; \
+    Traducciones; \
+    ;\
+    ;\n \
+    29; \
+    Producción bibliográfica - Traducciones - Libro; \
+    Traducciones - Libro; \
+    Traducciones; \
+    ;\
+    ;\n \
+    30; \
+    Producción bibliográfica - Traducciones - Otra; \
+    Traducciones - Otra; \
+    Traducciones; \
     ;\
     ;\n \
     N; \
