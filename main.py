@@ -63,6 +63,9 @@ for q in range(2,total):
         produccion_bibliografica.texnocienextract()
         from produccion_bibliografica import conttexnocien
         COD_PRODUCTO = int("".join(str(x) for x in conttexnocien))
+        produccion_bibliografica.workpextract()
+        from produccion_bibliografica import contworkp
+        COD_PRODUCTO = int("".join(str(x) for x in contworkp))
         # pubsoft.pubextract()
     else:
         pass

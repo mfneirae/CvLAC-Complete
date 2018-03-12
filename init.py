@@ -233,6 +233,12 @@ def inicio():
     Otro; \
     ;\
     ;\n \
+    26; \
+    Producción bibliográfica - Documento de trabajo (Working Paper); \
+    Documento de trabajo (Working Paper); \
+    Otro; \
+    ;\
+    ;\n \
     N; \
     el final; \
     el final; \

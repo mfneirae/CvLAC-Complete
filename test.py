@@ -19,10 +19,10 @@ y = 0
 page_soup = soup(page_html,"html.parser")
 containers = page_soup.findAll("table")
 for a in range(0,len(containers)):
-    buscatexnocien = containers[a].h3
-    #print(buscatexnocien)
+    buscaworkp = containers[a].h3
+    #print(buscaworkp)
     try:
-        if buscatexnocien.text == "Textos en publicaciones no científicas":
+        if buscaworkp.text == "Documentos de trabajo":
             all = a
             #print(all)
             break
@@ -31,13 +31,27 @@ for a in range(0,len(containers)):
 
 containerb = containers[all]
 container = containerb.findAll("blockquote")
-tipoart = containerb.findAll("li")
-cont = container[0]
-tipotex = tipotexno[0]
-tipo = tipoar.text
-info_texnocien = cont.text
+tipotexno = containerb.findAll("li")
 
-#Volumen
-index1 = info_texnocien.find("\r\n                    v.") + 24
-index2 = info_texnocien.find("\r\n",index1,len(info_texnocien))
-Volumen = info_texnocien[index1:index2]
+cont = container[0]
+info_workp = cont.text
+tipotex = tipotexno[0]
+
+#Lugar
+index1 = info_workp.find('En: ') + 4
+index2 = info_workp.find('\r\n                    ',index1,len(info_workp))
+lugar = info_workp[index1:index2]
+if lugar == ". ":
+    lugar = ""
+
+index1 = info_workp.find("Palabras:")
+index2 = info_workp.find("Areas:")
+index3 = info_workp.find("Sectores:")
+if index1 == -1:
+    palabras = ""
+elif index2 != -1:
+    palabras = info_workp[index1 + 9:index2]
+elif index2 == -1 and index3 != -1:
+    palabras = info_workp[index1 + 9:index3]
+else:
+    palabras = info_workp[index1 + 9:len(info_workp)]
