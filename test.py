@@ -19,10 +19,10 @@ y = 0
 page_soup = soup(page_html,"html.parser")
 containers = page_soup.findAll("table")
 for a in range(0,len(containers)):
-    buscaotrapb = containers[a].h3
-    #print(buscaotrapb)
+    buscaptsoftware = containers[a].h3
+    #print(buscaptsoftware)
     try:
-        if buscaotrapb.text == "Otra producción blibliográfica":
+        if buscaptsoftware.text == "Softwares":
             all = a
             #print(all)
             break
@@ -34,11 +34,9 @@ container = containerb.findAll("blockquote")
 tipotexno = containerb.findAll("li")
 
 cont = container[0]
-info_otrapb = cont.text
+info_ptsoftware = cont.text
 tipotex = tipotexno[0]
 
-index1 = info_otrapb.find('p.') + 3
-index2 = info_otrapb.find('\n',index1,len(info_otrapb))
-paginas = info_otrapb[index1:index2]
-if paginas == ". ":
-    paginas = ""
+index1 = info_ptsoftware.find('ambiente:') + 10
+index2 = info_ptsoftware.find(',',index1,len(info_ptsoftware))
+Ambiente = info_ptsoftware[index1:index2]

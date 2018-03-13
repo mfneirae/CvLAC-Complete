@@ -25,7 +25,7 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      23;     Producción bibliográfica - Otro artículo publicado - Revista de divulgación;     Revista de divulgación;     Otro;     ;    ;
      24;     Producción bibliográfica - Otro artículo publicado - Cartas al editor;     Cartas al editor;     Otro;     ;    ;
      25;     Producción bibliográfica - Otro artículo publicado - Reseñas de libros;     Reseñas de libros;     Otro;     ;    ;
-     26;     Producción bibliográfica - Otro artículo publicado - Columnas de opinión;     Columnas de opinión;     Otro;     ;    ;
+     26;     Producción bibliográfica - Otro artículo publicado - Columna de opinión;     Columnas de opinión;     Otro;     ;    ;
      27;     Producción bibliográfica - Documento de trabajo (Working Paper);     Documento de trabajo (Working Paper);     Otro;     ;    ;
      28;     Producción bibliográfica - Traducciones - Artículo;     Traducciones - Artículo;     Traducciones;     ;    ;
      29;     Producción bibliográfica - Traducciones - Libro;     Traducciones - Libro;     Traducciones;     ;    ;
@@ -34,4 +34,5 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      32;     Producción bibliográfica - Otra producción bibliográfica - Prólogo;     Prólogo;     Otro;     ;    ;
      33;     Producción bibliográfica - Otra producción bibliográfica - Epílogo;     Epílogo;     Otro;     ;    ;
      34;     Producción bibliográfica - Otra producción bibliográfica - Otra;     Otra;     Otro;     ;    ;
+     35;     Producción técnica - Softwares - Computacional;     Software;     Software;     ;    ;
      N;     el final;     el final;     el final;     ;    ;

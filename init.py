@@ -19,6 +19,7 @@ def inicio():
     global TIPO_PRODUCTO
     global TIPO_EVENTO
     global PROD_BIBLIOGRAFICA
+    global PROD_TECNICA
     RE_PERSONA_PRODUCTO = ["COD_RH; \
     COD_PRODUCTO; \
     COD_TIPO_PRODUCTO; \
@@ -228,7 +229,7 @@ def inicio():
     ;\
     ;\n \
     26; \
-    Producción bibliográfica - Otro artículo publicado - Columnas de opinión; \
+    Producción bibliográfica - Otro artículo publicado - Columna de opinión; \
     Columnas de opinión; \
     Otro; \
     ;\
@@ -281,6 +282,12 @@ def inicio():
     Otro; \
     ;\
     ;\n \
+    35; \
+    Producción técnica - Softwares - Computacional; \
+    Software; \
+    Software; \
+    ;\
+    ;\n \
     N; \
     el final; \
     el final; \
@@ -325,3 +332,16 @@ def inicio():
 
     RE_DNI_CODRH = [ "DNI; \
     COD_RH\n"]
+
+    PROD_TECNICA = [ "COD_RH; \
+    COD_PRODUCTO; \
+    RNOMBRE_COMERCIAL; \
+    CONTRATO/REGISTRO; \
+    TITULAR; \
+    DURACION; \
+    REGULACION; \
+    TIPO-REGULACION; \
+    CICLO; \
+    ESTADO_VARIEDAD; \
+    PLATAFORMA; \
+    AMBIENTE\n"]

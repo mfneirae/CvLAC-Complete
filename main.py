@@ -14,11 +14,13 @@
 
 import openpyxl
 import init
+import sys
 import apropiacion
 import produccion_bibliografica
+import produccion_tecnica
 global COD_PRODUCTO
-wb = openpyxl.load_workbook('./Base - completa.xlsx')
-# wb = openpyxl.load_workbook('./Base.xlsx')
+# wb = openpyxl.load_workbook('./Base - completa.xlsx')
+wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
 total = sheet.max_row +1
 COD_PRODUCTO = 1;
@@ -36,27 +38,21 @@ for q in range(2,total):
     + str(RH) \
     + "\n")
     if my_url != '-':
-        #Eventos
         apropiacion.evenextract()
         from apropiacion import conteventos
         COD_PRODUCTO = int("".join(str(x) for x in conteventos))
-        #Redes
         apropiacion.redesextract()
         from apropiacion import contredes
         COD_PRODUCTO = int("".join(str(x) for x in contredes))
-        #Estrategias
         apropiacion.estrategiaextract()
         from apropiacion import contEstrategia
         COD_PRODUCTO = int("".join(str(x) for x in contEstrategia))
-        #Articulos
         produccion_bibliografica.artiextract()
         from produccion_bibliografica import contarticulo
         COD_PRODUCTO = int("".join(str(x) for x in contarticulo))
-        #Libros
         produccion_bibliografica.libextract()
         from produccion_bibliografica import contlibro
         COD_PRODUCTO = int("".join(str(x) for x in contlibro))
-        #Libros
         produccion_bibliografica.caplibroextract()
         from produccion_bibliografica import contcaplibro
         COD_PRODUCTO = int("".join(str(x) for x in contcaplibro))
@@ -72,11 +68,12 @@ for q in range(2,total):
         produccion_bibliografica.otrapbextract()
         from produccion_bibliografica import contotrapb
         COD_PRODUCTO = int("".join(str(x) for x in contotrapb))
-        # pubsoft.pubextract()
-    else:
-        pass
+        produccion_tecnica.ptsoftwareextract()
+        from produccion_tecnica import contptsoftware
+        COD_PRODUCTO = int("".join(str(x) for x in contptsoftware))
+        print(str(q/(total-1)*100)+"%")
+        if q==total-1:
+            import printcsv
+            print ("Done! :]")
+            sys.exit()
     COD_PRODUCTO = 1;
-
-import printcsv
-
-print ("Done! :]")
