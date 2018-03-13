@@ -71,6 +71,9 @@ for q in range(2,total):
         produccion_tecnica.ptsoftwareextract()
         from produccion_tecnica import contptsoftware
         COD_PRODUCTO = int("".join(str(x) for x in contptsoftware))
+        produccion_tecnica.ptproductoextract()
+        from produccion_tecnica import contptproducto
+        COD_PRODUCTO = int("".join(str(x) for x in contptproducto))
         print(str(q/(total-1)*100)+"%")
         if q==total-1:
             import printcsv

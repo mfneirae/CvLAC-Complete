@@ -61,3 +61,11 @@ for item in init.PROD_BIBLIOGRAFICA:
     except UnicodeEncodeError:
         pass
 f.close()
+
+f = open ("./Resultados/PROD_TECNICA.csv", "w")
+for item in init.PROD_TECNICA:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()

@@ -288,6 +288,30 @@ def inicio():
     Software; \
     ;\
     ;\n \
+    36; \
+    Producción técnica - Productos tecnológicos - Gen Clonado; \
+    Productos tecnológicos - Gen Clonado; \
+    Productos tecnológicos; \
+    ;\
+    ;\n \
+    37; \
+    Producción técnica - Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada; \
+    Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada; \
+    Productos tecnológicos; \
+    ;\
+    ;\n \
+    38; \
+    Producción técnica - Productos tecnológicos - Otro; \
+    Productos tecnológicos - Otro; \
+    Productos tecnológicos; \
+    ;\
+    ;\n \
+    39; \
+    Producción técnica - Productos tecnológicos - Base de datos de referencia para investigación; \
+    Productos tecnológicos - Base de datos de referencia para investigación; \
+    Productos tecnológicos; \
+    ;\
+    ;\n \
     N; \
     el final; \
     el final; \

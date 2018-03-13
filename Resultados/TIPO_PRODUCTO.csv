@@ -35,4 +35,8 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      33;     Producción bibliográfica - Otra producción bibliográfica - Epílogo;     Epílogo;     Otro;     ;    ;
      34;     Producción bibliográfica - Otra producción bibliográfica - Otra;     Otra;     Otro;     ;    ;
      35;     Producción técnica - Softwares - Computacional;     Software;     Software;     ;    ;
+     36;     Producción técnica - Productos tecnológicos - Gen Clonado;     Productos tecnológicos - Gen Clonado;     Productos tecnológicos;     ;    ;
+     37;     Producción técnica - Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada;     Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada;     Productos tecnológicos;     ;    ;
+     38;     Producción técnica - Productos tecnológicos - Otro;     Productos tecnológicos - Otro;     Productos tecnológicos;     ;    ;
+     39;     Producción técnica - Productos tecnológicos - Base de datos de referencia para investigación;     Productos tecnológicos - Base de datos de referencia para investigación;     Productos tecnológicos;     ;    ;
      N;     el final;     el final;     el final;     ;    ;
