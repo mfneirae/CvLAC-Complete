@@ -74,6 +74,25 @@ for q in range(2,total):
         produccion_tecnica.ptproductoextract()
         from produccion_tecnica import contptproducto
         COD_PRODUCTO = int("".join(str(x) for x in contptproducto))
+        produccion_tecnica.ptdiseñoextract()
+        from produccion_tecnica import contptdiseño
+        COD_PRODUCTO = int("".join(str(x) for x in contptdiseño))
+        produccion_tecnica.ptcircuitosextract()
+        from produccion_tecnica import contptcircuitos
+        COD_PRODUCTO = int("".join(str(x) for x in contptcircuitos))
+        produccion_tecnica.ptinnovaextract()
+        from produccion_tecnica import contptinnova
+        COD_PRODUCTO = int("".join(str(x) for x in contptinnova))
+        produccion_tecnica.ptvaranimalextract()
+        from produccion_tecnica import contptvaranimal
+        COD_PRODUCTO = int("".join(str(x) for x in contptvaranimal))
+        produccion_tecnica.ptprocesoextract()
+        from produccion_tecnica import contptproceso
+        COD_PRODUCTO = int("".join(str(x) for x in contptproceso))
+        produccion_tecnica.ptcartasextract()
+        from produccion_tecnica import contptcartas
+        COD_PRODUCTO = int("".join(str(x) for x in contptcartas))
+
         print(str(q/(total-1)*100)+"%")
         if q==total-1:
             import printcsv

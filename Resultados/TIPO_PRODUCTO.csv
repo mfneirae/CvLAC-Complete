@@ -39,4 +39,15 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      37;     Producción técnica - Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada;     Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada;     Productos tecnológicos;     ;    ;
      38;     Producción técnica - Productos tecnológicos - Otro;     Productos tecnológicos - Otro;     Productos tecnológicos;     ;    ;
      39;     Producción técnica - Productos tecnológicos - Base de datos de referencia para investigación;     Productos tecnológicos - Base de datos de referencia para investigación;     Productos tecnológicos;     ;    ;
+     40;     Producción técnica - Diseño Industrial;     Diseño Industrial;     Otro;     ;    ;
+     41;     Producción técnica - Esquema de circuito integrado;     Esquema de circuito integrado;     Otro;     ;    ;
+     42;     Producción técnica - Innovaciones generadas de producción empresarial - Organizacional;     Innovaciones generadas de producción empresarial - Organizacional;     Innovaciones;     ;    ;
+     43;     Producción técnica - Innovaciones generadas de producción empresarial - Empresarial;     Innovaciones generadas de producción empresarial - Empresarial;     Innovaciones;     ;    ;
+     44;     Producción técnica - Variedad animal;     Variedad animal;     Otro;     ;    ;
+     45;     Producción técnica - Innovación de proceso o procedimiento;     Innovación de proceso o procedimiento;     Innovación;     ;    ;
+     46;     Producción técnica - Cartas, mapas o similares - Aerofotograma;     Aerofotograma;     Otro;     ;    ;
+     47;     Producción técnica - Cartas, mapas o similares - Carta;     Carta;     Otro;     ;    ;
+     48;     Producción técnica - Cartas, mapas o similares - Fotograma;     Fotograma;     Otro;     ;    ;
+     49;     Producción técnica - Cartas, mapas o similares - Mapa;     Mapa;     Otro;     ;    ;
+     50;     Producción técnica - Cartas, mapas o similares - Otra;     Otra;     Otro;     ;    ;
      N;     el final;     el final;     el final;     ;    ;

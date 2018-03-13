@@ -312,6 +312,72 @@ def inicio():
     Productos tecnológicos; \
     ;\
     ;\n \
+    40; \
+    Producción técnica - Diseño Industrial; \
+    Diseño Industrial; \
+    Otro; \
+    ;\
+    ;\n \
+    41; \
+    Producción técnica - Esquema de circuito integrado; \
+    Esquema de circuito integrado; \
+    Otro; \
+    ;\
+    ;\n \
+    42; \
+    Producción técnica - Innovaciones generadas de producción empresarial - Organizacional; \
+    Innovaciones generadas de producción empresarial - Organizacional; \
+    Innovaciones; \
+    ;\
+    ;\n \
+    43; \
+    Producción técnica - Innovaciones generadas de producción empresarial - Empresarial; \
+    Innovaciones generadas de producción empresarial - Empresarial; \
+    Innovaciones; \
+    ;\
+    ;\n \
+    44; \
+    Producción técnica - Variedad animal; \
+    Variedad animal; \
+    Otro; \
+    ;\
+    ;\n \
+    45; \
+    Producción técnica - Innovación de proceso o procedimiento; \
+    Innovación de proceso o procedimiento; \
+    Innovación; \
+    ;\
+    ;\n \
+    46; \
+    Producción técnica - Cartas, mapas o similares - Aerofotograma; \
+    Aerofotograma; \
+    Otro; \
+    ;\
+    ;\n \
+    47; \
+    Producción técnica - Cartas, mapas o similares - Carta; \
+    Carta; \
+    Otro; \
+    ;\
+    ;\n \
+    48; \
+    Producción técnica - Cartas, mapas o similares - Fotograma; \
+    Fotograma; \
+    Otro; \
+    ;\
+    ;\n \
+    49; \
+    Producción técnica - Cartas, mapas o similares - Mapa; \
+    Mapa; \
+    Otro; \
+    ;\
+    ;\n \
+    50; \
+    Producción técnica - Cartas, mapas o similares - Otra; \
+    Otra; \
+    Otro; \
+    ;\
+    ;\n \
     N; \
     el final; \
     el final; \
