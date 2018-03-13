@@ -257,6 +257,30 @@ def inicio():
     Traducciones; \
     ;\
     ;\n \
+    31; \
+    Producción bibliográfica - Otra producción bibliográfica - Introducción; \
+    Introducción; \
+    Otro; \
+    ;\
+    ;\n \
+    32; \
+    Producción bibliográfica - Otra producción bibliográfica - Prólogo; \
+    Prólogo; \
+    Otro; \
+    ;\
+    ;\n \
+    33; \
+    Producción bibliográfica - Otra producción bibliográfica - Epílogo; \
+    Epílogo; \
+    Otro; \
+    ;\
+    ;\n \
+    34; \
+    Producción bibliográfica - Otra producción bibliográfica - Otra; \
+    Otra; \
+    Otro; \
+    ;\
+    ;\n \
     N; \
     el final; \
     el final; \

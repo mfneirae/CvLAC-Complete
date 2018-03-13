@@ -30,4 +30,8 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      28;     Producción bibliográfica - Traducciones - Artículo;     Traducciones - Artículo;     Traducciones;     ;    ;
      29;     Producción bibliográfica - Traducciones - Libro;     Traducciones - Libro;     Traducciones;     ;    ;
      30;     Producción bibliográfica - Traducciones - Otra;     Traducciones - Otra;     Traducciones;     ;    ;
+     31;     Producción bibliográfica - Otra producción bibliográfica - Introducción;     Introducción;     Otro;     ;    ;
+     32;     Producción bibliográfica - Otra producción bibliográfica - Prólogo;     Prólogo;     Otro;     ;    ;
+     33;     Producción bibliográfica - Otra producción bibliográfica - Epílogo;     Epílogo;     Otro;     ;    ;
+     34;     Producción bibliográfica - Otra producción bibliográfica - Otra;     Otra;     Otro;     ;    ;
      N;     el final;     el final;     el final;     ;    ;
