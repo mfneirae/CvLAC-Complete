@@ -22,7 +22,7 @@ for a in range(0,len(containers)):
     buscaptproducto = containers[a].h3
     #print(buscaptproducto)
     try:
-        if buscaptproducto.text == "Productos tecnológicos":
+        if buscaptproducto.text == "Variedad vegetal":
             all = a
             #print(all)
             break

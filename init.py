@@ -378,6 +378,108 @@ def inicio():
     Otro; \
     ;\
     ;\n \
+    51; \
+    Producción técnica - Variedad vegetal; \
+    Variedad vegetal; \
+    Otro; \
+    ;\
+    ;\n \
+    52; \
+    Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Servicios de proyectos de IDI; \
+    Servicios de proyectos de IDI; \
+    Otro; \
+    ;\
+    ;\n \
+    53; \
+    Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Comercialización de tecnología; \
+    Comercialización de tecnología; \
+    Otro; \
+    ;\
+    ;\n \
+    54; \
+    Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Análisis de competitividad; \
+    Análisis de competitividad; \
+    Otro; \
+    ;\
+    ;\n \
+    55; \
+    Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Informe técnico; \
+    Informe técnico; \
+    Otro; \
+    ;\
+    ;\n \
+    56; \
+    Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Otro; \
+    Otro; \
+    Otro; \
+    ;\
+    ;\n \
+    57; \
+    Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Acciones de transferencia tecnológica; \
+    Acciones de transferencia tecnológica; \
+    Otro; \
+    ;\
+    ;\n \
+    58; \
+    Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Desarrollo de productos; \
+    Desarrollo de productos; \
+    Otro; \
+    ;\
+    ;\n \
+    59; \
+    Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Implementación de sistemas de análisis; \
+    Implementación de sistemas de análisis; \
+    Otro; \
+    ;\
+    ;\n \
+    60; \
+    Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Consultoría en artes,arquitectura y diseño; \
+    Consultoría en artes,arquitectura y diseño; \
+    Otro; \
+    ;\
+    ;\n \
+    61; \
+    Producción técnica - Regulación, norma, reglamento o legislación - Ambiental o de Salud; \
+    Regulación, norma, reglamento o legislación - Ambiental o de Salud; \
+    Otro; \
+    ;\
+    ;\n \
+    62; \
+    Producción técnica - Regulación, norma, reglamento o legislación - Educativa; \
+    Regulación, norma, reglamento o legislación - Educativa; \
+    Otro; \
+    ;\
+    ;\n \
+    63; \
+    Producción técnica - Regulación, norma, reglamento o legislación - Social; \
+    Regulación, norma, reglamento o legislación - Social; \
+    Otro; \
+    ;\
+    ;\n \
+    64; \
+    Producción técnica - Regulación, norma, reglamento o legislación - Técnica; \
+    Regulación, norma, reglamento o legislación - Técnica; \
+    Otro; \
+    ;\
+    ;\n \
+    65; \
+    Producción técnica - Regulación, norma, reglamento o legislación - Guía de práctica clínica; \
+    Regulación, norma, reglamento o legislación - Guía de práctica clínica; \
+    Otro; \
+    ;\
+    ;\n \
+    66; \
+    Producción técnica - Regulación, norma, reglamento o legislación - Proyecto de ley; \
+    Regulación, norma, reglamento o legislación - Proyecto de ley; \
+    Otro; \
+    ;\
+    ;\n \
+    67; \
+    Producción técnica - Reglamento Técnico; \
+    Reglamento Técnico; \
+    Otro; \
+    ;\
+    ;\n \
     N; \
     el final; \
     el final; \

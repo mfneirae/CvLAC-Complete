@@ -1,9 +1,9 @@
-def ptcartasextract():
+def ptreglamentoextract():
     from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
     import bs4
     import init
     import re
-    global contptcartas
+    global contptreglamento
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
     uClient = uReq(my_url)
@@ -16,10 +16,10 @@ def ptcartasextract():
     page_soup = soup(page_html,"html.parser")
     containers = page_soup.findAll("table")
     for a in range(0,len(containers)):
-        buscaptcartas = containers[a].h3
-        #print(buscaptcartas)
+        buscaptreglamento = containers[a].h3
+        #print(buscaptreglamento)
         try:
-            if buscaptcartas.text == "Cartas, mapas y similares":
+            if buscaptreglamento.text == "Reglamentos":
                 all = a
                 #print(all)
                 break
@@ -32,79 +32,83 @@ def ptcartasextract():
         tipotexno = containerb.findAll("li")
         for x in range(0, len(container)):
             cont = container[x]
-            info_ptcartas = cont.text
+            info_ptreglamento = cont.text
             #Tipo Otra Produccion
             tipotex = tipotexno[x]
             tipo = tipotex.text
-            if tipo.strip() == "Producción técnica - Cartas, mapas o similares - Aerofotograma":
-                tipo = "46"
-            elif tipo.strip() == "Producción técnica - Cartas, mapas o similares - Carta":
-                tipo = "47"
-            elif tipo.strip() == "Producción técnica - Cartas, mapas o similares - Fotograma":
-                tipo = "48"
-            elif tipo.strip() == "Producción técnica - Cartas, mapas o similares - Mapa":
-                tipo = "49"
-            elif tipo.strip() == "Producción técnica - Cartas, mapas o similares - Otra":
-                tipo = "50"
+            if tipo.strip() == "Producción técnica - Reglamento Técnico":
+                tipo = "67"
+            # elif tipo.strip() == "Producción técnica - Regulación, norma, reglamento o legislación - Educativa":
+            #     tipo = "62"
             else:
                 print(tipo)
             #Nombre Producto
-            index = info_ptcartas.find('Nombre comercial:')
-            index = info_ptcartas.rfind(',',0,index)
-            index1 = info_ptcartas.rfind(',',0,index) + 2
-            index2 = info_ptcartas.find(',',index1 + 1,len(info_ptcartas))
-            NombreProducto = info_ptcartas[index1:index2]
+            index = info_ptreglamento.find('Nombre comercial:')
+            index = info_ptreglamento.rfind(',',0,index)
+            index1 = info_ptreglamento.rfind(',',0,index) + 2
+            index2 = info_ptreglamento.find(',',index1 + 1,len(info_ptreglamento))
+            NombreProducto = info_ptreglamento[index1:index2]
             #Coautores
             index2 = index1
             index1 = 1
-            coautores = info_ptcartas[index1:index2]
+            coautores = info_ptreglamento[index1:index2]
             #Nombre Comercial
-            index1 = info_ptcartas.find('Nombre comercial:') + 18
-            index2 = info_ptcartas.find(',',index1,len(info_ptcartas))
-            NombreComercial = info_ptcartas[index1:index2]
+            index1 = info_ptreglamento.find('Nombre comercial:') + 18
+            index2 = info_ptreglamento.find(',',index1,len(info_ptreglamento))
+            NombreComercial = info_ptreglamento[index1:index2]
+            #Paginas
+            Paginas = ""
+            #Duración
+            Duracion = ""
+            #Editorial
+            Editorial = ""
+            #Regulacion
+            Regulacion = ""
+            #Tipo Regulacion
+            TipoRegulacion = ""
             #Contrato / Registro
-            index1 = info_ptcartas.find('contrato/registro:') + 19
-            index2 = info_ptcartas.find(',',index1,len(info_ptcartas))
-            Registro = info_ptcartas[index1:index2]
+            index1 = info_ptreglamento.find('contrato/registro:') + 19
+            index2 = info_ptreglamento.find(',',index1,len(info_ptreglamento))
+            Registro = info_ptreglamento[index1:index2]
             #Lugar
-            index1 = info_ptcartas.find('En: ') + 4
-            index2 = info_ptcartas.find(',\xa0\r\n                    ',index1,len(info_ptcartas))
-            lugar = info_ptcartas[index1:index2]
+            index1 = info_ptreglamento.find('En: ') + 4
+            index2 = info_ptreglamento.find(',\xa0\r\n                    ',index1,len(info_ptreglamento))
+            lugar = info_ptreglamento[index1:index2]
             if lugar == ". ":
                 lugar = ""
             #Año
-            index = info_ptcartas.find("En:")
-            index = info_ptcartas.find(",",index,len(info_ptcartas)) +1
-            index1 = info_ptcartas.find(',',index,len(info_ptcartas)) +1
-            index2 = info_ptcartas.find(',',index1,len(info_ptcartas))
-            Anoptcartas = info_ptcartas[index1:index2]
+            index = info_ptreglamento.find("En:")
+            index = info_ptreglamento.find(",",index,len(info_ptreglamento)) +1
+            index1 = info_ptreglamento.find(',',index,len(info_ptreglamento)) +1
+            index2 = info_ptreglamento.find(',',index1,len(info_ptreglamento))
+            Anoptreglamento = info_ptreglamento[index1:index2]
             #Palabras
-            index1 = info_ptcartas.find("Palabras:")
-            index2 = info_ptcartas.find("Areas:")
-            index3 = info_ptcartas.find("Sectores:")
+            index1 = info_ptreglamento.find("Palabras:")
+            index2 = info_ptreglamento.find("Areas:")
+            index3 = info_ptreglamento.find("Sectores:")
             if index1 == -1:
                 palabras = ""
             elif index2 != -1:
-                palabras = info_ptcartas[index1 + 9:index2]
+                palabras = info_ptreglamento[index1 + 9:index2]
             elif index2 == -1 and index3 != -1:
-                palabras = info_ptcartas[index1 + 9:index3]
+                palabras = info_ptreglamento[index1 + 9:index3]
             else:
-                palabras = info_ptcartas[index1 + 9:len(info_ptcartas)]
+                palabras = info_ptreglamento[index1 + 9:len(info_ptreglamento)]
             #Areas
-            index1 = info_ptcartas.find("Areas:")
-            index2 = info_ptcartas.find("Sectores:")
+            index1 = info_ptreglamento.find("Areas:")
+            index2 = info_ptreglamento.find("Sectores:")
             if index1 == -1:
                 areas = ""
             elif index2 != -1:
-                areas = info_ptcartas[index1 + 6:index2]
+                areas = info_ptreglamento[index1 + 6:index2]
             else:
-                areas = info_ptcartas[index1 + 6:len(info_ptcartas)]
+                areas = info_ptreglamento[index1 + 6:len(info_ptreglamento)]
             #Sectores
-            index1 = info_ptcartas.find("Sectores:")
+            index1 = info_ptreglamento.find("Sectores:")
             if index1 == -1:
                 sectores = ""
             else:
-                sectores = info_ptcartas[index1 + 9:len(info_ptcartas)]
+                sectores = info_ptreglamento[index1 + 9:len(info_ptreglamento)]
             init.RE_PERSONA_PRODUCTO.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
@@ -113,16 +117,16 @@ def ptcartasextract():
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + re.sub(' +',' ',Anoptcartas.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Anoptreglamento.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
             + re.sub(' +',' ',palabras.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',areas.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',sectores.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',coautores.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
+            + re.sub(' +',' ',Editorial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
-            + "" + ";" \
-            + "" + ";" \
+            + re.sub(' +',' ',Paginas.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -133,9 +137,9 @@ def ptcartasextract():
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
-            + "" + ";" \
-            + "" + ";" \
-            + "" + ";" \
+            + re.sub(' +',' ',Duracion.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Regulacion.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',TipoRegulacion.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -143,5 +147,5 @@ def ptcartasextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Cartas o Mapas Registrados")
-    contptcartas = [COD_PRODUCTO]
+        print("El Docente ",name," ",last," ","no tiene Reglamentos Asociados")
+    contptreglamento = [COD_PRODUCTO]

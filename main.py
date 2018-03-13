@@ -92,6 +92,18 @@ for q in range(2,total):
         produccion_tecnica.ptcartasextract()
         from produccion_tecnica import contptcartas
         COD_PRODUCTO = int("".join(str(x) for x in contptcartas))
+        produccion_tecnica.ptvegetalextract()
+        from produccion_tecnica import contptvegetal
+        COD_PRODUCTO = int("".join(str(x) for x in contptvegetal))
+        produccion_tecnica.pttratecextract()
+        from produccion_tecnica import contpttratec
+        COD_PRODUCTO = int("".join(str(x) for x in contpttratec))
+        produccion_tecnica.ptnormaextract()
+        from produccion_tecnica import contptnorma
+        COD_PRODUCTO = int("".join(str(x) for x in contptnorma))
+        produccion_tecnica.ptreglamentoextract()
+        from produccion_tecnica import contptreglamento
+        COD_PRODUCTO = int("".join(str(x) for x in contptreglamento))
 
         print(str(q/(total-1)*100)+"%")
         if q==total-1:
