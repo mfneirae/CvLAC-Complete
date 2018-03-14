@@ -19,8 +19,8 @@ import apropiacion
 import produccion_bibliografica
 import produccion_tecnica
 global COD_PRODUCTO
-# wb = openpyxl.load_workbook('./Base - completa.xlsx')
-wb = openpyxl.load_workbook('./Base.xlsx')
+wb = openpyxl.load_workbook('./Base - completa.xlsx')
+# wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
 total = sheet.max_row +1
 COD_PRODUCTO = 1;
@@ -104,8 +104,17 @@ for q in range(2,total):
         produccion_tecnica.ptreglamentoextract()
         from produccion_tecnica import contptreglamento
         COD_PRODUCTO = int("".join(str(x) for x in contptreglamento))
+        produccion_tecnica.ptempresaextract()
+        from produccion_tecnica import contptempresa
+        COD_PRODUCTO = int("".join(str(x) for x in contptempresa))
+        produccion_tecnica.demastrabajosextract()
+        from produccion_tecnica import contdemastrabajos
+        COD_PRODUCTO = int("".join(str(x) for x in contdemastrabajos))
+        produccion_tecnica.ptsignosextract()
+        from produccion_tecnica import contptsignos
+        COD_PRODUCTO = int("".join(str(x) for x in contptsignos))
 
-        print(str(q/(total-1)*100)+"%")
+        print("------> "+str(q/(total-1)*100)+"%")
         if q==total-1:
             import printcsv
             print ("Done! :]")

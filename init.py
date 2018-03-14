@@ -480,6 +480,66 @@ def inicio():
     Otro; \
     ;\
     ;\n \
+    68; \
+    Producción técnica - Empresa de base tecnológica - Spin-off; \
+    Empresa de base tecnológica - Spin-off; \
+    Otro; \
+    ;\
+    ;\n \
+    69; \
+    Producción técnica - Empresa de base tecnológica - Start-up; \
+    Empresa de base tecnológica - Start-up; \
+    Otro; \
+    ;\
+    ;\n \
+    70; \
+    Demás trabajos - Demás trabajos; \
+    Demás trabajos; \
+    Otro; \
+    ;\
+    ;\n \
+    71; \
+    Producción técnica - Signos; \
+    Signos; \
+    Otro; \
+    ;\
+    ;\n \
+    72; \
+    Producción técnica - Softwares - Multimedia; \
+    Multimedia; \
+    Software; \
+    ;\
+    ;\n \
+    73; \
+    Producción técnica - Softwares - Otra; \
+    Softwares - Otra; \
+    Software; \
+    ;\
+    ;\n \
+    74; \
+    Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Básica; \
+    Técnica - Básica; \
+    Otro; \
+    ;\
+    ;\n \
+    75; \
+    Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Ensayo; \
+    Técnica - Ensayo; \
+    Otro; \
+    ;\
+    ;\n \
+    76; \
+    Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Servicios de Proyectos de I+D+I; \
+    Servicios de Proyectos de I+D+I; \
+    Otro; \
+    ;\
+    ;\n \
+    77; \
+    Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Proceso; \
+    Técnica - Proceso;; \
+    Otro; \
+    ;\
+    ;\n \
     N; \
     el final; \
     el final; \

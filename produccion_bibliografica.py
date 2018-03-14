@@ -63,7 +63,7 @@ def artiextract():
             elif tipo.strip() == "Producción bibliográfica - Artículo - Caso clínico":
                 tipo = "11"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Coautores
             index1 = info_articulo.find("  \r\n                                        \r\n                    ") + 66
             index2 = info_articulo.find('"')
@@ -192,7 +192,7 @@ def libextract():
             elif tipo.strip() == "Producción bibliográfica - Libro - Libro pedagógico y/o de divulgación":
                 tipo = "19"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             cont = container[x]
             info_libro = cont.text
             #Coautores
@@ -345,7 +345,7 @@ def caplibroextract():
             elif Tipo == "Otro capítulo de libro publicado":
                 Tipo = "20"
             else:
-                print(Tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index1 = info_caplibro.find(',                    \r\n                            \r\n\r\n                            "') + 84
             index2 = info_caplibro.find('"\r\n                            ')
@@ -500,7 +500,7 @@ def texnocienextract():
             elif tipo.strip() == "Producción bibliográfica - Otro artículo publicado - Columna de opinión":
                 tipo = "26"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
 
             #Coautores
             index1 = 1
@@ -649,7 +649,7 @@ def workpextract():
             if tipo.strip() == "Producción bibliográfica - Documento de trabajo (Working Paper)":
                 tipo = "27"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Coautores
             index1 = 1
             index2 = info_workp.find('"')
@@ -786,7 +786,7 @@ def traduccionextract():
             elif tipo.strip() == "Producción bibliográfica - Traducciones - Otra":
                 tipo = "30"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Coautores
             index1 = 1
             index2 = info_traduccion.find('"')
@@ -950,7 +950,7 @@ def otrapbextract():
             elif tipo.strip() == "Producción bibliográfica - Otra producción bibliográfica - Otra":
                 tipo = "34"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Coautores
             index1 = 1
             index2 = info_otrapb.find('"')

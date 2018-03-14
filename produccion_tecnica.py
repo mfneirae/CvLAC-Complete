@@ -52,10 +52,12 @@ def ptsoftwareextract():
             tipo = tipotex.text
             if tipo.strip() == "Producción técnica - Softwares - Computacional":
                 tipo = "35"
-            # elif tipo.strip() == "Producción bibliográfica - Otra producción bibliográfica - Prólogo":
-            #     tipo = "32"
+            elif tipo.strip() == "Producción técnica - Softwares - Multimedia":
+                tipo = "72"
+            elif tipo.strip() == "Producción técnica - Softwares - Otra":
+                tipo = "73"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptsoftware.find('Nombre comercial:')
             index = info_ptsoftware.rfind(',',0,index)
@@ -206,10 +208,10 @@ def ptproductoextract():
                 tipo = "37"
             elif tipo.strip() == "Producción técnica - Productos tecnológicos - Otro":
                 tipo = "38"
-            elif tipo.strip() == "Producción técnica - Productos tecnológicos - Base de datos de referencia para investigación":
+            elif tipo.strip() == "Producción técnica - Productos tecnológicos - Base de datos de referencia para investigacion":
                 tipo = "39"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptproducto.find('Nombre comercial:')
             index = info_ptproducto.rfind(',',0,index)
@@ -351,7 +353,7 @@ def ptdiseñoextract():
             # elif tipo.strip() == "Producción técnica - Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada":
             #     tipo = "37"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptdiseño.find('Nombre comercial:')
             index = info_ptdiseño.rfind(',',0,index)
@@ -493,7 +495,7 @@ def ptcircuitosextract():
             # elif tipo.strip() == "Producción técnica - Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada":
             #     tipo = "37"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptcircuitos.find('Nombre comercial:')
             index = info_ptcircuitos.rfind(',',0,index)
@@ -635,7 +637,7 @@ def ptinnovaextract():
             elif tipo.strip() == "Producción técnica - Innovaciones generadas de producción empresarial - Empresarial":
                 tipo = "43"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptinnova.find('Nombre comercial:')
             index = info_ptinnova.rfind(',',0,index)
@@ -777,7 +779,7 @@ def ptvaranimalextract():
             # elif tipo.strip() == "Producción técnica - Innovaciones generadas de producción empresarial - Empresarial":
             #     tipo = "43"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptvaranimal.find('Nombre comercial:')
             index = info_ptvaranimal.rfind(',',0,index)
@@ -919,7 +921,7 @@ def ptprocesoextract():
             # elif tipo.strip() == "Producción técnica - Innovaciones generadas de producción empresarial - Empresarial":
             #     tipo = "43"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptproceso.find('Nombre comercial:')
             index = info_ptproceso.rfind(',',0,index)
@@ -1067,7 +1069,7 @@ def ptcartasextract():
             elif tipo.strip() == "Producción técnica - Cartas, mapas o similares - Otra":
                 tipo = "50"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptcartas.find('Nombre comercial:')
             index = info_ptcartas.rfind(',',0,index)
@@ -1209,7 +1211,7 @@ def ptvegetalextract():
             # elif tipo.strip() == "Producción técnica - Cartas, mapas o similares - Otra":
             #     tipo = "50"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptvegetal.find('Ciclo:')
             index = info_ptvegetal.rfind(',',0,index)
@@ -1362,7 +1364,7 @@ def pttratecextract():
                 tipo = "54"
             elif tipo.strip() == "Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Informe técnico":
                 tipo = "55"
-            elif tipo.strip() == "Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Otro":
+            elif tipo.strip() == "Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Otra":
                 tipo = "56"
             elif tipo.strip() == "Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Acciones de transferencia tecnológica":
                 tipo = "57"
@@ -1372,8 +1374,10 @@ def pttratecextract():
                 tipo = "59"
             elif tipo.strip() == "Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Consultoría en artes,arquitectura y diseño":
                 tipo = "60"
+            elif tipo.strip() == "Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Servicios de Proyectos de I+D+I":
+                tipo = "76"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_pttratec.find('Nombre comercial:')
             index = info_pttratec.rfind(',',0,index)
@@ -1531,8 +1535,14 @@ def ptnormaextract():
                 tipo = "65"
             elif tipo.strip() == "Producción técnica - Regulación, norma, reglamento o legislación - Proyecto de ley":
                 tipo = "66"
+            elif tipo.strip() == "Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Básica":
+                tipo = "74"
+            elif tipo.strip() == "Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Ensayo":
+                tipo = "75"
+            elif tipo.strip() == "Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Proceso":
+                tipo = "77"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptnorma.find('Nombre comercial:')
             index = info_ptnorma.rfind(',',0,index)
@@ -1684,7 +1694,7 @@ def ptreglamentoextract():
             # elif tipo.strip() == "Producción técnica - Regulación, norma, reglamento o legislación - Educativa":
             #     tipo = "62"
             else:
-                print(tipo)
+                print("ALERTA: "+tipo)
             #Nombre Producto
             index = info_ptreglamento.find('Nombre comercial:')
             index = info_ptreglamento.rfind(',',0,index)
@@ -1792,3 +1802,365 @@ def ptreglamentoextract():
     else:
         print("El Docente ",name," ",last," ","no tiene Reglamentos Asociados")
     contptreglamento = [COD_PRODUCTO]
+
+def ptempresaextract():
+    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
+    import bs4
+    import init
+    import re
+    global contptempresa
+    from urllib.request import urlopen as uReq
+    from bs4 import BeautifulSoup as soup
+    uClient = uReq(my_url)
+    page_html = uClient.read()
+    uClient.close()
+    all = 0
+    a = 0
+    x = 0
+    y = 0
+    page_soup = soup(page_html,"html.parser")
+    containers = page_soup.findAll("table")
+    for a in range(0,len(containers)):
+        buscaptempresa = containers[a].h3
+        #print(buscaptempresa)
+        try:
+            if buscaptempresa.text == "Empresas de base tecnológica":
+                all = a
+                #print(all)
+                break
+        except AttributeError:
+            pass
+
+    if all != 0:
+        containerb = containers[all]
+        container = containerb.findAll("blockquote")
+        tipotexno = containerb.findAll("li")
+        for x in range(0, len(container)):
+            cont = container[x]
+            info_ptempresa = cont.text
+            #Tipo Otra Produccion
+            tipotex = tipotexno[x]
+            tipo = tipotex.text
+            if tipo.strip() == "Producción técnica - Empresa de base tecnológica - Spin-off":
+                tipo = "68"
+            elif tipo.strip() == "Producción técnica - Empresa de base tecnológica - Start-up":
+                tipo = "69"
+            else:
+                print("ALERTA: "+tipo)
+            #Nombre Producto
+            index = info_ptempresa.find('Nit')
+            index = info_ptempresa.rfind(',',0,index)
+            index1 = info_ptempresa.rfind(',',0,index) + 2
+            index2 = info_ptempresa.find(',',index1 + 1,len(info_ptempresa))
+            NombreProducto = info_ptempresa[index1:index2]
+            #Coautores
+            index2 = index1
+            index1 = 1
+            coautores = info_ptempresa[index1:index2]
+            #Nombre Comercial
+            index1 = info_ptempresa.find('Nombre comercial:') + 18
+            index2 = info_ptempresa.find(',',index1,len(info_ptempresa))
+            NombreComercial = info_ptempresa[index1:index2]
+            #Contrato / Registro
+            index1 = info_ptempresa.find('Nit') + 3
+            index2 = info_ptempresa.find(',',index1,len(info_ptempresa))
+            Registro = info_ptempresa[index1:index2]
+            #Año
+            index1 = info_ptempresa.find("mara el:") + 9
+            index2 = index1+4
+            Anoptempresa = info_ptempresa[index1:index2]
+            #Palabras
+            index1 = info_ptempresa.find("Palabras:")
+            index2 = info_ptempresa.find("Areas:")
+            index3 = info_ptempresa.find("Sectores:")
+            if index1 == -1:
+                palabras = ""
+            elif index2 != -1:
+                palabras = info_ptempresa[index1 + 9:index2]
+            elif index2 == -1 and index3 != -1:
+                palabras = info_ptempresa[index1 + 9:index3]
+            else:
+                palabras = info_ptempresa[index1 + 9:len(info_ptempresa)]
+            #Areas
+            index1 = info_ptempresa.find("Areas:")
+            index2 = info_ptempresa.find("Sectores:")
+            if index1 == -1:
+                areas = ""
+            elif index2 != -1:
+                areas = info_ptempresa[index1 + 6:index2]
+            else:
+                areas = info_ptempresa[index1 + 6:len(info_ptempresa)]
+            #Sectores
+            index1 = info_ptempresa.find("Sectores:")
+            if index1 == -1:
+                sectores = ""
+            else:
+                sectores = info_ptempresa[index1 + 9:len(info_ptempresa)]
+            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            + str(COD_PRODUCTO) + ";"\
+            + tipo + ";"\
+            + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',Anoptempresa.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',palabras.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',areas.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',sectores.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',coautores.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" \
+            + "\n")
+            init.PROD_TECNICA.append(RH + ";"\
+            + str(COD_PRODUCTO) + ";"\
+            + "" + ";" \
+            + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "\n")
+            COD_PRODUCTO = COD_PRODUCTO + 1
+    else:
+        print("El Docente ",name," ",last," ","no tiene Empresas de Base Tecnológica Asociadas")
+    contptempresa = [COD_PRODUCTO]
+
+def demastrabajosextract():
+    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
+    import bs4
+    import init
+    import re
+    global contdemastrabajos
+    from urllib.request import urlopen as uReq
+    from bs4 import BeautifulSoup as soup
+    uClient = uReq(my_url)
+    page_html = uClient.read()
+    uClient.close()
+    all = 0
+    a = 0
+    x = 0
+    y = 0
+    page_soup = soup(page_html,"html.parser")
+    containers = page_soup.findAll("table")
+    for a in range(0,len(containers)):
+        buscademastrabajos = containers[a].h3
+        #print(buscademastrabajos)
+        try:
+            if buscademastrabajos.text == "Demás trabajos":
+                all = a
+                #print(all)
+                break
+        except AttributeError:
+            pass
+
+    if all != 0:
+        containerb = containers[all]
+        container = containerb.findAll("blockquote")
+        tipotexno = containerb.findAll("li")
+        for x in range(0, len(container)):
+            cont = container[x]
+            info_demastrabajos = cont.text
+            #Tipo Otra Produccion
+            tipotex = tipotexno[x]
+            tipo = tipotex.text
+            if tipo.strip() == "Demás trabajos - Demás trabajos":
+                tipo = "70"
+            # elif tipo.strip() == "Producción técnica - Empresa de base tecnológica - Start-up":
+            #     tipo = "69"
+            else:
+                print("ALERTA: "+tipo)
+            #Nombre Producto
+            index = info_demastrabajos.find('En:')
+            index = info_demastrabajos.rfind('.',0,index)
+            index1 = info_demastrabajos.rfind(',',0,index) + 2
+            index2 = info_demastrabajos.find('.',index1 + 1,len(info_demastrabajos))
+            NombreProducto = info_demastrabajos[index1:index2]
+            #Coautores
+            index2 = index1
+            index1 = 1
+            coautores = info_demastrabajos[index1:index2]
+            #Lugar
+            index1 = info_demastrabajos.find('En: ') + 4
+            index2 = info_demastrabajos.find(',\xa0\r\n                    ',index1,len(info_demastrabajos))
+            lugar = info_demastrabajos[index1:index2]
+            #Finalidad
+            index1 = info_demastrabajos.find('finalidad: ') + 11
+            if info_demastrabajos.find("Palabras:") != -1:
+                index2 = info_demastrabajos.find("Palabras:")
+            elif info_demastrabajos.find("Areas:") != -1:
+                index2 = info_demastrabajos.find("Areas:")
+            elif info_demastrabajos.find("Sectores:") != -1:
+                index2 = info_demastrabajos.find("Sectores:")
+            else:
+                index2 = len(info_demastrabajos)
+            Finalidad = info_demastrabajos[index1:index2]
+            #Año
+            index = info_demastrabajos.find("En:")
+            index = info_demastrabajos.find(",",index,len(info_demastrabajos)) +1
+            index1 = info_demastrabajos.find(',',index,len(info_demastrabajos)) +1
+            index2 = info_demastrabajos.find(',',index1,len(info_demastrabajos))
+            Anodemastrabajos = info_demastrabajos[index1:index2]
+            #Palabras
+            index1 = info_demastrabajos.find("Palabras:")
+            index2 = info_demastrabajos.find("Areas:")
+            index3 = info_demastrabajos.find("Sectores:")
+            if index1 == -1:
+                palabras = ""
+            elif index2 != -1:
+                palabras = info_demastrabajos[index1 + 9:index2]
+            elif index2 == -1 and index3 != -1:
+                palabras = info_demastrabajos[index1 + 9:index3]
+            else:
+                palabras = info_demastrabajos[index1 + 9:len(info_demastrabajos)]
+            #Areas
+            index1 = info_demastrabajos.find("Areas:")
+            index2 = info_demastrabajos.find("Sectores:")
+            if index1 == -1:
+                areas = ""
+            elif index2 != -1:
+                areas = info_demastrabajos[index1 + 6:index2]
+            else:
+                areas = info_demastrabajos[index1 + 6:len(info_demastrabajos)]
+            #Sectores
+            index1 = info_demastrabajos.find("Sectores:")
+            if index1 == -1:
+                sectores = ""
+            else:
+                sectores = info_demastrabajos[index1 + 9:len(info_demastrabajos)]
+            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            + str(COD_PRODUCTO) + ";"\
+            + tipo + ";"\
+            + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Anodemastrabajos.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',palabras.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',areas.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',sectores.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',coautores.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',Finalidad.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" \
+            + "\n")
+            COD_PRODUCTO = COD_PRODUCTO + 1
+    else:
+        print("El Docente ",name," ",last," ","no tiene Demás Trabajos Asociados")
+    contdemastrabajos = [COD_PRODUCTO]
+def ptsignosextract():
+    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
+    import bs4
+    import init
+    import re
+    global contptsignos
+    from urllib.request import urlopen as uReq
+    from bs4 import BeautifulSoup as soup
+    uClient = uReq(my_url)
+    page_html = uClient.read()
+    uClient.close()
+    all = 0
+    a = 0
+    x = 0
+    y = 0
+    page_soup = soup(page_html,"html.parser")
+    containers = page_soup.findAll("table")
+    for a in range(0,len(containers)):
+        buscaptsignos = containers[a].h3
+        #print(buscaptsignos)
+        try:
+            if buscaptsignos.text == "Signos distintivos":
+                all = a
+                #print(all)
+                break
+        except AttributeError:
+            pass
+
+    if all != 0:
+        containerb = containers[all]
+        container = containerb.findAll("blockquote")
+        for x in range(0, len(container)):
+            cont = container[x]
+            info_ptsignos = cont.text
+            #Tipo Otra Produccion
+            tipo = "71"
+            #Nombre Producto
+            index1 = 0
+            index2 = info_ptsignos.find(',')
+            NombreProducto = info_ptsignos[index1:index2]
+            #Contrato / Registro
+            index1 = info_ptsignos.find('Registro:') + 8
+            index2 = info_ptsignos.find(',',index1,len(info_ptsignos))
+            Registro = info_ptsignos[index1:index2]
+            #Titular
+            index1 = info_ptsignos.find('Titular: ') + 9
+            index2 = len(info_ptsignos)
+            Titular = info_ptsignos[index1:index2]
+            #Año
+            index = info_ptsignos.find("Registro:")
+            index1 = info_ptsignos.rfind(",",0,index) + 2
+            index2 = info_ptsignos.find("Registro:")
+            Anoptsignos = info_ptsignos[index1:index2]
+            #Lugar
+            index = info_ptsignos.find(",")
+            index1 = info_ptsignos.find("En\xa0",index + 1,len(info_ptsignos)) + 3
+            index2 = info_ptsignos.find(",",index1,len(info_ptsignos))
+            Lugar = info_ptsignos[index1:index2]
+            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            + str(COD_PRODUCTO) + ";"\
+            + tipo + ";"\
+            + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + re.sub(' +',' ',Lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Anoptsignos.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" \
+            + "\n")
+            init.PROD_TECNICA.append(RH + ";"\
+            + str(COD_PRODUCTO) + ";"\
+            + "" + ";" \
+            + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Titular.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "" + ";" \
+            + "\n")
+            COD_PRODUCTO = COD_PRODUCTO + 1
+    else:
+        print("El Docente ",name," ",last," ","no tiene Signos Asociados")
+    contptsignos = [COD_PRODUCTO]

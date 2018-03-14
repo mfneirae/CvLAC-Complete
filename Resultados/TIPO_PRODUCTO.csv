@@ -67,4 +67,8 @@ COD_TIPO_PRODUCTO;     TIPO_PRODUCTO_COL;     SUB_TIPO_PRODUCTO_COL;     TIPO_UA
      65;     Producción técnica - Regulación, norma, reglamento o legislación - Guía de práctica clínica;     Regulación, norma, reglamento o legislación - Guía de práctica clínica;     Otro;     ;    ;
      66;     Producción técnica - Regulación, norma, reglamento o legislación - Proyecto de ley;     Regulación, norma, reglamento o legislación - Proyecto de ley;     Otro;     ;    ;
      67;     Producción técnica - Reglamento Técnico;     Reglamento Técnico;     Otro;     ;    ;
+     68;     Producción técnica - Empresa de base tecnológica - Spin-off;     Empresa de base tecnológica - Spin-off;     Otro;     ;    ;
+     69;     Producción técnica - Empresa de base tecnológica - Start-up;     Empresa de base tecnológica - Start-up;     Otro;     ;    ;
+     70;     Demás trabajos - Demás trabajos;     Demás trabajos;     Otro;     ;    ;
+     71;     Producción técnica - Signos;     Signos;     Otro;     ;    ;
      N;     el final;     el final;     el final;     ;    ;

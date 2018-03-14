@@ -19,10 +19,10 @@ y = 0
 page_soup = soup(page_html,"html.parser")
 containers = page_soup.findAll("table")
 for a in range(0,len(containers)):
-    buscaptproducto = containers[a].h3
-    #print(buscaptproducto)
+    buscaptsignos = containers[a].h3
+    #print(buscaptsignos)
     try:
-        if buscaptproducto.text == "Variedad vegetal":
+        if buscaptsignos.text == "Signos distintivos":
             all = a
             #print(all)
             break
@@ -31,6 +31,10 @@ for a in range(0,len(containers)):
 
 containerb = containers[all]
 container = containerb.findAll("blockquote")
-tipotexno = containerb.findAll("li")
 cont = container[1]
-info_ptproducto = cont.text
+info_ptsignos = cont.text
+
+index = info_ptsignos.find(",")
+index1 = info_ptsignos.find("En\xa0",index + 1,len(info_ptsignos)) + 3
+index2 = info_ptsignos.find(",",index1,len(info_ptsignos))
+Lugar = info_ptsignos[index1:index2]
