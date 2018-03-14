@@ -19,22 +19,29 @@ y = 0
 page_soup = soup(page_html,"html.parser")
 containers = page_soup.findAll("table")
 for a in range(0,len(containers)):
-    buscaptsignos = containers[a].h3
-    #print(buscaptsignos)
+    buscareconocimientos = containers[a].h3
+    #print(buscareconocimientos)
     try:
-        if buscaptsignos.text == "Signos distintivos":
+        if buscareconocimientos.text == "Reconocimientos":
             all = a
             #print(all)
             break
     except AttributeError:
         pass
 
-containerb = containers[all]
-container = containerb.findAll("blockquote")
-cont = container[1]
-info_ptsignos = cont.text
-
-index = info_ptsignos.find(",")
-index1 = info_ptsignos.find("En\xa0",index + 1,len(info_ptsignos)) + 3
-index2 = info_ptsignos.find(",",index1,len(info_ptsignos))
-Lugar = info_ptsignos[index1:index2]
+#Nombre Producto
+index1 = 0
+index2 = info_reconocimientos.find(',')
+NombreProducto = info_reconocimientos[index1:index2]
+#Insitucion
+index1 = info_reconocimientos.find(',') + 1
+index2 = info_reconocimientos.find('-')
+Institucion = info_reconocimientos[index1:index2]
+#Mes
+index1 = info_reconocimientos.find('-') + 2
+index2 = info_reconocimientos.find('de ',index1,len(info_reconocimientos))
+Mes = info_reconocimientos[index1:index2]
+#Programa Académico
+index1 = index2 +3
+index2 = len(info_reconocimientos)
+Ano = info_reconocimientos[index1:index2]

@@ -69,3 +69,20 @@ for item in init.PROD_TECNICA:
     except UnicodeEncodeError:
         pass
 f.close()
+
+f = open ("./Resultados/COMITES.csv", "w")
+for item in init.COMITES:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()
+
+
+f = open ("./Resultados/RECONOCIMIENTOS.csv", "w")
+for item in init.RECONOCIMIENTOS:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()

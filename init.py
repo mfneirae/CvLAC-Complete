@@ -20,6 +20,8 @@ def inicio():
     global TIPO_EVENTO
     global PROD_BIBLIOGRAFICA
     global PROD_TECNICA
+    global COMITES
+    global RECONOCIMIENTOS
     RE_PERSONA_PRODUCTO = ["COD_RH; \
     COD_PRODUCTO; \
     COD_TIPO_PRODUCTO; \
@@ -51,6 +53,20 @@ def inicio():
     FECHA_FIN; \
     AÑO_FIN; \
     MES_FIN\n"]
+
+    COMITES = [ "COD_RH; \
+    COD_PRODUCTO; \
+    TIPO_TRABAJO_PRESENTADO; \
+    PROGRAMA_ACADEMICO; \
+    NOMBRE_ORIENTADO; \
+    NIVEL\n"]
+
+    RECONOCIMIENTOS = [ "COD_RH; \
+    COD_RECONOCIMIENTO; \
+    NOMBRE_RECONOCIMIENTO; \
+    MES_RECONOCIMIENTO; \
+    AÑO_RECONOCIMIENTO; \
+    INSTITUCION_RECONOCIMIENTO\n"]
 
     PROD_BIBLIOGRAFICA = [ "COD_RH; \
     COD_PRODUCTO; \
@@ -536,8 +552,80 @@ def inicio():
     ;\n \
     77; \
     Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Proceso; \
-    Técnica - Proceso;; \
+    Técnica - Proceso; \
     Otro; \
+    ;\
+    ;\n \
+    78; \
+    Datos complementarios - Participación en comités de evaluación - Profesor titular; \
+    Participación en comités de evaluación - Profesor titular; \
+    Comités; \
+    ;\
+    ;\n \
+    79; \
+    Datos complementarios - Participación en comités de evaluación - Concurso docente; \
+    Participación en comités de evaluación - Concurso docente; \
+    Comités; \
+    ;\
+    ;\n \
+    80; \
+    Datos complementarios - Participación en comités de evaluación - Jefe de cátedra; \
+    Participación en comités de evaluación - Jefe de cátedra; \
+    Comités; \
+    ;\
+    ;\n \
+    81; \
+    Datos complementarios - Participación en comités de evaluación - Evaluación de cursos; \
+    Participación en comités de evaluación - Evaluación de cursos; \
+    Comités; \
+    ;\
+    ;\n \
+    82; \
+    Datos complementarios - Participación en comités de evaluación - Acreditación de programas; \
+    Participación en comités de evaluación - Acreditación de programas; \
+    Comités; \
+    ;\
+    ;\n \
+    83; \
+    Datos complementarios - Participación en comités de evaluación - Asignación de becas; \
+    Participación en comités de evaluación - Asignación de becas; \
+    Comités; \
+    ;\
+    ;\n \
+    84; \
+    Datos complementarios - Participación en comités de evaluación - Otra; \
+    Participación en comités de evaluación - Otra; \
+    Comités; \
+    ;\
+    ;\n \
+    85; \
+    Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Pregrado; \
+    Jurado Pregrado; \
+    Comités; \
+    ;\
+    ;\n \
+    86; \
+    Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Especialización; \
+    Jurado Especialización; \
+    Comités; \
+    ;\
+    ;\n \
+    87; \
+    Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Especialidad Médica; \
+    Jurado Especialidad Médica; \
+    Comités; \
+    ;\
+    ;\n \
+    88; \
+    Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Maestría; \
+    Jurado Maestría; \
+    Comités; \
+    ;\
+    ;\n \
+    89; \
+    Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Doctorado; \
+    Jurado Doctorado; \
+    Comités; \
     ;\
     ;\n \
     N; \

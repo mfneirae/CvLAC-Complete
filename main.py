@@ -18,12 +18,16 @@ import sys
 import apropiacion
 import produccion_bibliografica
 import produccion_tecnica
+import comites
+import reconocimientos
 global COD_PRODUCTO
-wb = openpyxl.load_workbook('./Base - completa.xlsx')
-# wb = openpyxl.load_workbook('./Base.xlsx')
+global COD_RECONOCIMIENTO
+# wb = openpyxl.load_workbook('./Base - completa.xlsx')
+wb = openpyxl.load_workbook('./Base.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
 total = sheet.max_row +1
 COD_PRODUCTO = 1;
+COD_RECONOCIMIENTO= 1;
 init.inicio()
 for q in range(2,total):
     doc = sheet['A'+str(q)].value
@@ -113,6 +117,15 @@ for q in range(2,total):
         produccion_tecnica.ptsignosextract()
         from produccion_tecnica import contptsignos
         COD_PRODUCTO = int("".join(str(x) for x in contptsignos))
+        comites.pcomitesextract()
+        from comites import contpcomites
+        COD_PRODUCTO = int("".join(str(x) for x in contpcomites))
+        comites.pjcomitesextract()
+        from comites import contpjcomites
+        COD_PRODUCTO = int("".join(str(x) for x in contpjcomites))
+        reconocimientos.reconocimientosextract()
+        from reconocimientos import contreconocimientos
+        COD_PRODUCTO = int("".join(str(x) for x in contreconocimientos))
 
         print("------> "+str(q/(total-1)*100)+"%")
         if q==total-1:
@@ -120,3 +133,4 @@ for q in range(2,total):
             print ("Done! :]")
             sys.exit()
     COD_PRODUCTO = 1;
+    COD_RECONOCIMIENTO = 1;
