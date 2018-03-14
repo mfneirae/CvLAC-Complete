@@ -294,7 +294,7 @@ def libextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Artículos Asociados")
+        print("El Docente ",name," ",last," ","no tiene Libros Asociados")
     contlibro = [COD_PRODUCTO]
 
 def caplibroextract():
