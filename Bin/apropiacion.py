@@ -1,22 +1,39 @@
 #
 #
 # #############################################################################
-#         Copyright (c) 2018 by Manuel Embus. All Rights Reserved.
+#       Copyright (c) 2018 Universidad Nacional de Colombia All Rights Reserved.
 #
-#             This work is licensed under a Creative Commons
-#       Attribution - NonCommercial - ShareAlike 4.0
-#       International License.
+#             This work was made as a development to improve data collection
+#       for self-assessment and accreditation processes in the Vicedeanship
+#       of academic affairs in the Engineering Faculty of the Universidad
+#       Nacional de Colombia and is licensed under a Creative Commons
+#       Attribution-NonCommercial - ShareAlike 4.0 International License
+#       and MIT Licence.
+#
+#       by Manuel Embus.
 #
 #       For more information write me to jai@mfneirae.com
 #       Or visit my webpage at https://mfneirae.com/
 # #############################################################################
 #
 #
+
 def evenextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import init
-    import bs4
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global conteventos
+    LOG_FILENAME = './Logs/Registros.log'
+    logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG,
+        format = "%(asctime)s:%(levelname)s:%(message)s")
+    LEVELS = {'debug': logging.DEBUG,
+              'info': logging.INFO,
+              'warning': logging.WARNING,
+              'error': logging.ERROR,
+              'critical': logging.CRITICAL}
+    if len(sys.argv) > 1:
+        level_name = sys.argv[1]
+        level = LEVELS.get(level_name, logging.NOTSET)
+        logging.basicConfig(level=level)
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
     uClient = uReq(my_url)
@@ -70,7 +87,8 @@ def evenextract():
             elif TipoEvento.strip() == "Simposio":
                 TipoEvento = "E6"
             else:
-                print(TipoEvento)
+                logging.critical('Añadir a Tipo_Evento: ' + TipoEvento)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Ambito
             index1 = info_evento.find("\xa0\r\n                                        Ámbito: ") + 51
             index2 = info_evento.find("\xa0                \r\n                                        Realizado el:")
@@ -160,33 +178,33 @@ def evenextract():
                 + str(COD_PRODUCTO) + ";"\
                 + "0" + ";"\
                 + "" + ";"\
-                + TipoEvento.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-                + NombreEvento.strip().replace('"',"").replace(";" , "|").replace("\r\n","") + ";" \
+                + re.sub(' +',' ',TipoEvento.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                + re.sub(' +',' ',NombreEvento.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                 + "" + ";" \
-                + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                + AnoEventoini.strip() + ";" \
-                + Ambito.strip().replace(";" , "|").replace("\r\n","") + ";"
-                + "" + ";" \
-                + "" + ";" \
-                + "" + ";" \
-                + auto.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                + vincula.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                + re.sub(' +',' ',LugarEvento.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                + re.sub(' +',' ',AnoEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                + re.sub(' +',' ',Ambito.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                 + "" + ";" \
                 + "" + ";" \
                 + "" + ";" \
+                + re.sub(' +',' ',auto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                + re.sub(' +',' ',vincula.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                 + "" + ";" \
                 + "" + ";" \
-                + insti.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
-                + vinculain.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") \
+                + "" + ";" \
+                + "" + ";" \
+                + "" + ";" \
+                + re.sub(' +',' ',insti.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                + re.sub(' +',' ',vinculain.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                 + "\n")
                 init.APROPIACION.append(RH + ";"\
                 + str(COD_PRODUCTO) + ";"\
-                + FechaEventoini.strip() + ";" \
-                + AnoEventoini.strip() + ";" \
-                + MesEventoini.strip() + ";" \
-                + FechaEventofin.strip() + ";" \
-                + AnoEventofin.strip() + ";" \
-                + MesEventofin.strip() \
+                + re.sub(' +',' ',FechaEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                + re.sub(' +',' ',AnoEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                + re.sub(' +',' ',MesEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                + re.sub(' +',' ',FechaEventofin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                + re.sub(' +',' ',AnoEventofin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                + re.sub(' +',' ',MesEventofin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                 + "\n")
                 COD_PRODUCTO = COD_PRODUCTO + 1
             else:
@@ -219,38 +237,39 @@ def evenextract():
                     elif Tipopub == "Producción técnica - Presentación de trabajo - Otro":
                         Tipopub = "16"
                     else:
-                        print(Tipopub)
+                        logging.critical('Añadir a Tipo_Producto: ' + TipoEvento)
+                        print ("ALERTA: Revisar el archivo Eventos.log")
                     init.RE_PERSONA_PRODUCTO.append(RH + ";"\
                     + str(COD_PRODUCTO) + ";"\
-                    + Tipopub.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-                    + NombreProducto.strip().replace(";" , "|").replace("\r\n","").replace('"',"").replace("\n","").replace("\r","") + ";" \
-                    + TipoEvento.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-                    + NombreEvento.strip().replace(";" , "|").replace('"',"").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
+                    + re.sub(' +',' ',Tipopub.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',TipoEvento.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',NombreEvento.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                     + "" + ";" \
-                    + LugarEvento.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                    + AnoEventofin.strip() + ";" \
-                    + Ambito.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                    + "" + ";" \
-                    + "" + ";" \
-                    + "" + ";" \
-                    + auto.strip().replace(";" , "|").replace("\r\n","") + ";" \
-                    + vincula.strip().replace(";" , "|").replace("\r\n","") + ";" \
+                    + re.sub(' +',' ',LugarEvento.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',AnoEventofin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',Ambito.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                     + "" + ";" \
                     + "" + ";" \
                     + "" + ";" \
+                    + re.sub(' +',' ',auto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',vincula.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                     + "" + ";" \
                     + "" + ";" \
-                    + insti.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")  + ";" \
-                    + vinculain.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") \
+                    + "" + ";" \
+                    + "" + ";" \
+                    + "" + ";" \
+                    + re.sub(' +',' ',insti.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',vinculain.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                     + "\n")
                     init.APROPIACION.append(RH + ";"\
                     + str(COD_PRODUCTO) + ";"\
-                    + FechaEventoini.strip() + ";" \
-                    + AnoEventoini.strip() + ";" \
-                    + MesEventoini.strip() + ";" \
-                    + FechaEventofin.strip() + ";" \
-                    + AnoEventofin.strip() + ";" \
-                    + MesEventofin.strip() \
+                    + re.sub(' +',' ',FechaEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',AnoEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',MesEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',FechaEventofin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',AnoEventofin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+                    + re.sub(' +',' ',MesEventofin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                     + "\n")
                     COD_PRODUCTO = COD_PRODUCTO + 1
             auto = ""
@@ -258,14 +277,13 @@ def evenextract():
             insti = ""
             vinculain = ""
     else:
-        print("El Docente ",name," ",last," ","no tiene Eventos Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Eventos Asociados')
     conteventos = [COD_PRODUCTO]
 
 
 def estrategiaextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import init
-    import bs4
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
     global contEstrategia
@@ -340,13 +358,13 @@ def estrategiaextract():
 
             init.RE_PERSONA_PRODUCTO.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + "7" + ";"\
-            + NombreEstrategia.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + re.sub(' +',' ',"7".replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',NombreEstrategia.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";"\
             + "" + ";"\
             + "" + ";"\
             + "" + ";"\
-            + AnoEstrategiaini.strip() + ";" \
+            + re.sub(' +',' ',AnoEstrategiaini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";"\
             + "" + ";"\
             + "" + ";"\
@@ -363,22 +381,21 @@ def estrategiaextract():
             + "\n")
             init.APROPIACION.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + FechaEstrategiaini.strip() + ";" \
-            + AnoEstrategiaini.strip() + ";" \
-            + MesEstrategiaini.strip() + ";" \
-            + FechaEstrategiafin.strip() + ";" \
-            + AnoEstrategiafin.strip() + ";" \
-            + MesEstrategiafin.strip() \
+            + re.sub(' +',' ',FechaEstrategiaini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',AnoEstrategiaini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',MesEstrategiaini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',FechaEstrategiafin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',AnoEstrategiafin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',MesEstrategiafin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
-
     else:
-        print("El Docente ",name," ",last," ","no tiene Estrategias Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Estrategias Asociadas')
     contEstrategia = [COD_PRODUCTO]
+
 def redesextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import init
-    import bs4
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
     global contredes
@@ -458,12 +475,12 @@ def redesextract():
                     FechaRedfin = info_red[index1:index2]
             init.RE_PERSONA_PRODUCTO.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + "1" + ";"\
-            + Nombrered.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + re.sub(' +',' ',"1".replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Nombrered.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";"\
             + "" + ";"\
             + "" + ";"\
-            + LugarRed.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + re.sub(' +',' ',LugarRed.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";"\
             + "" + ";"\
             + "" + ";"\
@@ -481,15 +498,14 @@ def redesextract():
             + "\n")
             init.APROPIACION.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + FechaRedini.strip() + ";" \
-            + AnoRedini.strip() + ";" \
-            + MesRedini.strip() + ";" \
-            + FechaRedfin.strip() + ";" \
-            + AnoRedfin.strip() + ";" \
-            + MesRedfin.strip() \
+            + re.sub(' +',' ',FechaRedini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',AnoRedini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',MesRedini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',FechaRedfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',AnoRedfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',MesRedfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
-
     else:
-        print("El Docente ",name," ",last," ","no tiene Redes Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Redes Asociadas')
     contredes = [COD_PRODUCTO]

@@ -1,22 +1,26 @@
 #
 #
 # #############################################################################
-#         Copyright (c) 2018 by Manuel Embus. All Rights Reserved.
+#       Copyright (c) 2018 Universidad Nacional de Colombia All Rights Reserved.
 #
-#             This work is licensed under a Creative Commons
-#       Attribution - NonCommercial - ShareAlike 4.0
-#       International License.
+#             This work was made as a development to improve data collection
+#       for self-assessment and accreditation processes in the Vicedeanship
+#       of academic affairs in the Engineering Faculty of the Universidad
+#       Nacional de Colombia and is licensed under a Creative Commons
+#       Attribution-NonCommercial - ShareAlike 4.0 International License
+#       and MIT Licence.
+#
+#       by Manuel Embus.
 #
 #       For more information write me to jai@mfneirae.com
 #       Or visit my webpage at https://mfneirae.com/
 # #############################################################################
 #
+#
 
 def artiextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contarticulo
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -63,7 +67,8 @@ def artiextract():
             elif tipo.strip() == "Producción bibliográfica - Artículo - Caso clínico":
                 tipo = "11"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Artículos.log")
             #Coautores
             index1 = info_articulo.find("  \r\n                                        \r\n                    ") + 66
             index2 = info_articulo.find('"')
@@ -110,54 +115,64 @@ def artiextract():
             Pagfin = info_articulo[index1:index2]
             init.RE_PERSONA_PRODUCTO.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + tipo + ";"\
-            + NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + lugar.strip().replace("\r\n","") + ";" \
-            + AnoEvento.strip().replace("\r\n","") + ";" \
+            + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',AnoEvento.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(' +',' ',coautores.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',coautores.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
-            + editorial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-            + Volumen.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + re.sub(' +',' ',editorial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Volumen.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
-            + doi.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + re.sub(' +',' ',doi.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" \
             + "\n")
             init.PROD_BIBLIOGRAFICA.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + Revista.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-            + ISSN.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + re.sub(' +',' ',Revista.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',ISSN.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(' +',' ',fasciculo.strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + Pagini.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
-            + Pagfin.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + re.sub(' +',' ',fasciculo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Pagini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Pagfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Artículos Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Artículos Asociados')
+
     contarticulo = [COD_PRODUCTO]
 
 def libextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contlibro
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
+    LOG_FILENAME = './Logs/Libros.log'
+    logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG)
+    LEVELS = {'debug': logging.DEBUG,
+              'info': logging.INFO,
+              'warning': logging.WARNING,
+              'error': logging.ERROR,
+              'critical': logging.CRITICAL}
+    if len(sys.argv) > 1:
+        level_name = sys.argv[1]
+        level = LEVELS.get(level_name, logging.NOTSET)
+        logging.basicConfig(level=level)
     uClient = uReq(my_url)
     page_html = uClient.read()
     uClient.close()
@@ -192,7 +207,8 @@ def libextract():
             elif tipo.strip() == "Producción bibliográfica - Libro - Libro pedagógico y/o de divulgación":
                 tipo = "19"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Libros.log")
             cont = container[x]
             info_libro = cont.text
             #Coautores
@@ -257,7 +273,7 @@ def libextract():
                 sectores = info_libro[index1 + 9:len(info_libro)]
             init.RE_PERSONA_PRODUCTO.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + tipo + ";"\
+            + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -281,7 +297,7 @@ def libextract():
             init.PROD_BIBLIOGRAFICA.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
-            + ISBN.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","") + ";" \
+            + re.sub(' +',' ',ISBN.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -294,17 +310,26 @@ def libextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Libros Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Libros Asociados')
     contlibro = [COD_PRODUCTO]
 
 def caplibroextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contcaplibro
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
+    LOG_FILENAME = './Logs/Capítulos Libros.log'
+    logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG)
+    LEVELS = {'debug': logging.DEBUG,
+              'info': logging.INFO,
+              'warning': logging.WARNING,
+              'error': logging.ERROR,
+              'critical': logging.CRITICAL}
+    if len(sys.argv) > 1:
+        level_name = sys.argv[1]
+        level = LEVELS.get(level_name, logging.NOTSET)
+        logging.basicConfig(level=level)
     uClient = uReq(my_url)
     page_html = uClient.read()
     uClient.close()
@@ -345,7 +370,8 @@ def caplibroextract():
             elif Tipo == "Otro capítulo de libro publicado":
                 Tipo = "20"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Capítulos Libros.log")
             #Nombre Producto
             index1 = info_caplibro.find(',                    \r\n                            \r\n\r\n                            "') + 84
             index2 = info_caplibro.find('"\r\n                            ')
@@ -449,17 +475,27 @@ def caplibroextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Capítulos de Libro Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Capítulos de Libro Asociados')
+
     contcaplibro = [COD_PRODUCTO]
 
 def texnocienextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global conttexnocien
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
+    LOG_FILENAME = './Logs/Textos No Cientificos.log'
+    logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG)
+    LEVELS = {'debug': logging.DEBUG,
+              'info': logging.INFO,
+              'warning': logging.WARNING,
+              'error': logging.ERROR,
+              'critical': logging.CRITICAL}
+    if len(sys.argv) > 1:
+        level_name = sys.argv[1]
+        level = LEVELS.get(level_name, logging.NOTSET)
+        logging.basicConfig(level=level)
     uClient = uReq(my_url)
     page_html = uClient.read()
     uClient.close()
@@ -500,7 +536,9 @@ def texnocienextract():
             elif tipo.strip() == "Producción bibliográfica - Otro artículo publicado - Columna de opinión":
                 tipo = "26"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Textos No Cientificos.log")
+
 
             #Coautores
             index1 = 1
@@ -606,17 +644,26 @@ def texnocienextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Textos no Cientificos Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Textos no Cientificos Asociados')
     conttexnocien = [COD_PRODUCTO]
 
 def workpextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contworkp
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
+    LOG_FILENAME = './Logs/Documentos.log'
+    logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG)
+    LEVELS = {'debug': logging.DEBUG,
+              'info': logging.INFO,
+              'warning': logging.WARNING,
+              'error': logging.ERROR,
+              'critical': logging.CRITICAL}
+    if len(sys.argv) > 1:
+        level_name = sys.argv[1]
+        level = LEVELS.get(level_name, logging.NOTSET)
+        logging.basicConfig(level=level)
     uClient = uReq(my_url)
     page_html = uClient.read()
     uClient.close()
@@ -649,7 +696,8 @@ def workpextract():
             if tipo.strip() == "Producción bibliográfica - Documento de trabajo (Working Paper)":
                 tipo = "27"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Documentos.log")
             #Coautores
             index1 = 1
             index2 = info_workp.find('"')
@@ -739,14 +787,12 @@ def workpextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Documentos de Trabajo Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Documentos de Trabajo Asociados')
     contworkp = [COD_PRODUCTO]
 
 def traduccionextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global conttraduccion
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -786,7 +832,8 @@ def traduccionextract():
             elif tipo.strip() == "Producción bibliográfica - Traducciones - Otra":
                 tipo = "30"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Eventos.log")
             #Coautores
             index1 = 1
             index2 = info_traduccion.find('"')
@@ -900,14 +947,12 @@ def traduccionextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Traducciones Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Traducciones Asociadas')
     conttraduccion = [COD_PRODUCTO]
 
 def otrapbextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contotrapb
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -950,7 +995,8 @@ def otrapbextract():
             elif tipo.strip() == "Producción bibliográfica - Otra producción bibliográfica - Otra":
                 tipo = "34"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Eventos.log")
             #Coautores
             index1 = 1
             index2 = info_otrapb.find('"')
@@ -1042,5 +1088,5 @@ def otrapbextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Otras Producciones Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Otras Producciones Asociadas')
     contotrapb = [COD_PRODUCTO]

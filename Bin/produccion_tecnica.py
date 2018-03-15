@@ -1,22 +1,26 @@
 #
 #
 # #############################################################################
-#         Copyright (c) 2018 by Manuel Embus. All Rights Reserved.
+#       Copyright (c) 2018 Universidad Nacional de Colombia All Rights Reserved.
 #
-#             This work is licensed under a Creative Commons
-#       Attribution - NonCommercial - ShareAlike 4.0
-#       International License.
+#             This work was made as a development to improve data collection
+#       for self-assessment and accreditation processes in the Vicedeanship
+#       of academic affairs in the Engineering Faculty of the Universidad
+#       Nacional de Colombia and is licensed under a Creative Commons
+#       Attribution-NonCommercial - ShareAlike 4.0 International License
+#       and MIT Licence.
+#
+#       by Manuel Embus.
 #
 #       For more information write me to jai@mfneirae.com
 #       Or visit my webpage at https://mfneirae.com/
 # #############################################################################
 #
 #
+
 def ptsoftwareextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptsoftware
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -57,7 +61,8 @@ def ptsoftwareextract():
             elif tipo.strip() == "Producción técnica - Softwares - Otra":
                 tipo = "73"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptsoftware.find('Nombre comercial:')
             index = info_ptsoftware.rfind(',',0,index)
@@ -161,14 +166,12 @@ def ptsoftwareextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Sofwares Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Sofwares Asociados')
     contptsoftware = [COD_PRODUCTO]
 
 def ptproductoextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptproducto
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -211,7 +214,8 @@ def ptproductoextract():
             elif tipo.strip() == "Producción técnica - Productos tecnológicos - Base de datos de referencia para investigacion":
                 tipo = "39"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptproducto.find('Nombre comercial:')
             index = info_ptproducto.rfind(',',0,index)
@@ -307,14 +311,12 @@ def ptproductoextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Producción Técnica Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Producciones Técnicas Asociadas')
     contptproducto = [COD_PRODUCTO]
 
 def ptdiseñoextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptdiseño
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -329,11 +331,9 @@ def ptdiseñoextract():
     containers = page_soup.findAll("table")
     for a in range(0,len(containers)):
         buscaptdiseño = containers[a].h3
-        #print(buscaptdiseño)
         try:
             if buscaptdiseño.text == "Diseño industrial":
                 all = a
-                #print(all)
                 break
         except AttributeError:
             pass
@@ -353,7 +353,7 @@ def ptdiseñoextract():
             # elif tipo.strip() == "Producción técnica - Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada":
             #     tipo = "37"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
             #Nombre Producto
             index = info_ptdiseño.find('Nombre comercial:')
             index = info_ptdiseño.rfind(',',0,index)
@@ -449,14 +449,12 @@ def ptdiseñoextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Diseños Industriales Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Diseños Industriales Asociados')
     contptdiseño = [COD_PRODUCTO]
 
 def ptcircuitosextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptcircuitos
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -471,11 +469,9 @@ def ptcircuitosextract():
     containers = page_soup.findAll("table")
     for a in range(0,len(containers)):
         buscaptcircuitos = containers[a].h3
-        #print(buscaptcircuitos)
         try:
             if buscaptcircuitos.text == "Esquemas de trazado de circuitos integrados":
                 all = a
-                #print(all)
                 break
         except AttributeError:
             pass
@@ -495,7 +491,8 @@ def ptcircuitosextract():
             # elif tipo.strip() == "Producción técnica - Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada":
             #     tipo = "37"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptcircuitos.find('Nombre comercial:')
             index = info_ptcircuitos.rfind(',',0,index)
@@ -591,14 +588,12 @@ def ptcircuitosextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Esquemas de Circuitos Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Esquemas de Circuitos Asociados')
     contptcircuitos = [COD_PRODUCTO]
 
 def ptinnovaextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptinnova
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -637,7 +632,8 @@ def ptinnovaextract():
             elif tipo.strip() == "Producción técnica - Innovaciones generadas de producción empresarial - Empresarial":
                 tipo = "43"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptinnova.find('Nombre comercial:')
             index = info_ptinnova.rfind(',',0,index)
@@ -733,14 +729,12 @@ def ptinnovaextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Innovaciones en Empresas Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Innovaciones en Empresas Asociadas')
     contptinnova = [COD_PRODUCTO]
 
 def ptvaranimalextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptvaranimal
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -779,7 +773,8 @@ def ptvaranimalextract():
             # elif tipo.strip() == "Producción técnica - Innovaciones generadas de producción empresarial - Empresarial":
             #     tipo = "43"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptvaranimal.find('Nombre comercial:')
             index = info_ptvaranimal.rfind(',',0,index)
@@ -875,14 +870,12 @@ def ptvaranimalextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Variedades Animales Registradas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Variedades Animales Registradas')
     contptvaranimal = [COD_PRODUCTO]
 
 def ptprocesoextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptproceso
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -921,7 +914,8 @@ def ptprocesoextract():
             # elif tipo.strip() == "Producción técnica - Innovaciones generadas de producción empresarial - Empresarial":
             #     tipo = "43"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptproceso.find('Nombre comercial:')
             index = info_ptproceso.rfind(',',0,index)
@@ -1017,14 +1011,12 @@ def ptprocesoextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Innovaciones en Procesos Registradas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Innovaciones en Procesos Registradas')
     contptproceso = [COD_PRODUCTO]
 
 def ptcartasextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptcartas
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -1069,7 +1061,8 @@ def ptcartasextract():
             elif tipo.strip() == "Producción técnica - Cartas, mapas o similares - Otra":
                 tipo = "50"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptcartas.find('Nombre comercial:')
             index = info_ptcartas.rfind(',',0,index)
@@ -1165,14 +1158,12 @@ def ptcartasextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Cartas o Mapas Registrados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Cartas o Mapas Registrados')
     contptcartas = [COD_PRODUCTO]
 
 def ptvegetalextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptvegetal
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -1211,7 +1202,8 @@ def ptvegetalextract():
             # elif tipo.strip() == "Producción técnica - Cartas, mapas o similares - Otra":
             #     tipo = "50"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptvegetal.find('Ciclo:')
             index = info_ptvegetal.rfind(',',0,index)
@@ -1315,14 +1307,12 @@ def ptvegetalextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Variedades Vegetales Registradas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Variedades Vegetales Registradas"')
     contptvegetal = [COD_PRODUCTO]
 
 def pttratecextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contpttratec
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -1377,7 +1367,8 @@ def pttratecextract():
             elif tipo.strip() == "Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Servicios de Proyectos de I+D+I":
                 tipo = "76"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_pttratec.find('Nombre comercial:')
             index = info_pttratec.rfind(',',0,index)
@@ -1482,14 +1473,12 @@ def pttratecextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Trabajos Técnicos Registradas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Trabajos Técnicos Registradas')
     contpttratec = [COD_PRODUCTO]
 
 def ptnormaextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptnorma
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -1542,7 +1531,8 @@ def ptnormaextract():
             elif tipo.strip() == "Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Proceso":
                 tipo = "77"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptnorma.find('Nombre comercial:')
             index = info_ptnorma.rfind(',',0,index)
@@ -1648,14 +1638,12 @@ def ptnormaextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Normas o Regulaciones Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Normas o Regulaciones Asociadas')
     contptnorma = [COD_PRODUCTO]
 
 def ptreglamentoextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptreglamento
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -1694,7 +1682,8 @@ def ptreglamentoextract():
             # elif tipo.strip() == "Producción técnica - Regulación, norma, reglamento o legislación - Educativa":
             #     tipo = "62"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptreglamento.find('Nombre comercial:')
             index = info_ptreglamento.rfind(',',0,index)
@@ -1800,14 +1789,12 @@ def ptreglamentoextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Reglamentos Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Reglamentos Asociados')
     contptreglamento = [COD_PRODUCTO]
 
 def ptempresaextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptempresa
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -1846,7 +1833,8 @@ def ptempresaextract():
             elif tipo.strip() == "Producción técnica - Empresa de base tecnológica - Start-up":
                 tipo = "69"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_ptempresa.find('Nit')
             index = info_ptempresa.rfind(',',0,index)
@@ -1934,14 +1922,12 @@ def ptempresaextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Empresas de Base Tecnológica Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Empresas de Base Tecnológica Asociadas"')
     contptempresa = [COD_PRODUCTO]
 
 def demastrabajosextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contdemastrabajos
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -1980,7 +1966,8 @@ def demastrabajosextract():
             # elif tipo.strip() == "Producción técnica - Empresa de base tecnológica - Start-up":
             #     tipo = "69"
             else:
-                print("ALERTA: "+tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_demastrabajos.find('En:')
             index = info_demastrabajos.rfind('.',0,index)
@@ -2064,13 +2051,11 @@ def demastrabajosextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Demás Trabajos Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Demás Trabajos Asociados')
     contdemastrabajos = [COD_PRODUCTO]
 def ptsignosextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contptsignos
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -2162,5 +2147,5 @@ def ptsignosextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Signos Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Signos Asociados')
     contptsignos = [COD_PRODUCTO]

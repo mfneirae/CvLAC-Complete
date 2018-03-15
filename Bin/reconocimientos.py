@@ -1,22 +1,26 @@
 #
 #
 # #############################################################################
-#         Copyright (c) 2018 by Manuel Embus. All Rights Reserved.
+#       Copyright (c) 2018 Universidad Nacional de Colombia All Rights Reserved.
 #
-#             This work is licensed under a Creative Commons
-#       Attribution - NonCommercial - ShareAlike 4.0
-#       International License.
+#             This work was made as a development to improve data collection
+#       for self-assessment and accreditation processes in the Vicedeanship
+#       of academic affairs in the Engineering Faculty of the Universidad
+#       Nacional de Colombia and is licensed under a Creative Commons
+#       Attribution-NonCommercial - ShareAlike 4.0 International License
+#       and MIT Licence.
+#
+#       by Manuel Embus.
 #
 #       For more information write me to jai@mfneirae.com
 #       Or visit my webpage at https://mfneirae.com/
 # #############################################################################
 #
 #
+
 def reconocimientosextract():
-    from main import my_url, name, doc, last, depar, RH, COD_RECONOCIMIENTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_RECONOCIMIENTO
+    import init, bs4, logging, sys, re
     global contreconocimientos
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -71,5 +75,5 @@ def reconocimientosextract():
             + "\n")
             COD_RECONOCIMIENTO = COD_RECONOCIMIENTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Reconocimientos Asociados")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Reconocimientos Asociado')
     contreconocimientos = [COD_RECONOCIMIENTO]

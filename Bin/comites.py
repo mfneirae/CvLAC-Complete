@@ -1,22 +1,26 @@
 #
 #
 # #############################################################################
-#         Copyright (c) 2018 by Manuel Embus. All Rights Reserved.
+#       Copyright (c) 2018 Universidad Nacional de Colombia All Rights Reserved.
 #
-#             This work is licensed under a Creative Commons
-#       Attribution - NonCommercial - ShareAlike 4.0
-#       International License.
+#             This work was made as a development to improve data collection
+#       for self-assessment and accreditation processes in the Vicedeanship
+#       of academic affairs in the Engineering Faculty of the Universidad
+#       Nacional de Colombia and is licensed under a Creative Commons
+#       Attribution-NonCommercial - ShareAlike 4.0 International License
+#       and MIT Licence.
+#
+#       by Manuel Embus.
 #
 #       For more information write me to jai@mfneirae.com
 #       Or visit my webpage at https://mfneirae.com/
 # #############################################################################
 #
 #
+
 def pcomitesextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contpcomites
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -66,7 +70,8 @@ def pcomitesextract():
             elif tipo.strip() == "Datos complementarios - Participación en comités de evaluación - Otra":
                 tipo = "84"
             else:
-                print("ALERTA: "+ tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index = info_pcomites.find('en:')
             index1 = info_pcomites.rfind(',',0,index) + 2
@@ -146,14 +151,12 @@ def pcomitesextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene Participaciones en Comités Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Participaciones en Comités Asociadas')
     contpcomites = [COD_PRODUCTO]
 
 def pjcomitesextract():
-    from main import my_url, name, doc, last, depar, RH, COD_PRODUCTO
-    import bs4
-    import init
-    import re
+    from settings import my_url, name, doc, last, RH, COD_PRODUCTO
+    import init, bs4, logging, sys, re
     global contpjcomites
     from urllib.request import urlopen as uReq
     from bs4 import BeautifulSoup as soup
@@ -202,7 +205,8 @@ def pjcomitesextract():
             elif tipo.strip() == "Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Doctorado":
                 tipo = "89"
             else:
-                print("ALERTA: "+ tipo)
+                logging.critical('Añadir: ' + tipo)
+                print ("ALERTA: Revisar el archivo Registros.log")
             #Nombre Producto
             index1 = info_pjcomites.find('Titulo:') + 8
             index2 = info_pjcomites.find('Tipo de trabajo presentado:')
@@ -293,5 +297,5 @@ def pjcomitesextract():
             + "\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        print("El Docente ",name," ",last," ","no tiene registros como Jurado en Comités Asociadas")
+        logging.info(' El Docente ' + name + ' ' + last + 'no tiene registros como Jurado en Comités Asociadas')
     contpjcomites = [COD_PRODUCTO]
