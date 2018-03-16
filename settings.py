@@ -46,15 +46,15 @@ print ("*                        `hMMh-           -hMMMM  MMMy               sMM
 print ("*                         `oNMNho/-....:ohNMMMMM  MMMy               sMMh                     *")
 print ("*                           `/ymMMMNNNNMMMMMMMMM  MMMy               sMMh                     *")
 print ("*                                                                                             *")
-print ("*                                  UNIVERSIDAD NACIONAL DE COLOMBIA                           *")
+print ("*                                UNIVERSIDAD NACIONAL DE COLOMBIA                             *")
 print ("*                                           SEDE BOGOTÁ                                       *")
 print ("*  Facultad de Ingeniería                                                                     *")
 print ("*  Vicedecanatura Académica                                                                   *")
 print ("*  Marzo de 2018                                                                              *")
 print ("***********************************************************************************************")
 print ("------> Inicio de Importación de Registros.")
-# wb = openpyxl.load_workbook('./Base - completa.xlsx')
-wb = openpyxl.load_workbook('./Input/Base.xlsx')
+wb = openpyxl.load_workbook('./Input/Base - completa.xlsx')
+# wb = openpyxl.load_workbook('./Input/Base.xlsx')
 sheet = wb['Sheet1']
 total = sheet.max_row +1
 COD_PRODUCTO = 1;
