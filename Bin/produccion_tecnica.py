@@ -128,7 +128,7 @@ def ptsoftwareextract():
                 sectores = ""
             else:
                 sectores = info_ptsoftware[index1 + 9:len(info_ptsoftware)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -151,7 +151,7 @@ def ptsoftwareextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -273,7 +273,7 @@ def ptproductoextract():
                 sectores = ""
             else:
                 sectores = info_ptproducto[index1 + 9:len(info_ptproducto)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -296,7 +296,7 @@ def ptproductoextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -411,7 +411,7 @@ def ptdiseñoextract():
                 sectores = ""
             else:
                 sectores = info_ptdiseño[index1 + 9:len(info_ptdiseño)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -434,7 +434,7 @@ def ptdiseñoextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -550,7 +550,7 @@ def ptcircuitosextract():
                 sectores = ""
             else:
                 sectores = info_ptcircuitos[index1 + 9:len(info_ptcircuitos)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -573,7 +573,7 @@ def ptcircuitosextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -691,7 +691,7 @@ def ptinnovaextract():
                 sectores = ""
             else:
                 sectores = info_ptinnova[index1 + 9:len(info_ptinnova)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -714,7 +714,7 @@ def ptinnovaextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -832,7 +832,7 @@ def ptvaranimalextract():
                 sectores = ""
             else:
                 sectores = info_ptvaranimal[index1 + 9:len(info_ptvaranimal)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -855,7 +855,7 @@ def ptvaranimalextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -973,7 +973,7 @@ def ptprocesoextract():
                 sectores = ""
             else:
                 sectores = info_ptproceso[index1 + 9:len(info_ptproceso)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -996,7 +996,7 @@ def ptprocesoextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1120,7 +1120,7 @@ def ptcartasextract():
                 sectores = ""
             else:
                 sectores = info_ptcartas[index1 + 9:len(info_ptcartas)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1143,7 +1143,7 @@ def ptcartasextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1269,7 +1269,7 @@ def ptvegetalextract():
                 sectores = ""
             else:
                 sectores = info_ptvegetal[index1 + 9:len(info_ptvegetal)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1292,7 +1292,7 @@ def ptvegetalextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1435,7 +1435,7 @@ def pttratecextract():
                 sectores = ""
             else:
                 sectores = info_pttratec[index1 + 9:len(info_pttratec)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1458,7 +1458,7 @@ def pttratecextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1600,7 +1600,7 @@ def ptnormaextract():
                 sectores = ""
             else:
                 sectores = info_ptnorma[index1 + 9:len(info_ptnorma)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1623,7 +1623,7 @@ def ptnormaextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1751,7 +1751,7 @@ def ptreglamentoextract():
                 sectores = ""
             else:
                 sectores = info_ptreglamento[index1 + 9:len(info_ptreglamento)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1774,7 +1774,7 @@ def ptreglamentoextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1884,7 +1884,7 @@ def ptempresaextract():
                 sectores = ""
             else:
                 sectores = info_ptempresa[index1 + 9:len(info_ptempresa)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1907,7 +1907,7 @@ def ptempresaextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -2026,7 +2026,7 @@ def demastrabajosextract():
                 sectores = ""
             else:
                 sectores = info_demastrabajos[index1 + 9:len(info_demastrabajos)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -2109,7 +2109,7 @@ def ptsignosextract():
             index1 = info_ptsignos.find("En\xa0",index + 1,len(info_ptsignos)) + 3
             index2 = info_ptsignos.find(",",index1,len(info_ptsignos))
             Lugar = info_ptsignos[index1:index2]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -2132,7 +2132,7 @@ def ptsignosextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_TECNICA.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \

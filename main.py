@@ -18,4 +18,24 @@
 #
 #
 
+print ("***********************************************************************************************")
+print ("***********************************************************************************************")
+print ("*                                                                                             *")
+print ("*                        yMMs               sMMM  MMMMMMMMMNNNNMMMmh\`                        *")
+print ("*                        hMMs               sMMM  MMMMMNho:-..--/ohNMNo`                      *")
+print ("*                        hMMs               sMMM  MMMMh-           -hMMh`                     *")
+print ("*                        hMMs               sMMM  MMMm`             `mMMo                     *")
+print ("*                        hMMy               yMMM  MMMy               yMMh                     *")
+print ("*                        oMMm`             `mMMM  MMMy               sMMh                     *")
+print ("*                        `hMMh-           -hMMMM  MMMy               sMMh                     *")
+print ("*                         `oNMNho/-....:ohNMMMMM  MMMy               sMMh                     *")
+print ("*                           `/ymMMMNNNNMMMMMMMMM  MMMy               sMMh                     *")
+print ("*                                                                                             *")
+print ("*                                UNIVERSIDAD NACIONAL DE COLOMBIA                             *")
+print ("*                                           SEDE BOGOTÁ                                       *")
+print ("*  Facultad de Ingeniería                                                                     *")
+print ("*  Vicedecanatura Académica                                                                   *")
+print ("*  Marzo de 2018                                                                              *")
+print ("***********************************************************************************************")
+print ("------> Inicio de Importación de Registros.")
 import settings

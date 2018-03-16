@@ -66,7 +66,7 @@ def reconocimientosextract():
             index1 = index2 + 3
             index2 = len(info_reconocimientos)
             Ano = info_reconocimientos[index1:index2]
-            init.RECONOCIMIENTOS.append(RH + ";"\
+            init.colciencias_reconocimientos.append(RH + ";"\
             + str(COD_RECONOCIMIENTO) + ";"\
             + re.sub(' +',' ',NombreProducto.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Mes.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \

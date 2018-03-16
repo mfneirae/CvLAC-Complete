@@ -13,16 +13,16 @@
 #
 
 def inicio():
-    global RE_PERSONA_PRODUCTO
-    global APROPIACION
+    global rel_persona_producto_colciencias
+    global colciencias_apropiacion
     global RE_DNI_CODRH
-    global TIPO_PRODUCTO
-    global TIPO_EVENTO
-    global PROD_BIBLIOGRAFICA
-    global PROD_TECNICA
-    global COMITES
-    global RECONOCIMIENTOS
-    RE_PERSONA_PRODUCTO = ["COD_RH; \
+    global v_colciencias_tipo_producto
+    global v_colciencias_tipo_evento
+    global colciencias_prod_bibliografica
+    global colciencias_prod_tecnica
+    global colciencias_comites
+    global colciencias_reconocimientos
+    rel_persona_producto_colciencias = ["COD_RH; \
     COD_PRODUCTO; \
     COD_TIPO_PRODUCTO; \
     NOMPRE_PRODUCTO; \
@@ -45,7 +45,7 @@ def inicio():
     INSTITUCIONES_ASOCIADAS; \
     TIPO_VINCULACION_INSTITUCION\n"]
 
-    APROPIACION = [ "COD_RH; \
+    colciencias_apropiacion = [ "COD_RH; \
     COD_PRODUCTO; \
     FECHA_INI; \
     AÑO_INI; \
@@ -54,21 +54,21 @@ def inicio():
     AÑO_FIN; \
     MES_FIN\n"]
 
-    COMITES = [ "COD_RH; \
+    colciencias_comites = [ "COD_RH; \
     COD_PRODUCTO; \
     TIPO_TRABAJO_PRESENTADO; \
     PROGRAMA_ACADEMICO; \
     NOMBRE_ORIENTADO; \
     NIVEL\n"]
 
-    RECONOCIMIENTOS = [ "COD_RH; \
+    colciencias_reconocimientos = [ "COD_RH; \
     COD_RECONOCIMIENTO; \
     NOMBRE_RECONOCIMIENTO; \
     MES_RECONOCIMIENTO; \
     AÑO_RECONOCIMIENTO; \
     INSTITUCION_RECONOCIMIENTO\n"]
 
-    PROD_BIBLIOGRAFICA = [ "COD_RH; \
+    colciencias_prod_bibliografica = [ "COD_RH; \
     COD_PRODUCTO; \
     REVISTA; \
     ISSN/ISBN; \
@@ -82,7 +82,7 @@ def inicio():
     PAGINA_INICIAL; \
     PAGINA_FINAL\n"]
 
-    TIPO_PRODUCTO = [ "COD_TIPO_PRODUCTO; \
+    v_colciencias_tipo_producto = [ "COD_TIPO_PRODUCTO; \
     TIPO_PRODUCTO_COL; \
     SUB_TIPO_PRODUCTO_COL; \
     TIPO_UAPA; \
@@ -635,7 +635,7 @@ def inicio():
     ;\
     ;\n"]
 
-    TIPO_EVENTO = [ "COD_TIPO_EVENTO; \
+    v_colciencias_tipo_evento = [ "COD_TIPO_EVENTO; \
     TIPO_EVENTO_COL; \
     TIPO_EVENTO_UAPA; \
     TIPO_EVENTO_PREGRADO; \
@@ -673,7 +673,7 @@ def inicio():
     RE_DNI_CODRH = [ "DNI; \
     COD_RH\n"]
 
-    PROD_TECNICA = [ "COD_RH; \
+    colciencias_prod_tecnica = [ "COD_RH; \
     COD_PRODUCTO; \
     RNOMBRE_COMERCIAL; \
     CONTRATO/REGISTRO; \

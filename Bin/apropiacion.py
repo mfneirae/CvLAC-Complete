@@ -174,7 +174,7 @@ def evenextract():
             #Productos Asociados
             productos = b_eventos[1].findAll("li")
             if len(productos) == 0:
-                init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+                init.rel_persona_producto_colciencias.append(RH + ";"\
                 + str(COD_PRODUCTO) + ";"\
                 + "0" + ";"\
                 + "" + ";"\
@@ -197,7 +197,7 @@ def evenextract():
                 + re.sub(' +',' ',insti.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                 + re.sub(' +',' ',vinculain.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                 + "\n")
-                init.APROPIACION.append(RH + ";"\
+                init.colciencias_apropiacion.append(RH + ";"\
                 + str(COD_PRODUCTO) + ";"\
                 + re.sub(' +',' ',FechaEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                 + re.sub(' +',' ',AnoEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -239,7 +239,7 @@ def evenextract():
                     else:
                         logging.critical('Añadir a Tipo_Producto: ' + TipoEvento)
                         print ("ALERTA: Revisar el archivo Eventos.log")
-                    init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+                    init.rel_persona_producto_colciencias.append(RH + ";"\
                     + str(COD_PRODUCTO) + ";"\
                     + re.sub(' +',' ',Tipopub.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                     + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -262,7 +262,7 @@ def evenextract():
                     + re.sub(' +',' ',insti.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                     + re.sub(' +',' ',vinculain.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                     + "\n")
-                    init.APROPIACION.append(RH + ";"\
+                    init.colciencias_apropiacion.append(RH + ";"\
                     + str(COD_PRODUCTO) + ";"\
                     + re.sub(' +',' ',FechaEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                     + re.sub(' +',' ',AnoEventoini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -356,7 +356,7 @@ def estrategiaextract():
                     index2 = info_Estrategia.find(",\xa0                \t\t\t\r\n")
                     FechaEstrategiafin = info_Estrategia[index1:index2]
 
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',"7".replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',NombreEstrategia.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -379,7 +379,7 @@ def estrategiaextract():
             + "" + ";"\
             + "" + ";"\
             + "\n")
-            init.APROPIACION.append(RH + ";"\
+            init.colciencias_apropiacion.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',FechaEstrategiaini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',AnoEstrategiaini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -473,7 +473,7 @@ def redesextract():
                     index1 = info_red.find(",",index1,index1 + 58) + 40
                     index2 = index1 + 10
                     FechaRedfin = info_red[index1:index2]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',"1".replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Nombrered.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -496,7 +496,7 @@ def redesextract():
             + "" + ";"\
             + "" + ";"\
             + "\n")
-            init.APROPIACION.append(RH + ";"\
+            init.colciencias_apropiacion.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',FechaRedini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',AnoRedini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \

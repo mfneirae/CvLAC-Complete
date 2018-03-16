@@ -1,0 +1,6 @@
+SET unique_checks = 0;
+SET foreign_key_checks = 0;
+INSERT INTO 'uapa_db'.'RE_DNI_CODRH' ('DNI;     COD_RH') VALUES ('123,0001458832');
+INSERT INTO 'uapa_db'.'RE_DNI_CODRH' ('DNI;     COD_RH') VALUES ('321,0001545295');
+SET unique_checks = 1;
+SET foreign_key_checks = 1;

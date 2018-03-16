@@ -30,31 +30,23 @@ import produccion_tecnica
 import comites
 import reconocimientos
 os.chdir(Dir)
-
 global COD_PRODUCTO, COD_RECONOCIMIENTO
-
-print ("***********************************************************************************************")
-print ("***********************************************************************************************")
-print ("*                                                                                             *")
-print ("*                        yMMs               sMMM  MMMMMMMMMNNNNMMMmh\`                        *")
-print ("*                        hMMs               sMMM  MMMMMNho:-..--/ohNMNo`                      *")
-print ("*                        hMMs               sMMM  MMMMh-           -hMMh`                     *")
-print ("*                        hMMs               sMMM  MMMm`             `mMMo                     *")
-print ("*                        hMMy               yMMM  MMMy               yMMh                     *")
-print ("*                        oMMm`             `mMMM  MMMy               sMMh                     *")
-print ("*                        `hMMh-           -hMMMM  MMMy               sMMh                     *")
-print ("*                         `oNMNho/-....:ohNMMMMM  MMMy               sMMh                     *")
-print ("*                           `/ymMMMNNNNMMMMMMMMM  MMMy               sMMh                     *")
-print ("*                                                                                             *")
-print ("*                                UNIVERSIDAD NACIONAL DE COLOMBIA                             *")
-print ("*                                           SEDE BOGOTÁ                                       *")
-print ("*  Facultad de Ingeniería                                                                     *")
-print ("*  Vicedecanatura Académica                                                                   *")
-print ("*  Marzo de 2018                                                                              *")
-print ("***********************************************************************************************")
+condition = 0;
+while condition != 1:
+    try:
+        print ("------> Seleccione la forma en la que desea obtener la información:")
+        print ("1) Imprimir datos en CSV y en Insert")
+        print ("2) Imprimir datos en CSV")
+        mode = int(input('-> Seleccione una opción: '))
+        if mode == 1 or mode == 2 or mode == 3:
+            condition = 1
+        else:
+            print ("El varlor escogido no es valido")
+    except ValueError:
+        print ("Not a number")
 print ("------> Inicio de Importación de Registros.")
-wb = openpyxl.load_workbook('./Input/Base - completa.xlsx')
-# wb = openpyxl.load_workbook('./Input/Base.xlsx')
+# wb = openpyxl.load_workbook('./Input/Base - completa.xlsx')
+wb = openpyxl.load_workbook('./Input/Base.xlsx')
 sheet = wb['Sheet1']
 total = sheet.max_row +1
 COD_PRODUCTO = 1;
@@ -173,7 +165,11 @@ for q in range(2,total):
         if q==total-1:
             logging.shutdown()
             print ("------> Escribiendo las bases de datos.")
-            import printcsv
+            if mode == 1:
+                import printcsv
+                import printinsert
+            else:
+                import printcsv
             print ("-----------------------------------------------------------------------------------------------")
             print ("")
             print ("------> ¡Extracción Exitosa!")

@@ -113,7 +113,7 @@ def artiextract():
             index1 = info_articulo.find("\r\n                    -",index1,len(info_articulo)) + 24
             index2 = info_articulo.find("\r\n                    ,",index1,len(info_articulo))
             Pagfin = info_articulo[index1:index2]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -136,7 +136,7 @@ def artiextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_BIBLIOGRAFICA.append(RH + ";"\
+            init.colciencias_prod_bibliografica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',Revista.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',ISSN.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -271,7 +271,7 @@ def libextract():
                 sectores = ""
             else:
                 sectores = info_libro[index1 + 9:len(info_libro)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -294,7 +294,7 @@ def libextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_BIBLIOGRAFICA.append(RH + ";"\
+            init.colciencias_prod_bibliografica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + re.sub(' +',' ',ISBN.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -436,7 +436,7 @@ def caplibroextract():
             index1 = info_caplibro.find(", v.") + 4
             index2 = info_caplibro.find(", p.")
             Volumen = info_caplibro[index1:index2]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + Tipo + ";"\
             + re.sub(' +',' ',Libro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -459,7 +459,7 @@ def caplibroextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_BIBLIOGRAFICA.append(RH + ";"\
+            init.colciencias_prod_bibliografica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + "" + ";" \
@@ -605,7 +605,7 @@ def texnocienextract():
             index1 = info_texnocien.find("\r\n                    v.") + 24
             index2 = info_texnocien.find("\r\n",index1,len(info_texnocien))
             Volumen = info_texnocien[index1:index2]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -628,7 +628,7 @@ def texnocienextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_BIBLIOGRAFICA.append(RH + ";"\
+            init.colciencias_prod_bibliografica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',Revista.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',ISSN.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -748,7 +748,7 @@ def workpextract():
                 sectores = ""
             else:
                 sectores = info_workp[index1 + 9:len(info_workp)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -771,7 +771,7 @@ def workpextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_BIBLIOGRAFICA.append(RH + ";"\
+            init.colciencias_prod_bibliografica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + "" + ";" \
@@ -908,7 +908,7 @@ def traduccionextract():
                 sectores = ""
             else:
                 sectores = info_traduccion[index1 + 9:len(info_traduccion)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -931,7 +931,7 @@ def traduccionextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_BIBLIOGRAFICA.append(RH + ";"\
+            init.colciencias_prod_bibliografica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + "" + ";" \
@@ -1049,7 +1049,7 @@ def otrapbextract():
                 sectores = ""
             else:
                 sectores = info_otrapb[index1 + 9:len(info_otrapb)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1072,7 +1072,7 @@ def otrapbextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.PROD_BIBLIOGRAFICA.append(RH + ";"\
+            init.colciencias_prod_bibliografica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + "" + ";" \

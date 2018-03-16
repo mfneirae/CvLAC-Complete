@@ -119,7 +119,7 @@ def pcomitesextract():
                 sectores = ""
             else:
                 sectores = info_pcomites[index1 + 9:len(info_pcomites)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -142,7 +142,7 @@ def pcomitesextract():
             + re.sub(' +',' ',Instituciones.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "" \
             + "\n")
-            init.COMITES.append(RH + ";"\
+            init.colciencias_comites.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + "" + ";" \
@@ -265,7 +265,7 @@ def pjcomitesextract():
                 sectores = ""
             else:
                 sectores = info_pjcomites[index1 + 9:len(info_pjcomites)]
-            init.RE_PERSONA_PRODUCTO.append(RH + ";"\
+            init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -288,7 +288,7 @@ def pjcomitesextract():
             + "" + ";" \
             + "" \
             + "\n")
-            init.COMITES.append(RH + ";"\
+            init.colciencias_comites.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',TipoTrabajoPresentado.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',ProgramaAcademico.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
