@@ -17,3 +17,12 @@
 # #############################################################################
 #
 #
+import init
+
+f = open ("./Resultados/inv_colciencias_tipo_producto.txt", "w")
+for item in init.inv_colciencias_tipo_producto:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()

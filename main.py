@@ -10,7 +10,8 @@
 #       Attribution-NonCommercial - ShareAlike 4.0 International License
 #       and MIT Licence.
 #
-#       by Manuel Embus.
+#       by Manuel Embus
+#
 #
 #       For more information write me to jai@mfneirae.com
 #       Or visit my webpage at https://mfneirae.com/

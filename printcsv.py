@@ -37,8 +37,8 @@ for item in init.colciencias_apropiacion:
         pass
 f.close()
 
-f = open ("./Resultados/RE_DNI_CODRH.csv", "w")
-for item in init.RE_DNI_CODRH:
+f = open ("./Resultados/rel_persona_colciencias.csv", "w")
+for item in init.rel_persona_colciencias:
     try:
         f.write(item)
     except UnicodeEncodeError:

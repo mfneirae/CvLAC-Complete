@@ -36,7 +36,8 @@ while condition != 1:
     try:
         print ("------> Seleccione la forma en la que desea obtener la información:")
         print ("1) Imprimir datos en CSV y en Insert")
-        print ("2) Imprimir datos en CSV")
+        print ("2) Imprimir datos en Insert para MySQL")
+        print ("3) Imprimir datos en CSV")
         mode = int(input('-> Seleccione una opción: '))
         if mode == 1 or mode == 2 or mode == 3:
             condition = 1
@@ -73,7 +74,7 @@ for q in range(2,total):
     index1 = my_url.find("cod_rh=") + 7
     index2 = len(my_url)
     RH = my_url[index1:index2]
-    init.RE_DNI_CODRH.append(str(doc) + ";"\
+    init.rel_persona_colciencias.append(str(doc) + ";"\
     + str(RH) \
     + "\n")
     if my_url != '-':
@@ -167,6 +168,8 @@ for q in range(2,total):
             print ("------> Escribiendo las bases de datos.")
             if mode == 1:
                 import printcsv
+                import printinsert
+            elif mode == 2:
                 import printinsert
             else:
                 import printcsv
