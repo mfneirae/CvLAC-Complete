@@ -78,7 +78,7 @@ for q in range(2,total):
     + str(RH) \
     + "\n")
     init.inrel_persona_colciencias.append("INSERT INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES " \
-    + "(" + str(RH) + "," + str(doc) + ");\n")
+    + "(" + str(RH) + ",'" + str(doc) + "');\n")
     if my_url != '-':
         apropiacion.evenextract()
         from apropiacion import conteventos
