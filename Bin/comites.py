@@ -204,6 +204,10 @@ def pjcomitesextract():
                 tipo = "88"
             elif tipo.strip() == "Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Doctorado":
                 tipo = "89"
+            elif tipo.strip() == "Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Otra":
+                tipo = "90"
+            elif tipo.strip() == "Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Curso de perfeccionamiento/especialización":
+                tipo = "91"
             else:
                 logging.critical('Añadir: ' + tipo)
                 print ("ALERTA: Revisar el archivo Registros.log")

@@ -77,6 +77,8 @@ for q in range(2,total):
     init.rel_persona_colciencias.append(str(doc) + ";"\
     + str(RH) \
     + "\n")
+    init.inrel_persona_colciencias.append("INSERT INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES " \
+    + "(" + str(RH) + "," + str(doc) + ");\n")
     if my_url != '-':
         apropiacion.evenextract()
         from apropiacion import conteventos
@@ -166,6 +168,9 @@ for q in range(2,total):
         if q==total-1:
             logging.shutdown()
             print ("------> Escribiendo las bases de datos.")
+            init.inrel_persona_colciencias.append("SET unique_checks = 1;\n\
+SET foreign_key_checks = 1;\n"
+            )
             if mode == 1:
                 import printcsv
                 import printinsert

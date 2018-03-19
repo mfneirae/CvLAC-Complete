@@ -26,3 +26,19 @@ for item in init.inv_colciencias_tipo_producto:
     except UnicodeEncodeError:
         pass
 f.close()
+
+f = open ("./Resultados/inv_colciencias_tipo_evento.txt", "w")
+for item in init.inv_colciencias_tipo_evento:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()
+
+f = open ("./Resultados/inrel_persona_colciencias.txt", "w")
+for item in init.inrel_persona_colciencias:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()
