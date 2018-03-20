@@ -23,7 +23,7 @@ def inicio():
     global colciencias_comites
     global colciencias_reconocimientos
     #Tablas Insert
-    global inrel_persona_producto_colciencias
+    global inrel_personas_producto_colciencias
     global incolciencias_apropiacion
     global inrel_persona_colciencias
     global inv_colciencias_tipo_producto
@@ -55,7 +55,8 @@ FINALIDAD; \
 INSTITUCIONES_ASOCIADAS; \
 TIPO_VINCULACION_INSTITUCION\n"]
 
-    colciencias_apropiacion = [ "COD_RH; \
+    colciencias_apropiacion = [ "COD_COLCIENCIAS_APROPIACION; \
+COD_RH; \
 COD_PRODUCTO; \
 FECHA_INI; \
 AÑO_INI; \
@@ -713,7 +714,7 @@ AMBIENTE\n"]
 #***************************************************************************
     inv_colciencias_tipo_producto = [ "SET unique_checks = 0;\n\
 SET foreign_key_checks = 0;\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `cod_tipo_producto`,\
 `tipo_producto_col`,\
 `sub_tipo_producto_col`,\
@@ -726,7 +727,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Evento sin producto asociado',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -739,7 +740,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Redes de conocimiento',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -752,7 +753,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Capítulos de memoria',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -765,7 +766,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Trabajo de Comunicación',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -778,7 +779,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Poster',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -791,7 +792,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Conferencia',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -804,7 +805,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Ponencia',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -817,7 +818,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Estrategias pedagógicas',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -830,7 +831,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Artículo',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -843,7 +844,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Artículo',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -856,7 +857,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Estrategias pedagógicas',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -869,7 +870,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Artículo',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -882,7 +883,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Resumen',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -895,7 +896,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Congreso',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -908,7 +909,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Simposio',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -921,7 +922,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Seminario',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -934,7 +935,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -947,7 +948,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Libro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -960,7 +961,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Libro - Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -973,7 +974,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Libro - pedagógico',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -986,7 +987,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Capítulo de libro - Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -999,7 +1000,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Capítulo de libro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1012,7 +1013,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1025,7 +1026,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1038,7 +1039,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1051,7 +1052,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1064,7 +1065,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1077,7 +1078,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1090,7 +1091,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Traducciones',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1103,7 +1104,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Traducciones',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1116,7 +1117,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Traducciones',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1129,7 +1130,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1142,7 +1143,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1155,7 +1156,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1168,7 +1169,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1181,7 +1182,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Software',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1194,7 +1195,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Productos tecnológicos',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1207,7 +1208,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Productos tecnológicos',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1220,7 +1221,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Productos tecnológicos',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1233,7 +1234,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Productos tecnológicos',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1246,7 +1247,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1259,7 +1260,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1272,7 +1273,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Innovaciones',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1285,7 +1286,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Innovaciones',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1298,7 +1299,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1311,7 +1312,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Innovación',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1324,7 +1325,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1337,7 +1338,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1350,7 +1351,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1363,7 +1364,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1376,7 +1377,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1389,7 +1390,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1402,7 +1403,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1415,7 +1416,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1428,7 +1429,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1441,7 +1442,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1454,7 +1455,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1467,7 +1468,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1480,7 +1481,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1493,7 +1494,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1506,7 +1507,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1519,7 +1520,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1532,7 +1533,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1545,7 +1546,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1558,7 +1559,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1571,7 +1572,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1584,7 +1585,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1597,7 +1598,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1610,7 +1611,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1623,7 +1624,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1636,7 +1637,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1649,7 +1650,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1662,7 +1663,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Software',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1675,7 +1676,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Software',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1688,7 +1689,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1701,7 +1702,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1714,7 +1715,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1727,7 +1728,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1740,7 +1741,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1753,7 +1754,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1766,7 +1767,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1779,7 +1780,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1792,7 +1793,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1805,7 +1806,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1818,7 +1819,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1831,7 +1832,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1844,7 +1845,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1857,7 +1858,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1870,7 +1871,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1883,7 +1884,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1896,7 +1897,7 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Comités',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
@@ -1914,7 +1915,7 @@ SET foreign_key_checks = 1;\n"]
 
     inv_colciencias_tipo_evento = [ "SET unique_checks = 0;\n\
 SET foreign_key_checks = 0;\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
@@ -1922,11 +1923,11 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 1,\
-Otro',\
-Otro',\
+'Otro',\
+'Otro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
@@ -1934,11 +1935,11 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 2,\
-Taller',\
-Taller',\
+'Taller',\
+'Taller',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
@@ -1946,11 +1947,11 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 3,\
-Congreso',\
-Congreso',\
+'Congreso',\
+'Congreso',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
@@ -1958,11 +1959,11 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 4,\
-Encuentro',\
-Encuentro',\
+'Encuentro',\
+'Encuentro',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
@@ -1970,11 +1971,11 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 5,\
-Seminario',\
-Seminario',\
+'Seminario',\
+'Seminario',\
 null,\
 null);\n\
-INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
@@ -1982,12 +1983,18 @@ INSERT INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 6,\
-Simposio',\
-Simposio',\
+'Simposio',\
+'Simposio',\
 null,\
 null);\n\
 SET unique_checks = 1;\n\
 SET foreign_key_checks = 1;\n"]
 
     inrel_persona_colciencias = [ "SET unique_checks = 0;\n\
+SET foreign_key_checks = 0;\n"]
+
+    incolciencias_apropiacion = [ "SET unique_checks = 0;\n\
+SET foreign_key_checks = 0;\n"]
+
+    inrel_personas_producto_colciencias = [ "SET unique_checks = 0;\n\
 SET foreign_key_checks = 0;\n"]

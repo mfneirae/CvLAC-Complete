@@ -77,8 +77,8 @@ for q in range(2,total):
     init.rel_persona_colciencias.append(str(doc) + ";"\
     + str(RH) \
     + "\n")
-    init.inrel_persona_colciencias.append("INSERT INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES " \
-    + "(" + str(RH) + ",'" + str(doc) + "');\n")
+    init.inrel_persona_colciencias.append("REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES " \
+    + "('" + str(RH) + "','" + str(doc) + "');\n")
     if my_url != '-':
         apropiacion.evenextract()
         from apropiacion import conteventos
@@ -169,6 +169,12 @@ for q in range(2,total):
             logging.shutdown()
             print ("------> Escribiendo las bases de datos.")
             init.inrel_persona_colciencias.append("SET unique_checks = 1;\n\
+SET foreign_key_checks = 1;\n"
+            )
+            init.incolciencias_apropiacion.append("SET unique_checks = 1;\n\
+SET foreign_key_checks = 1;\n"
+            )
+            init.inrel_personas_producto_colciencias.append("SET unique_checks = 1;\n\
 SET foreign_key_checks = 1;\n"
             )
             if mode == 1:

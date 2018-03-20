@@ -1,6 +1,0 @@
-SET unique_checks = 0;
-SET foreign_key_checks = 0;
-INSERT INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES (0001458832,123);
-INSERT INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES (0001545295,321);
-SET unique_checks = 1;
-SET foreign_key_checks = 1;
