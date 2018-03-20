@@ -132,7 +132,7 @@ def ptsoftwareextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -175,7 +175,8 @@ def ptsoftwareextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -188,6 +189,22 @@ def ptsoftwareextract():
             + re.sub(' +',' ',Plataforma.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Ambiente.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',Plataforma.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Ambiente.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) \
+            + "');\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Sofwares Asociados')
@@ -301,7 +318,7 @@ def ptproductoextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -344,7 +361,8 @@ def ptproductoextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -357,6 +375,22 @@ def ptproductoextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Producciones Técnicas Asociadas')
@@ -463,7 +497,7 @@ def ptdiseñoextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -506,7 +540,8 @@ def ptdiseñoextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -519,6 +554,22 @@ def ptdiseñoextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Diseños Industriales Asociados')
@@ -626,7 +677,7 @@ def ptcircuitosextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -669,7 +720,8 @@ def ptcircuitosextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -682,6 +734,22 @@ def ptcircuitosextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Esquemas de Circuitos Asociados')
@@ -791,7 +859,7 @@ def ptinnovaextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -834,7 +902,8 @@ def ptinnovaextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -847,6 +916,22 @@ def ptinnovaextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Innovaciones en Empresas Asociadas')
@@ -956,7 +1041,7 @@ def ptvaranimalextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -999,7 +1084,8 @@ def ptvaranimalextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1012,6 +1098,22 @@ def ptvaranimalextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Variedades Animales Registradas')
@@ -1121,7 +1223,7 @@ def ptprocesoextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1164,7 +1266,8 @@ def ptprocesoextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1177,6 +1280,22 @@ def ptprocesoextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Innovaciones en Procesos Registradas')
@@ -1292,7 +1411,7 @@ def ptcartasextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1335,7 +1454,8 @@ def ptcartasextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1348,6 +1468,22 @@ def ptcartasextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Cartas o Mapas Registrados')
@@ -1465,7 +1601,7 @@ def ptvegetalextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1508,7 +1644,8 @@ def ptvegetalextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1521,6 +1658,22 @@ def ptvegetalextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',Ciclo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Variedad.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Variedades Vegetales Registradas"')
@@ -1655,7 +1808,7 @@ def pttratecextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1698,7 +1851,8 @@ def pttratecextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1711,6 +1865,21 @@ def pttratecextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',Duracion.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Trabajos Técnicos Registradas')
@@ -1844,7 +2013,7 @@ def ptnormaextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1887,7 +2056,8 @@ def ptnormaextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -1900,6 +2070,21 @@ def ptnormaextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',Duracion.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Regulacion.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',TipoRegulacion.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Normas o Regulaciones Asociadas')
@@ -2019,7 +2204,7 @@ def ptreglamentoextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -2062,7 +2247,8 @@ def ptreglamentoextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + re.sub(' +',' ',NombreComercial.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -2075,6 +2261,21 @@ def ptreglamentoextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',Duracion.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Regulacion.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',TipoRegulacion.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Reglamentos Asociados')
@@ -2176,7 +2377,7 @@ def ptempresaextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -2219,7 +2420,8 @@ def ptempresaextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -2232,6 +2434,21 @@ def ptempresaextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Empresas de Base Tecnológica Asociadas"')
@@ -2342,7 +2559,7 @@ def demastrabajosextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -2428,11 +2645,11 @@ def ptsignosextract():
             index2 = info_ptsignos.find(',')
             NombreProducto = info_ptsignos[index1:index2]
             #Contrato / Registro
-            index1 = info_ptsignos.find('Registro:') + 8
+            index1 = info_ptsignos.find('Registro:') + 9
             index2 = info_ptsignos.find(',',index1,len(info_ptsignos))
             Registro = info_ptsignos[index1:index2]
             #Titular
-            index1 = info_ptsignos.find('Titular: ') + 9
+            index1 = info_ptsignos.find('Titular:') + 8
             index2 = len(info_ptsignos)
             Titular = info_ptsignos[index1:index2]
             #Año
@@ -2449,7 +2666,7 @@ def ptsignosextract():
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
             + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + "" + ";" \
+            + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
             + re.sub(' +',' ',Lugar.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -2492,7 +2709,8 @@ def ptsignosextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
-            init.colciencias_prod_tecnica.append(RH + ";"\
+            init.colciencias_prod_tecnica.append(str(RH) + str(COD_PRODUCTO) + ";"\
+            + RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + re.sub(' +',' ',Registro.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
@@ -2505,6 +2723,21 @@ def ptsignosextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_tecnica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "('" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Titular.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Signos Asociados')

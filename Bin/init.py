@@ -663,32 +663,37 @@ TIPO_EVENTO_COL; \
 TIPO_EVENTO_UAPA; \
 TIPO_EVENTO_PREGRADO; \
 TIPO_EVENTO_POSGRADO\n\
-E1; \
+0; \
+Sin Información; \
+Sin Información; \
+; \
+\n\
+1; \
 Otro; \
 Otro; \
 ; \
 \n\
-E2; \
+2; \
 Taller; \
 Taller; \
 ; \
 \n\
-E3; \
+3; \
 Congreso; \
 Congreso; \
 ; \
 \n\
-E4; \
+4; \
 Encuentro; \
 Encuentro; \
 ; \
 \n\
-E5; \
+5; \
 Seminario; \
 Seminario; \
 ; \
 \n\
-E6; \
+6; \
 Simposio; \
 Simposio; \
 ;\n"]
@@ -696,7 +701,8 @@ Simposio; \
     rel_persona_colciencias = [ "DNI; \
 COD_RH\n"]
 
-    colciencias_prod_tecnica = [ "COD_RH; \
+    colciencias_prod_tecnica = [ "COD_COLCIENCIAS_PROD_TECNICA; \
+COD_RH; \
 COD_PRODUCTO; \
 RNOMBRE_COMERCIAL; \
 CONTRATO/REGISTRO; \
@@ -1919,19 +1925,17 @@ REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
-`TIPO_UAPA`,\
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 0,\
-'Sin información',\
 'Sin Información',\
+'Sin información',\
 null,\
 null);\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
-`TIPO_UAPA`,\
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 1,\
@@ -1943,7 +1947,6 @@ REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
-`TIPO_UAPA`,\
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 2,\
@@ -1955,7 +1958,6 @@ REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
-`TIPO_UAPA`,\
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 3,\
@@ -1967,7 +1969,6 @@ REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
-`TIPO_UAPA`,\
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 4,\
@@ -1979,7 +1980,6 @@ REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
-`TIPO_UAPA`,\
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 5,\
@@ -1991,7 +1991,6 @@ REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
-`TIPO_UAPA`,\
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
 6,\

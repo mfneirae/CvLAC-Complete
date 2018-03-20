@@ -62,3 +62,13 @@ for item in init.inrel_personas_producto_colciencias:
     except UnicodeEncodeError:
         pass
 f.close()
+
+f = open ("./Resultados/incolciencias_prod_tecnica.sql", "w")
+init.incolciencias_prod_tecnica = [w.replace("''", 'null') for w in init.incolciencias_prod_tecnica]
+init.incolciencias_prod_tecnica = [w.replace(",,", ',null,') for w in init.incolciencias_prod_tecnica]
+for item in init.incolciencias_prod_tecnica:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()
