@@ -177,6 +177,9 @@ SET foreign_key_checks = 1;\n"
             init.inrel_personas_producto_colciencias.append("SET unique_checks = 1;\n\
 SET foreign_key_checks = 1;\n"
             )
+            init.incolciencias_prod_tecnica.append("SET unique_checks = 1;\n\
+SET foreign_key_checks = 1;\n"
+            )
             if mode == 1:
                 import printcsv
                 import printinsert

@@ -1922,6 +1922,18 @@ REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `TIPO_UAPA`,\
 `tipo_pregrado`,\
 `tipo_posgrado`) VALUES (\
+0,\
+'Sin información',\
+'Sin Información',\
+null,\
+null);\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
+`cod_tipo_evento`,\
+`tipo_evento_col`,\
+`tipo_evento_uapa`,\
+`TIPO_UAPA`,\
+`tipo_pregrado`,\
+`tipo_posgrado`) VALUES (\
 1,\
 'Otro',\
 'Otro',\
@@ -1997,4 +2009,7 @@ SET foreign_key_checks = 0;\n"]
 SET foreign_key_checks = 0;\n"]
 
     inrel_personas_producto_colciencias = [ "SET unique_checks = 0;\n\
+SET foreign_key_checks = 0;\n"]
+
+    incolciencias_prod_tecnica = [ "SET unique_checks = 0;\n\
 SET foreign_key_checks = 0;\n"]
