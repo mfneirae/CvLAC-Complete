@@ -2012,3 +2012,12 @@ SET foreign_key_checks = 0;\n"]
 
     incolciencias_prod_tecnica = [ "SET unique_checks = 0;\n\
 SET foreign_key_checks = 0;\n"]
+
+    incolciencias_prod_bibliografica = [ "SET unique_checks = 0;\n\
+SET foreign_key_checks = 0;\n"]
+
+    incolciencias_comites = [ "SET unique_checks = 0;\n\
+SET foreign_key_checks = 0;\n"]
+
+    incolciencias_reconocimientos = [ "SET unique_checks = 0;\n\
+SET foreign_key_checks = 0;\n"]

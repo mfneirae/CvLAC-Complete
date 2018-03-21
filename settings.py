@@ -180,6 +180,12 @@ SET foreign_key_checks = 1;\n"
             init.incolciencias_prod_tecnica.append("SET unique_checks = 1;\n\
 SET foreign_key_checks = 1;\n"
             )
+            init.incolciencias_prod_bibliografica.append("SET unique_checks = 1;\n\
+SET foreign_key_checks = 1;\n"
+            )
+            init.incolciencias_comites.append("SET unique_checks = 1;\n\
+SET foreign_key_checks = 1;\n"
+            )
             if mode == 1:
                 import printcsv
                 import printinsert

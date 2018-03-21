@@ -192,7 +192,7 @@ def ptsoftwareextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -378,7 +378,7 @@ def ptproductoextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -557,7 +557,7 @@ def ptdiseñoextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -737,7 +737,7 @@ def ptcircuitosextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -919,7 +919,7 @@ def ptinnovaextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -1101,7 +1101,7 @@ def ptvaranimalextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -1283,7 +1283,7 @@ def ptprocesoextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -1471,7 +1471,7 @@ def ptcartasextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -1661,7 +1661,7 @@ def ptvegetalextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -1868,7 +1868,7 @@ def pttratecextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -2073,7 +2073,7 @@ def ptnormaextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -2264,7 +2264,7 @@ def ptreglamentoextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -2437,7 +2437,7 @@ def ptempresaextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "null" + ","\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -2726,7 +2726,7 @@ def ptsignosextract():
             init.incolciencias_prod_tecnica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
             + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + "null" + ","\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\

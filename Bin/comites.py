@@ -173,6 +173,16 @@ def pcomitesextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_comites.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_comites`(`cod_colciencias_comites`,`cod_rh`,`cod_producto`,`tipo_trabajo_presentado`,`programa_academico`,`nombre_orientado`,`nivel`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "'" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null"\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Participaciones en Comités Asociadas')
@@ -347,6 +357,17 @@ def pjcomitesextract():
             + re.sub(' +',' ',NombreOrientado.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Nivel.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
+            init.incolciencias_comites.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_comites`(`cod_colciencias_comites`,`cod_rh`,`cod_producto`,`tipo_trabajo_presentado`,`programa_academico`,`nombre_orientado`,`nivel`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "'" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',TipoTrabajoPresentado.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',ProgramaAcademico.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',NombreOrientado.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Nivel.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))+ "'"\
+            + ");\n")
+
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene registros como Jurado en Comités Asociadas')

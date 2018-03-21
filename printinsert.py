@@ -72,3 +72,23 @@ for item in init.incolciencias_prod_tecnica:
     except UnicodeEncodeError:
         pass
 f.close()
+
+f = open ("./Resultados/incolciencias_comites.sql", "w")
+init.incolciencias_comites = [w.replace("''", 'null') for w in init.incolciencias_comites]
+init.incolciencias_comites = [w.replace(",,", ',null,') for w in init.incolciencias_comites]
+for item in init.incolciencias_comites:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()
+
+f = open ("./Resultados/incolciencias_reconocimientos.sql", "w")
+init.incolciencias_reconocimientos = [w.replace("''", 'null') for w in init.incolciencias_reconocimientos]
+init.incolciencias_reconocimientos = [w.replace(",,", ',null,') for w in init.incolciencias_reconocimientos]
+for item in init.incolciencias_reconocimientos:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()

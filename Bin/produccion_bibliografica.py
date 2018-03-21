@@ -138,7 +138,7 @@ def artiextract():
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
             "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -174,6 +174,23 @@ def artiextract():
             + re.sub(' +',' ',Pagini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Pagfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
+            init.incolciencias_prod_bibliografica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_bibliografica`(`cod_colciencias_prod_bibliografica`,`cod_rh`,`cod_producto`,`revista`,`issn/isbn`,`libro/revista_original_trad`,`nombre_libro/revista_trad`,`nombre_autor_original_trad`,`idioma_original`,`idioma_traduccion`,`nombre_capitulo`,`fasciculo`,`pagina_inicial`,`pagina_final`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "'" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',Revista.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',ISSN.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',fasciculo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Pagini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Pagfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) \
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Artículos Asociados')
@@ -320,7 +337,7 @@ def libextract():
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
             "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -356,6 +373,23 @@ def libextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_bibliografica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_bibliografica`(`cod_colciencias_prod_bibliografica`,`cod_rh`,`cod_producto`,`revista`,`issn/isbn`,`libro/revista_original_trad`,`nombre_libro/revista_trad`,`nombre_autor_original_trad`,`idioma_original`,`idioma_traduccion`,`nombre_capitulo`,`fasciculo`,`pagina_inicial`,`pagina_final`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "'" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',ISBN.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" \
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Libros Asociados')
@@ -509,7 +543,7 @@ def caplibroextract():
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
             "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',Tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',Libro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -545,6 +579,23 @@ def caplibroextract():
             + re.sub(' +',' ',Pagini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Pagfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
+            init.incolciencias_prod_bibliografica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_bibliografica`(`cod_colciencias_prod_bibliografica`,`cod_rh`,`cod_producto`,`revista`,`issn/isbn`,`libro/revista_original_trad`,`nombre_libro/revista_trad`,`nombre_autor_original_trad`,`idioma_original`,`idioma_traduccion`,`nombre_capitulo`,`fasciculo`,`pagina_inicial`,`pagina_final`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "'" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',Pagini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Pagfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) \
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Capítulos de Libro Asociados')
@@ -702,7 +753,7 @@ def texnocienextract():
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
             "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -738,6 +789,23 @@ def texnocienextract():
             + re.sub(' +',' ',Pagini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Pagfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
+            init.incolciencias_prod_bibliografica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_bibliografica`(`cod_colciencias_prod_bibliografica`,`cod_rh`,`cod_producto`,`revista`,`issn/isbn`,`libro/revista_original_trad`,`nombre_libro/revista_trad`,`nombre_autor_original_trad`,`idioma_original`,`idioma_traduccion`,`nombre_capitulo`,`fasciculo`,`pagina_inicial`,`pagina_final`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "'" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "'" + re.sub(' +',' ',Revista.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',ISSN.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',Pagini.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Pagfin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) \
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Textos no Cientificos Asociados')
@@ -869,7 +937,7 @@ def workpextract():
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
             "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -905,6 +973,23 @@ def workpextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_bibliografica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_bibliografica`(`cod_colciencias_prod_bibliografica`,`cod_rh`,`cod_producto`,`revista`,`issn/isbn`,`libro/revista_original_trad`,`nombre_libro/revista_trad`,`nombre_autor_original_trad`,`idioma_original`,`idioma_traduccion`,`nombre_capitulo`,`fasciculo`,`pagina_inicial`,`pagina_final`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "'" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null"\
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Documentos de Trabajo Asociados')
@@ -1053,7 +1138,7 @@ def traduccionextract():
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
             "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -1089,6 +1174,23 @@ def traduccionextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_bibliografica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_bibliografica`(`cod_colciencias_prod_bibliografica`,`cod_rh`,`cod_producto`,`revista`,`issn/isbn`,`libro/revista_original_trad`,`nombre_libro/revista_trad`,`nombre_autor_original_trad`,`idioma_original`,`idioma_traduccion`,`nombre_capitulo`,`fasciculo`,`pagina_inicial`,`pagina_final`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "'" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',NombreOriginal.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',AutorOriginal.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',IdiomaOriginal.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',IdiomaTraduccion.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "'" + re.sub(' +',' ',fasciculo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "null" + ","\
+            + "null" \
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Traducciones Asociadas')
@@ -1218,7 +1320,7 @@ def otrapbextract():
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
             "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            + "'" + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -1254,6 +1356,23 @@ def otrapbextract():
             + "" + ";" \
             + "" + ";" \
             + "\n")
+            init.incolciencias_prod_bibliografica.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_prod_bibliografica`(`cod_colciencias_prod_bibliografica`,`cod_rh`,`cod_producto`,`revista`,`issn/isbn`,`libro/revista_original_trad`,`nombre_libro/revista_trad`,`nombre_autor_original_trad`,`idioma_original`,`idioma_traduccion`,`nombre_capitulo`,`fasciculo`,`pagina_inicial`,`pagina_final`) VALUES"
+            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            + "'" + str(RH) + "',"\
+            + str(COD_PRODUCTO) + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" + ","\
+            + "null" \
+            + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Otras Producciones Asociadas')

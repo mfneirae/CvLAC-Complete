@@ -73,6 +73,16 @@ def reconocimientosextract():
             + re.sub(' +',' ',Ano.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + re.sub(' +',' ',Institucion.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
+            init.incolciencias_reconocimientos.append( \
+            "REPLACE INTO `uapa_db`.`colciencias_comites`(`cod_reconocimientos`,`cod_rh`,`nombre_reconocimiento`,`mes_reconocimiento`,`ano_reconocimiento`,`institucion_reconocimiento`) VALUES"
+            + "('" + str(COD_RECONOCIMIENTO) + "',"\
+            + "'" + str(RH) + "',"\
+            + "'" + re.sub(' +',' ',NombreProducto.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Mes.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Ano.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Institucion.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))+ "'"\
+            + ");\n")
+
             COD_RECONOCIMIENTO = COD_RECONOCIMIENTO + 1
     else:
         logging.info(' El Docente ' + name + ' ' + last + 'no tiene Reconocimientos Asociado')
