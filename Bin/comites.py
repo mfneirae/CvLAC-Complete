@@ -143,8 +143,8 @@ def pcomitesextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -327,8 +327,8 @@ def pjcomitesextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\

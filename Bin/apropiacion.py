@@ -208,8 +208,8 @@ def evenextract():
                 + re.sub(' +',' ',MesEventofin.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                 + "\n")
                 init.inrel_personas_producto_colciencias.append( \
-                "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-                + "('" + str(RH) + "',"\
+                "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+                + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
                 + str(COD_PRODUCTO) + ","\
                 + "0" + ","\
                 + "null" + ","\
@@ -299,8 +299,8 @@ def evenextract():
                     + re.sub(' +',' ',vinculain.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
                     + "\n")
                     init.inrel_personas_producto_colciencias.append( \
-                    "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-                    + "('" + str(RH) + "',"\
+                    "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+                    + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
                     + str(COD_PRODUCTO) + ","\
                     + re.sub(' +',' ',Tipopub.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
                     + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -451,8 +451,8 @@ def estrategiaextract():
             + "" + ";"\
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',"7".replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreEstrategia.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
@@ -604,8 +604,8 @@ def redesextract():
             + "" + ";"\
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('" + str(RH) + "',"\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
             + str(COD_PRODUCTO) + ","\
             + re.sub(' +',' ',"7".replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',Nombrered.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\

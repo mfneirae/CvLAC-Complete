@@ -74,8 +74,9 @@ def reconocimientosextract():
             + re.sub(' +',' ',Institucion.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
             init.incolciencias_reconocimientos.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_comites`(`cod_reconocimientos`,`cod_rh`,`nombre_reconocimiento`,`mes_reconocimiento`,`ano_reconocimiento`,`institucion_reconocimiento`) VALUES"
-            + "('" + str(COD_RECONOCIMIENTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_reconocimientos`(`cod_colciencias_reconocimientos`,`cod_reconocimiento`,`cod_rh`,`nombre_reconocimiento`,`mes_reconocimiento`,`ano_reconocimiento`,`institucion_reconocimiento`) VALUES"
+            + "('" + str(RH) + "R" + str(COD_RECONOCIMIENTO) + "',"\
+            + str(COD_RECONOCIMIENTO) + ","\
             + "'" + str(RH) + "',"\
             + "'" + re.sub(' +',' ',NombreProducto.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Mes.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
