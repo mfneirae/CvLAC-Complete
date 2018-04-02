@@ -152,9 +152,9 @@ def ptsoftwareextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -190,10 +190,10 @@ def ptsoftwareextract():
             + re.sub(' +',' ',Ambiente.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -338,9 +338,9 @@ def ptproductoextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -376,10 +376,10 @@ def ptproductoextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -517,9 +517,9 @@ def ptdiseñoextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -555,10 +555,10 @@ def ptdiseñoextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -697,9 +697,9 @@ def ptcircuitosextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -735,10 +735,10 @@ def ptcircuitosextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -879,9 +879,9 @@ def ptinnovaextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -917,10 +917,10 @@ def ptinnovaextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -1061,9 +1061,9 @@ def ptvaranimalextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -1099,10 +1099,10 @@ def ptvaranimalextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -1243,9 +1243,9 @@ def ptprocesoextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -1281,10 +1281,10 @@ def ptprocesoextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -1431,9 +1431,9 @@ def ptcartasextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -1469,10 +1469,10 @@ def ptcartasextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -1621,9 +1621,9 @@ def ptvegetalextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -1659,10 +1659,10 @@ def ptvegetalextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -1828,9 +1828,9 @@ def pttratecextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -1866,10 +1866,10 @@ def pttratecextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -2034,9 +2034,9 @@ def ptnormaextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -2072,10 +2072,10 @@ def ptnormaextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -2226,9 +2226,9 @@ def ptreglamentoextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -2264,10 +2264,10 @@ def ptreglamentoextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',NombreComercial.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -2400,9 +2400,9 @@ def ptempresaextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -2438,10 +2438,10 @@ def ptempresaextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "null" + ","\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "null" + ","\
@@ -2583,9 +2583,9 @@ def demastrabajosextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -2690,9 +2690,9 @@ def ptsignosextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -2728,10 +2728,10 @@ def ptsignosextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_prod_tecnica.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_producto`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_prod_tecnica`(`cod_colciencias_prod_tecnica`,`cod_rh`,`cod_rel_per_prod_col`,`nombre_comercial`,`contrato/registro`,`titular`,`duracion`,`regulacion`,`tipo_regulacion`,`ciclo`,`estado_variedad`,`plataforma`,`ambiente`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "null" + ","\
             + "'" + re.sub(' +',' ',Registro.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',Titular.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\

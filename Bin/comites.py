@@ -143,9 +143,9 @@ def pcomitesextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -174,10 +174,10 @@ def pcomitesextract():
             + "" + ";" \
             + "\n")
             init.incolciencias_comites.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_comites`(`cod_colciencias_comites`,`cod_rh`,`cod_producto`,`tipo_trabajo_presentado`,`programa_academico`,`nombre_orientado`,`nivel`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_comites`(`cod_colciencias_comites`,`cod_rh`,`cod_rel_per_prod_col`,`tipo_trabajo_presentado`,`programa_academico`,`nombre_orientado`,`nivel`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
@@ -327,9 +327,9 @@ def pjcomitesextract():
             + "" \
             + "\n")
             init.inrel_personas_producto_colciencias.append( \
-            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_producto_colciencias`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
-            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            "REPLACE INTO `uapa_db`.`rel_personas_producto_colciencias`(`cod_rel_per_prod_col`,`cod_producto`,`cod_rh`,`cod_tipo_producto`,`nombre_producto`,`cod_tipo_evento`,`evento_asociado`,`datos_complementarios`,`lugar`,`ano`,`ambito`,`palabras_clave`,`areas`,`sectores`,`coautores`,`vincula_coautores`,`editorial`,`volumen`,`paginas`,`doi`,`finalidad`,`instituciones_asociadas`,`tipo_vinculacion_institucion`) VALUES"
+            + "('"+ str(RH) + str(COD_PRODUCTO) + "'," + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + "',"\
             + re.sub(' +',' ',tipo.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ","\
             + "'" + re.sub(' +',' ',NombreProducto.replace('"',"").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "0" + ","\
@@ -358,10 +358,10 @@ def pjcomitesextract():
             + re.sub(' +',' ',Nivel.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
             init.incolciencias_comites.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_comites`(`cod_colciencias_comites`,`cod_rh`,`cod_producto`,`tipo_trabajo_presentado`,`programa_academico`,`nombre_orientado`,`nivel`) VALUES"
-            + "('" + str(RH) + str(COD_PRODUCTO) + "',"\
+            "REPLACE INTO `uapa_db`.`colciencias_comites`(`cod_colciencias_comites`,`cod_rh`,`cod_rel_per_prod_col`,`tipo_trabajo_presentado`,`programa_academico`,`nombre_orientado`,`nivel`) VALUES"
+            + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
-            + str(COD_PRODUCTO) + ","\
+            + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "'" + re.sub(' +',' ',TipoTrabajoPresentado.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',ProgramaAcademico.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
             + "'" + re.sub(' +',' ',NombreOrientado.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
