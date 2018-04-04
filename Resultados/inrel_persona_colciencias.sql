@@ -1,0 +1,14 @@
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0001371417','1024496205');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0001240633','1032363637');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0001353347','1032389108');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0001421474','1032419449');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0001479088','1057581307');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0001413927','1082104140');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0000013192','1121859744');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0001468331','1136881212');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0000266299','14894713');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0000249360','15813899');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0000773093','15920734');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0000177725','16737949');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0001447216','19136869');
+REPLACE INTO `uapa_db`.`rel_persona_colciencias` (`cod_rh`,`dni_persona`) VALUES ('0000105244','19187789');
