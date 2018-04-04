@@ -718,9 +718,7 @@ AMBIENTE\n"]
 #***************************************************************************
 #Insert
 #***************************************************************************
-    inv_colciencias_tipo_producto = [ "SET unique_checks = 0;\n\
-SET foreign_key_checks = 0;\n\
-REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+    inv_colciencias_tipo_producto = [ "REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `cod_tipo_producto`,\
 `tipo_producto_col`,\
 `sub_tipo_producto_col`,\
@@ -1915,13 +1913,9 @@ REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 'Jurado Especial',\
 'Comités',\
 null,\
-null);\n\
-SET unique_checks = 1;\n\
-SET foreign_key_checks = 1;\n"]
+null);\n"]
 
-    inv_colciencias_tipo_evento = [ "SET unique_checks = 0;\n\
-SET foreign_key_checks = 0;\n\
-REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
+    inv_colciencias_tipo_evento = [ "REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
 `tipo_evento_col`,\
 `tipo_evento_uapa`,\
@@ -1997,27 +1991,39 @@ REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 'Simposio',\
 'Simposio',\
 null,\
-null);\n\
-SET unique_checks = 1;\n\
-SET foreign_key_checks = 1;\n"]
+null);\n"]
 
-    inrel_persona_colciencias = [ "SET unique_checks = 0;\n\
-SET foreign_key_checks = 0;\n"]
+#     inrel_persona_colciencias = [ "SET unique_checks = 0;\n\
+# SET foreign_key_checks = 0;\n"]
+#
+#     incolciencias_apropiacion = [ "SET unique_checks = 0;\n\
+# SET foreign_key_checks = 0;\n"]
+#
+#     inrel_personas_producto_colciencias = [ "SET unique_checks = 0;\n\
+# SET foreign_key_checks = 0;\n"]
+#
+#     incolciencias_prod_tecnica = [ "SET unique_checks = 0;\n\
+# SET foreign_key_checks = 0;\n"]
+#
+#     incolciencias_prod_bibliografica = [ "SET unique_checks = 0;\n\
+# SET foreign_key_checks = 0;\n"]
+#
+#     incolciencias_comites = [ "SET unique_checks = 0;\n\
+# SET foreign_key_checks = 0;\n"]
+#
+#     incolciencias_reconocimientos = [ "SET unique_checks = 0;\n\
+# SET foreign_key_checks = 0;\n"]
 
-    incolciencias_apropiacion = [ "SET unique_checks = 0;\n\
-SET foreign_key_checks = 0;\n"]
+    inrel_persona_colciencias = []
 
-    inrel_personas_producto_colciencias = [ "SET unique_checks = 0;\n\
-SET foreign_key_checks = 0;\n"]
+    incolciencias_apropiacion = []
 
-    incolciencias_prod_tecnica = [ "SET unique_checks = 0;\n\
-SET foreign_key_checks = 0;\n"]
+    inrel_personas_producto_colciencias = []
 
-    incolciencias_prod_bibliografica = [ "SET unique_checks = 0;\n\
-SET foreign_key_checks = 0;\n"]
+    incolciencias_prod_tecnica = []
 
-    incolciencias_comites = [ "SET unique_checks = 0;\n\
-SET foreign_key_checks = 0;\n"]
+    incolciencias_prod_bibliografica = []
 
-    incolciencias_reconocimientos = [ "SET unique_checks = 0;\n\
-SET foreign_key_checks = 0;\n"]
+    incolciencias_comites = []
+
+    incolciencias_reconocimientos = []

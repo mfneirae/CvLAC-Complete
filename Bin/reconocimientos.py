@@ -59,7 +59,7 @@ def reconocimientosextract():
             index2 = info_reconocimientos.find('-')
             Institucion = info_reconocimientos[index1:index2]
             #Mes
-            index1 = info_reconocimientos.find('-') + 2
+            index1 = info_reconocimientos.rfind('-',0,len(info_reconocimientos)) + 2
             index2 = info_reconocimientos.find('de ',index1,len(info_reconocimientos))
             Mes = info_reconocimientos[index1:index2]
             #Programa Académico
@@ -68,20 +68,20 @@ def reconocimientosextract():
             Ano = info_reconocimientos[index1:index2]
             init.colciencias_reconocimientos.append(RH + ";"\
             + str(COD_RECONOCIMIENTO) + ";"\
-            + re.sub(' +',' ',NombreProducto.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + re.sub(' +',' ',Mes.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + re.sub(' +',' ',Ano.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
-            + re.sub(' +',' ',Institucion.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',NombreProducto.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Mes.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Ano.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
+            + re.sub(' +',' ',Institucion.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + ";" \
             + "\n")
             init.incolciencias_reconocimientos.append( \
             "REPLACE INTO `uapa_db`.`colciencias_reconocimientos`(`cod_colciencias_reconocimientos`,`cod_reconocimiento`,`cod_rh`,`nombre_reconocimiento`,`mes_reconocimiento`,`ano_reconocimiento`,`institucion_reconocimiento`) VALUES"
             + "('" + str(RH) + "R" + str(COD_RECONOCIMIENTO) + "',"\
             + str(COD_RECONOCIMIENTO) + ","\
             + "'" + str(RH) + "',"\
-            + "'" + re.sub(' +',' ',NombreProducto.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
-            + "'" + re.sub(' +',' ',Mes.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
-            + "'" + re.sub(' +',' ',Ano.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
-            + "'" + re.sub(' +',' ',Institucion.strip().replace('"',"").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))+ "'"\
+            + "'" + re.sub(' +',' ',NombreProducto.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Mes.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Ano.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r","")) + "',"\
+            + "'" + re.sub(' +',' ',Institucion.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))+ "'"\
             + ");\n")
 
             COD_RECONOCIMIENTO = COD_RECONOCIMIENTO + 1

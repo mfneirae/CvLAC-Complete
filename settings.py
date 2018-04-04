@@ -46,8 +46,8 @@ while condition != 1:
     except ValueError:
         print ("Not a number")
 print ("------> Inicio de Importación de Registros.")
-# wb = openpyxl.load_workbook('./Input/Base - completa.xlsx')
 wb = openpyxl.load_workbook('./Input/Base.xlsx')
+# wb = openpyxl.load_workbook('./Input/Base.xlsx')
 sheet = wb['Sheet1']
 total = sheet.max_row +1
 COD_PRODUCTO = 1;
@@ -168,24 +168,6 @@ for q in range(2,total):
         if q==total-1:
             logging.shutdown()
             print ("------> Escribiendo las bases de datos.")
-            init.inrel_persona_colciencias.append("SET unique_checks = 1;\n\
-SET foreign_key_checks = 1;\n"
-            )
-            init.incolciencias_apropiacion.append("SET unique_checks = 1;\n\
-SET foreign_key_checks = 1;\n"
-            )
-            init.inrel_personas_producto_colciencias.append("SET unique_checks = 1;\n\
-SET foreign_key_checks = 1;\n"
-            )
-            init.incolciencias_prod_tecnica.append("SET unique_checks = 1;\n\
-SET foreign_key_checks = 1;\n"
-            )
-            init.incolciencias_prod_bibliografica.append("SET unique_checks = 1;\n\
-SET foreign_key_checks = 1;\n"
-            )
-            init.incolciencias_comites.append("SET unique_checks = 1;\n\
-SET foreign_key_checks = 1;\n"
-            )
             if mode == 1:
                 import printcsv
                 import printinsert

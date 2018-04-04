@@ -38,13 +38,14 @@ Previows version used to extract some products in UAPA format is available [Here
     pip install openpyxl
   ```  
 3. Usage:
-  * Locate the CvLAC that you want to use.
-  * Copy the URL.
-  * Open main.py on your text editor.
-  * replace "my_url" with the URL that you want to use.
-  * Open a Terminal (CMD, bash, Git... does not matters).
+  * Locate the list of CvLAC that you want to use and place it in the file \Input\Base.xslx in this way:
+      * Document
+      * Names
+      * Last Names
+      * URL
+  * Save the file and open bash or a command prompt (terminal if you are on Linux OS)
   * Run:
   ```
     python main.py
   ```  
-  * That is all, you sould see your data stored in the Resultados folder.
+  * That is all, now you can get all your data stored in the \Resultados folder.
