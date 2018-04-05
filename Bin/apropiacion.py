@@ -236,7 +236,7 @@ def evenextract():
                 "REPLACE INTO `uapa_db`.`colciencias_apropiacion`(`cod_colciencias_apropiacion`,`cod_rh`,`cod_rel_per_prod_col`,`fecha_ini`,`ano_ini`,`mes_ini`,`fecha_fin`,`ano_fin`,`mes_fin`) VALUES"
                 + "('" + str(COD_PRODUCTO) + "',"\
                 + "'" + str(RH) + "',"\
-                + str(RH) + str(COD_PRODUCTO) + ","\
+                + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
                 + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',FechaEventoini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
                 + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',AnoEventoini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
                 + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',MesEventoini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
@@ -338,7 +338,7 @@ def evenextract():
                     "REPLACE INTO `uapa_db`.`colciencias_apropiacion`(`cod_colciencias_apropiacion`,`cod_rh`,`cod_rel_per_prod_col`,`fecha_ini`,`ano_ini`,`mes_ini`,`fecha_fin`,`ano_fin`,`mes_fin`) VALUES"
                     + "('" + str(COD_PRODUCTO) + "',"\
                     + "'" + str(RH) + "',"\
-                    + str(RH) + str(COD_PRODUCTO) + ","\
+                    + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
                     + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',FechaEventoini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
                     + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',AnoEventoini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
                     + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',MesEventoini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
