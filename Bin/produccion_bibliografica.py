@@ -115,23 +115,23 @@ def artiextract():
             Pagfin = info_articulo[index1:index2]
             init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',AnoEvento.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',AnoEvento.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',editorial.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Volumen.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',editorial.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Volumen.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',doi.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',doi.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" \
@@ -141,56 +141,56 @@ def artiextract():
             + "('"+ str(RH) + str(COD_PRODUCTO) + "'," \
             + str(COD_PRODUCTO) + ","\
             + "'" + str(RH) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "0" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',AnoEvento.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',AnoEvento.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',editorial.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',editorial.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',doi.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',doi.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
             init.colciencias_prod_bibliografica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Revista.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',ISSN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Revista.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',ISSN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',fasciculo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',fasciculo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "\n")
             init.incolciencias_prod_bibliografica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_bibliografica`(`cod_colciencias_prod_bibliografica`,`cod_rh`,`cod_rel_per_prod_col`,`revista`,`issn/isbn`,`libro/revista_original_trad`,`nombre_libro/revista_trad`,`nombre_autor_original_trad`,`idioma_original`,`idioma_traduccion`,`nombre_capitulo`,`fasciculo`,`pagina_inicial`,`pagina_final`) VALUES"
             + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
             + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Revista.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',ISSN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Revista.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',ISSN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',fasciculo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "'"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',fasciculo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "'"\
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
@@ -315,22 +315,22 @@ def libextract():
                 sectores = info_libro[index1 + 9:len(info_libro)]
             init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anolibro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anolibro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Editorial.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Volumen.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',paginas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Editorial.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Volumen.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',paginas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -341,22 +341,22 @@ def libextract():
             + "('"+ str(RH) + str(COD_PRODUCTO) + "'," \
             + str(COD_PRODUCTO) + ","\
             + "'" + str(RH) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "0" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anolibro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anolibro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Editorial.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Editorial.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
@@ -364,7 +364,7 @@ def libextract():
             init.colciencias_prod_bibliografica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',ISBN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',ISBN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -381,7 +381,7 @@ def libextract():
             + "'" + str(RH) + "',"\
             + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',ISBN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',ISBN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
@@ -523,21 +523,21 @@ def caplibroextract():
             init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + Tipo + ";"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Libro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Libro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "0" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anocaplibro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anocaplibro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Editorial.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Volumen.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',paginas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Editorial.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Volumen.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',paginas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -548,22 +548,22 @@ def caplibroextract():
             + "('"+ str(RH) + str(COD_PRODUCTO) + "'," \
             + str(COD_PRODUCTO) + ","\
             + "'" + str(RH) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Libro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Libro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "0" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anocaplibro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anocaplibro.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Editorial.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Editorial.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
@@ -577,10 +577,10 @@ def caplibroextract():
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "\n")
             init.incolciencias_prod_bibliografica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_bibliografica`(`cod_colciencias_prod_bibliografica`,`cod_rh`,`cod_rel_per_prod_col`,`revista`,`issn/isbn`,`libro/revista_original_trad`,`nombre_libro/revista_trad`,`nombre_autor_original_trad`,`idioma_original`,`idioma_traduccion`,`nombre_capitulo`,`fasciculo`,`pagina_inicial`,`pagina_final`) VALUES"
@@ -594,10 +594,10 @@ def caplibroextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "'"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "'"\
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
@@ -734,21 +734,21 @@ def texnocienextract():
             init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anotexnocien.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anotexnocien.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Volumen.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',paginas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Volumen.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',paginas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -759,30 +759,30 @@ def texnocienextract():
             + "('"+ str(RH) + str(COD_PRODUCTO) + "'," \
             + str(COD_PRODUCTO) + ","\
             + "'" + str(RH) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "0" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anotexnocien.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anotexnocien.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
             + "null" + ");\n")
             init.colciencias_prod_bibliografica.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Revista.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',ISSN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Revista.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',ISSN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -790,16 +790,16 @@ def texnocienextract():
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "\n")
             init.incolciencias_prod_bibliografica.append( \
             "REPLACE INTO `uapa_db`.`colciencias_prod_bibliografica`(`cod_colciencias_prod_bibliografica`,`cod_rh`,`cod_rel_per_prod_col`,`revista`,`issn/isbn`,`libro/revista_original_trad`,`nombre_libro/revista_trad`,`nombre_autor_original_trad`,`idioma_original`,`idioma_traduccion`,`nombre_capitulo`,`fasciculo`,`pagina_inicial`,`pagina_final`) VALUES"
             + "('" + str(COD_PRODUCTO) + "',"\
             + "'" + str(RH) + "',"\
             + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Revista.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',ISSN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Revista.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',ISSN.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
@@ -807,8 +807,8 @@ def texnocienextract():
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "'"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagini.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Pagfin.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "'"\
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
@@ -919,21 +919,21 @@ def workpextract():
             init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anoworkp.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anoworkp.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',paginas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',paginas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -944,22 +944,22 @@ def workpextract():
             + "('"+ str(RH) + str(COD_PRODUCTO) + "'," \
             + str(COD_PRODUCTO) + ","\
             + "'" + str(RH) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "0" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anoworkp.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anoworkp.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
@@ -1121,20 +1121,20 @@ def traduccionextract():
             init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anotraduccion.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anotraduccion.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -1146,21 +1146,21 @@ def traduccionextract():
             + "('"+ str(RH) + str(COD_PRODUCTO) + "'," \
             + str(COD_PRODUCTO) + ","\
             + "'" + str(RH) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "0" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anotraduccion.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anotraduccion.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',volumen.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
@@ -1170,13 +1170,13 @@ def traduccionextract():
             + str(COD_PRODUCTO) + ";"\
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreOriginal.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',AutorOriginal.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',IdiomaOriginal.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',IdiomaTraduccion.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreOriginal.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',AutorOriginal.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',IdiomaOriginal.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',IdiomaTraduccion.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',fasciculo.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',fasciculo.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "\n")
@@ -1187,13 +1187,13 @@ def traduccionextract():
             + "'" + str(RH) + str(COD_PRODUCTO) + "',"\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreOriginal.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',AutorOriginal.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',IdiomaOriginal.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',IdiomaTraduccion.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreOriginal.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',AutorOriginal.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',IdiomaOriginal.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',IdiomaTraduccion.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',fasciculo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',fasciculo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" \
             + ");\n")
@@ -1304,21 +1304,21 @@ def otrapbextract():
             init.rel_persona_producto_colciencias.append(RH + ";"\
             + str(COD_PRODUCTO) + ";"\
             + tipo + ";"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anootrapb.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anootrapb.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "" + ";" \
             + "" + ";" \
             + "" + ";" \
@@ -1329,22 +1329,22 @@ def otrapbextract():
             + "('"+ str(RH) + str(COD_PRODUCTO) + "'," \
             + str(COD_PRODUCTO) + ","\
             + "'" + str(RH) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',tipo.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',NombreProducto.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "0" + ","\
             + "null" + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',Anootrapb.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',lugar.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',Anootrapb.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ","\
             + "null" + ","\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
-            + "'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',palabras.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',areas.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',sectores.replace('"',"").replace("'","").strip().replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            + "'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',coautores.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
-            +"'" + re.sub(r'[^\x00-\x7f]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
+            +"'" + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',paginas.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + "',"\
             + "null" + ","\
             + "null" + ","\
             + "null" + ","\
