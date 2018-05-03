@@ -74,7 +74,7 @@ def idiomasextract():
             + re.sub(r'[^A-Za-z0-9éèáàéñèíìúùó ò]',r'',re.sub(' +',' ',entiende.strip().replace('"',"").replace("'","").replace(";" , "|").replace("\r\n","").replace("\n","").replace("\r",""))) + ";" \
             + "\n")
             init.incolciencias_idiomas.append( \
-            "REPLACE INTO `uapa_db`.`colciencias_idiomas`(`cod_colciencias_idiomas`,`cod_reconocimiento`,`cod_rh`,`nombre_reconocimiento`,`mes_reconocimiento`,`ano_reconocimiento`,`institucion_reconocimiento`) VALUES"
+            "REPLACE INTO `uapa_db`.`colciencias_idiomas`(`cod_colciencias_idiomas`,`cod_idiomas`,`cod_rh`,`idioma_persona`,`habla`,`lee`,`escribe`,`entiende`) VALUES"
             + "('" + str(RH) + "D" + str(COD_IDIOMA) + "',"\
             + str(COD_IDIOMA) + ","\
             + "'" + str(RH) + "',"\
