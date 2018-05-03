@@ -93,3 +93,11 @@ for item in init.colciencias_reconocimientos:
     except UnicodeEncodeError:
         pass
 f.close()
+
+f = open ("./Resultados/colciencias_idiomas.csv", "w")
+for item in init.colciencias_idiomas:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()

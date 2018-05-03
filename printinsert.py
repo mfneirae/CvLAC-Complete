@@ -103,3 +103,13 @@ for item in init.incolciencias_reconocimientos:
     except UnicodeEncodeError:
         pass
 f.close()
+
+f = open ("./Resultados/incolciencias_idiomas.sql", "w")
+init.incolciencias_idiomas = [w.replace("''", 'null') for w in init.incolciencias_idiomas]
+init.incolciencias_idiomas = [w.replace(",,", ',null,') for w in init.incolciencias_idiomas]
+for item in init.incolciencias_idiomas:
+    try:
+        f.write(item)
+    except UnicodeEncodeError:
+        pass
+f.close()

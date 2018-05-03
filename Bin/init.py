@@ -22,6 +22,7 @@ def inicio():
     global colciencias_prod_tecnica
     global colciencias_comites
     global colciencias_reconocimientos
+    global colciencias_idiomas
     #Tablas Insert
     global inrel_personas_producto_colciencias
     global incolciencias_apropiacion
@@ -32,6 +33,7 @@ def inicio():
     global incolciencias_prod_tecnica
     global incolciencias_comites
     global incolciencias_reconocimientos
+    global incolciencias_idiomas
     rel_persona_producto_colciencias = ["COD_RH; \
 COD_PRODUCTO; \
 COD_TIPO_PRODUCTO; \
@@ -78,6 +80,14 @@ NOMBRE_RECONOCIMIENTO; \
 MES_RECONOCIMIENTO; \
 AÑO_RECONOCIMIENTO; \
 INSTITUCION_RECONOCIMIENTO\n"]
+
+    colciencias_idiomas = [ "COD_RH; \
+COD_IDIOMA; \
+NOMBRE_IDIOMA; \
+HABLA; \
+ESCRIBE; \
+LEE\
+ENTIENDE\n"]
 
     colciencias_prod_bibliografica = [ "COD_RH; \
 COD_PRODUCTO; \
@@ -2027,3 +2037,5 @@ null);\n"]
     incolciencias_comites = []
 
     incolciencias_reconocimientos = []
+
+    incolciencias_idiomas = []

@@ -29,6 +29,7 @@ import produccion_bibliografica
 import produccion_tecnica
 import comites
 import reconocimientos
+import idiomas
 os.chdir(Dir)
 global COD_PRODUCTO, COD_RECONOCIMIENTO
 condition = 0;
@@ -52,6 +53,7 @@ sheet = wb['Sheet1']
 total = sheet.max_row +1
 COD_PRODUCTO = 1;
 COD_RECONOCIMIENTO= 1;
+COD_IDIOMA= 1;
 init.inicio()
 LOG_FILENAME = './Logs/Registros.log'
 logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG,
@@ -163,7 +165,9 @@ for q in range(2,total):
         COD_PRODUCTO = int("".join(str(x) for x in contpjcomites))
         reconocimientos.reconocimientosextract()
         from reconocimientos import contreconocimientos
-        COD_PRODUCTO = int("".join(str(x) for x in contreconocimientos))
+        idiomas.idiomasextract()
+        from idiomas import contidiomas
+        COD_PRODUCTO = int("".join(str(x) for x in contidiomas))
         print("------> "+ name + " " + last + " ha sido procesado, Estado: " + str(q/(total-1)*100) + "%")
         if q==total-1:
             logging.shutdown()
