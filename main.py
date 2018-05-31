@@ -1,6 +1,6 @@
 #
 #
-# #############################################################################
+# ##############################################################################
 #       Copyright (c) 2018 Universidad Nacional de Colombia All Rights Reserved.
 #
 #             This work was made as a development to improve data collection
@@ -15,7 +15,7 @@
 #
 #       For more information write me to jai@mfneirae.com
 #       Or visit my webpage at https://mfneirae.com/
-# #############################################################################
+# ##############################################################################
 #
 #
 
