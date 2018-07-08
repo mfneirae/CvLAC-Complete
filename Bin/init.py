@@ -732,1276 +732,1172 @@ AMBIENTE\n"]
 `cod_tipo_producto`,\
 `tipo_producto_col`,\
 `sub_tipo_producto_col`,\
-`tipo_uapa`,\
-`tipo_pregrado`,\
-`tipo_posgrado`) VALUES (\
+`tipo_uapa`) VALUES (\
 0,\
 'Evento sin producto asociado',\
 'Evento sin producto asociado',\
-'Evento sin producto asociado',\
-null,\
-null);\n\
+'Evento sin producto asociado');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 1,\
 'Redes de conocimiento',\
 'Redes de conocimiento',\
-'Redes de conocimiento',\
-null,\
-null);\n\
+'Redes de conocimiento');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 2,\
 'Producción bibliográfica - Trabajos en eventos (Capítulos de memoria) - Completo',\
 'Capítulos de memoria',\
-'Capítulos de memoria',\
-null,\
-null);\n\
+'Capítulos de memoria');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 3,\
 'Producción técnica - Presentación de trabajo - Comunicación',\
 'Presentación de trabajo',\
-'Trabajo de Comunicación',\
-null,\
-null);\n\
+'Trabajo de Comunicación');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 4,\
 'Demás trabajos - Demás trabajos - Póster',\
 'Demás trabajos',\
-'Poster',\
-null,\
-null);\n\
+'Poster');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 5,\
 'Producción técnica - Presentación de trabajo - Conferencia',\
 'Presentación de trabajo',\
-'Conferencia',\
-null,\
-null);\n\
+'Conferencia');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 6,\
 'Producción técnica - Presentación de trabajo - Ponencia',\
 'Presentación de trabajo',\
-'Ponencia',\
-null,\
-null);\n\
+'Ponencia');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 7,\
 'Estrategias pedagógicas para el fomento a la CTI',\
 'Estrategias pedagógicas',\
-'Estrategias pedagógicas',\
-null,\
-null);\n\
+'Estrategias pedagógicas');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 8,\
 'Producción bibliográfica - Artículo - Publicado en revista especializada',\
 'Publicado en revista especializada',\
-'Artículo',\
-null,\
-null);\n\
+'Artículo');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 9,\
 'Producción bibliográfica - Artículo - Corto (Resumen)',\
 'Corto (Resumen)',\
-'Artículo',\
-null,\
-null);\n\
+'Artículo');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 10,\
 'Estrategias pedagógicas para el fomento a la CTI',\
 'Estrategias pedagógicas',\
-'Estrategias pedagógicas',\
-null,\
-null);\n\
+'Estrategias pedagógicas');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 11,\
 'Producción bibliográfica - Artículo - Caso clínico',\
 'Caso Clínico',\
-'Artículo',\
-null,\
-null);\n\
+'Artículo');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 12,\
 'Producción bibliográfica - Trabajos en eventos (Capítulos de memoria) - Resumen',\
 'Capítulo de Memoria',\
-'Resumen',\
-null,\
-null);\n\
+'Resumen');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 13,\
 'Producción técnica - Presentación de trabajo - Congreso',\
 'Congreso',\
-'Congreso',\
-null,\
-null);\n\
+'Congreso');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 14,\
 'Producción técnica - Presentación de trabajo - Simposio',\
 'Simposio',\
-'Simposio',\
-null,\
-null);\n\
+'Simposio');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 15,\
 'Producción técnica - Presentación de trabajo - Seminario',\
 'Seminario',\
-'Seminario',\
-null,\
-null);\n\
+'Seminario');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 16,\
 'Producción técnica - Presentación de trabajo - Otro',\
 'Otro',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 17,\
 'Producción bibliográfica - Libro - Libro resultado de investigación',\
 'Libro resultado de investigación',\
-'Libro',\
-null,\
-null);\n\
+'Libro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 18,\
 'Producción bibliográfica - Libro - Otro libro publicado',\
 'Otro libro publicado',\
-'Libro - Otro',\
-null,\
-null);\n\
+'Libro - Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 19,\
 'Producción bibliográfica - Libro - Libro pedagógico y/o de divulgación',\
 'Libro pedagógico y/o de divulgación',\
-'Libro - pedagógico',\
-null,\
-null);\n\
+'Libro - pedagógico');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 20,\
 'Otro capítulo de libro publicado',\
 'Otro capítulo de libro',\
-'Capítulo de libro - Otro',\
-null,\
-null);\n\
+'Capítulo de libro - Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 21,\
 'Capítulo de libro',\
 'Capítulo de libro',\
-'Capítulo de libro',\
-null,\
-null);\n\
+'Capítulo de libro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 22,\
 'Producción bibliográfica - Otro artículo publicado - Periódico de noticias',\
 'Periódico de noticias',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 23,\
 'Producción bibliográfica - Otro artículo publicado - Revista de divulgación',\
 'Revista de divulgación',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 24,\
 'Producción bibliográfica - Otro artículo publicado - Cartas al editor',\
 'Cartas al editor',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 25,\
 'Producción bibliográfica - Otro artículo publicado - Reseñas de libros',\
 'Reseñas de libros',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 26,\
 'Producción bibliográfica - Otro artículo publicado - Columna de opinión',\
 'Columnas de opinión',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 27,\
 'Producción bibliográfica - Documento de trabajo (Working Paper)',\
 'Documento de trabajo (Working Paper)',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 28,\
 'Producción bibliográfica - Traducciones - Artículo',\
 'Traducciones - Artículo',\
-'Traducciones',\
-null,\
-null);\n\
+'Traducciones');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 29,\
 'Producción bibliográfica - Traducciones - Libro',\
 'Traducciones - Libro',\
-'Traducciones',\
-null,\
-null);\n\
+'Traducciones');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 30,\
 'Producción bibliográfica - Traducciones - Otra',\
 'Traducciones - Otra',\
-'Traducciones',\
-null,\
-null);\n\
+'Traducciones');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 31,\
 'Producción bibliográfica - Otra producción bibliográfica - Introducción',\
 'Introducción',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 32,\
 'Producción bibliográfica - Otra producción bibliográfica - Prólogo',\
 'Prólogo',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 33,\
 'Producción bibliográfica - Otra producción bibliográfica - Epílogo',\
 'Epílogo',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 34,\
 'Producción bibliográfica - Otra producción bibliográfica - Otra',\
 'Otra',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 35,\
 'Producción técnica - Softwares - Computacional',\
 'Software',\
-'Software',\
-null,\
-null);\n\
+'Software');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 36,\
 'Producción técnica - Productos tecnológicos - Gen Clonado',\
 'Productos tecnológicos - Gen Clonado',\
-'Productos tecnológicos',\
-null,\
-null);\n\
+'Productos tecnológicos');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 37,\
 'Producción técnica - Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada',\
 'Productos tecnológicos - Coleccion biologica de referencia con informacion sistematizada',\
-'Productos tecnológicos',\
-null,\
-null);\n\
+'Productos tecnológicos');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 38,\
 'Producción técnica - Productos tecnológicos - Otro',\
 'Productos tecnológicos - Otro',\
-'Productos tecnológicos',\
-null,\
-null);\n\
+'Productos tecnológicos');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 39,\
 'Producción técnica - Productos tecnológicos - Base de datos de referencia para investigación',\
 'Productos tecnológicos - Base de datos de referencia para investigación',\
-'Productos tecnológicos',\
-null,\
-null);\n\
+'Productos tecnológicos');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 40,\
 'Producción técnica - Diseño Industrial',\
 'Diseño Industrial',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 41,\
 'Producción técnica - Esquema de circuito integrado',\
 'Esquema de circuito integrado',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 42,\
 'Producción técnica - Innovaciones generadas de producción empresarial - Organizacional',\
 'Innovaciones generadas de producción empresarial - Organizacional',\
-'Innovaciones',\
-null,\
-null);\n\
+'Innovaciones');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 43,\
 'Producción técnica - Innovaciones generadas de producción empresarial - Empresarial',\
 'Innovaciones generadas de producción empresarial - Empresarial',\
-'Innovaciones',\
-null,\
-null);\n\
+'Innovaciones');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 44,\
 'Producción técnica - Variedad animal',\
 'Variedad animal',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 45,\
 'Producción técnica - Innovación de proceso o procedimiento',\
 'Innovación de proceso o procedimiento',\
-'Innovación',\
-null,\
-null);\n\
+'Innovación');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 46,\
 'Producción técnica - Cartas, mapas o similares - Aerofotograma',\
 'Aerofotograma',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 47,\
 'Producción técnica - Cartas, mapas o similares - Carta',\
 'Carta',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 48,\
 'Producción técnica - Cartas, mapas o similares - Fotograma',\
 'Fotograma',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 49,\
 'Producción técnica - Cartas, mapas o similares - Mapa',\
 'Mapa',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 50,\
 'Producción técnica - Cartas, mapas o similares - Otra',\
 'Otra',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 51,\
 'Producción técnica - Variedad vegetal',\
 'Variedad vegetal',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 52,\
 'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Servicios de proyectos de IDI',\
 'Servicios de proyectos de IDI',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 53,\
 'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Comercialización de tecnología',\
 'Comercialización de tecnología',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 54,\
 'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Análisis de competitividad',\
 'Análisis de competitividad',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 55,\
 'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Informe técnico',\
 'Informe técnico',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 56,\
 'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Otro',\
 'Otro',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 57,\
 'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Acciones de transferencia tecnológica',\
 'Acciones de transferencia tecnológica',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 58,\
 'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Desarrollo de productos',\
 'Desarrollo de productos',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 59,\
 'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Implementación de sistemas de análisis',\
 'Implementación de sistemas de análisis',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 60,\
 'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Consultoría en artes,arquitectura y diseño',\
 'Consultoría en artes,arquitectura y diseño',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 61,\
 'Producción técnica - Regulación, norma, reglamento o legislación - Ambiental o de Salud',\
 'Regulación, norma, reglamento o legislación - Ambiental o de Salud',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 62,\
 'Producción técnica - Regulación, norma, reglamento o legislación - Educativa',\
 'Regulación, norma, reglamento o legislación - Educativa',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 63,\
 'Producción técnica - Regulación, norma, reglamento o legislación - Social',\
 'Regulación, norma, reglamento o legislación - Social',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 64,\
 'Producción técnica - Regulación, norma, reglamento o legislación - Técnica',\
 'Regulación, norma, reglamento o legislación - Técnica',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 65,\
 'Producción técnica - Regulación, norma, reglamento o legislación - Guía de práctica clínica',\
 'Regulación, norma, reglamento o legislación - Guía de práctica clínica',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 66,\
 'Producción técnica - Regulación, norma, reglamento o legislación - Proyecto de ley',\
 'Regulación, norma, reglamento o legislación - Proyecto de ley',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 67,\
 'Producción técnica - Reglamento Técnico',\
 'Reglamento Técnico',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 68,\
 'Producción técnica - Empresa de base tecnológica - Spin-off',\
 'Empresa de base tecnológica - Spin-off',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 69,\
 'Producción técnica - Empresa de base tecnológica - Start-up',\
 'Empresa de base tecnológica - Start-up',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 70,\
 'Demás trabajos - Demás trabajos',\
 'Demás trabajos',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 71,\
 'Producción técnica - Signos',\
 'Signos',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 72,\
 'Producción técnica - Softwares - Multimedia',\
 'Multimedia',\
-'Software',\
-null,\
-null);\n\
+'Software');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 73,\
 'Producción técnica - Softwares - Otra',\
 'Softwares - Otra',\
-'Software',\
-null,\
-null);\n\
+'Software');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 74,\
 'Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Básica',\
 'Técnica - Básica',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 75,\
 'Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Ensayo',\
 'Técnica - Ensayo',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 76,\
 'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Servicios de Proyectos de I+D+I',\
 'Servicios de Proyectos de I+D+I',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 77,\
 'Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Proceso',\
 'Técnica - Proceso',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 78,\
 'Datos complementarios - Participación en comités de evaluación - Profesor titular',\
 'Participación en comités de evaluación - Profesor titular',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 79,\
 'Datos complementarios - Participación en comités de evaluación - Concurso docente',\
 'Participación en comités de evaluación - Concurso docente',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 80,\
 'Datos complementarios - Participación en comités de evaluación - Jefe de cátedra',\
 'articipación en comités de evaluación - Jefe de cátedra',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 81,\
 'Datos complementarios - Participación en comités de evaluación - Evaluación de cursos',\
 'Participación en comités de evaluación - Evaluación de cursos',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 82,\
 'Datos complementarios - Participación en comités de evaluación - Acreditación de programas',\
 'Participación en comités de evaluación - Acreditación de programas',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 83,\
 'Datos complementarios - Participación en comités de evaluación - Asignación de becas',\
 'Participación en comités de evaluación - Asignación de becas',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 84,\
 'Datos complementarios - Participación en comités de evaluación - Otra',\
 'Participación en comités de evaluación - Otra',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 85,\
 'Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Pregrado',\
 'Jurado Pregrado',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 86,\
 'Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Especialización',\
 'Jurado Especialización',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 87,\
 'Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Especialidad Médica',\
 'Jurado Especialidad Médica',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 88,\
 'Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Maestría',\
 'Jurado Maestría',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 89,\
 'Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Doctorado',\
 'Jurado Doctorado',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
 90, \
 'Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Otra',\
 'Jurado Otra',\
-'Comités',\
-null,\
-null);\n\
+'Comités');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `COD_TIPO_PRODUCTO`,\
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
-`TIPO_UAPA`,\
-`TIPO_PREGRADO`,\
-`TIPO_POSGRADO`) VALUES (\
+`TIPO_UAPA`) VALUES (\
+92, \
+'Producción técnica - Prototipo - Servicios',\
+'Prototipo - Servicios',\
+'Servicios');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+93, \
+'Producción técnica - Plantas piloto - Planta piloto',\
+'Plantas piloto - Planta piloto',\
+'Planta piloto');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+94, \
+'Producción técnica - Prototipo - Industrial',\
+'Prototipo - Industrial',\
+'Industrial');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+95, \
+'Producción técnica - Signos Distintivos - Marcas',\
+'Signos Distintivos - Marcas',\
+'Marcas');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+96, \
+'Producción técnica - Signos Distintivos - Nombres comerciales',\
+'Signos Distintivos - Nombres comerciales',\
+'Nombres comerciales');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+97, \
+'Apropiación - Eventos Cientificos - Otro',\
+'Eventos Cientificos -  Otro',\
+'Otro');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+98, \
+'Apropiación - Eventos Cientificos - Taller',\
+'Eventos Cientificos -  Taller',\
+'Taller');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+99, \
+'Apropiación - Eventos Cientificos - Congreso',\
+'Eventos Cientificos -  Congreso',\
+'Congreso');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+100, \
+'Apropiación - Eventos Cientificos - Encuentro',\
+'Eventos Cientificos -  Encuentro',\
+'Encuentro');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+101, \
+'Apropiación - Eventos Cientificos - Seminario',\
+'Eventos Cientificos -  Seminario',\
+'Seminario');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+102, \
+'Apropiación - Eventos Cientificos - Simposio',\
+'Eventos Cientificos -  Simposio',\
+'Simposio');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+103, \
+'Apropiación - Eventos Cientificos - Informes de investigación',\
+'Eventos Cientificos -  Informes de investigación',\
+'Informes de investigación');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+104, \
+'Apropiación - Impresos - Manual',\
+'Impresos - Manual',\
+'Manual');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+105, \
+'Apropiación - Impresos - Boletín',\
+'Impresos - Boletín',\
+'Boletín');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+106, \
+'Apropiación - Contenido Multimedia - Comentario',\
+'Contenido Multimedia - Comentario',\
+'Comentario');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+107, \
+'Apropiación - Contenido Multimedia - Entrevista',\
+'Contenido Multimedia - Entrevista',\
+'Entrevista');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+108, \
+'Apropiación - Contenido Virtual - Página Web',\
+'Contenido Virtual - Página Web',\
+'Página Web');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+109, \
+'Apropiación - Estrategias de Comunicación - Estrategias de Comunicación',\
+'Estrategias de Comunicación - Estrategias de Comunicación',\
+'Estrategias de Comunicación');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+110, \
+'Apropiación - Estrategias Pedagógicas - Estrategias Pedagógicas para el fomento a la CTI',\
+'Estrategias Pedagógicas - Estrategias Pedagógicas para el fomento a la CTI',\
+'Estrategias Pedagógicas para el fomento a la CTI');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+111, \
+'Apropiación - Participación Ciudadana - Participación Ciudadana en Proyectos de CTI',\
+'Participación Ciudadana - Participación Ciudadana en Proyectos de CTI',\
+'Participación Ciudadana en Proyectos de CTI');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+112, \
+'Apropiación - Participación Ciudadana - Espacios de Participación Ciudadana',\
+'Participación Ciudadana - Espacios de Participación Ciudadana',\
+'Espacios de Participación Ciudadana');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+113, \
+'Producción en arte, arquitectura y diseño - Obras o productos - Obras o productos',\
+'Obras o productos - Obras o productos',\
+'Obras o productos');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+114, \
+'Actividades de Formación - Actividades de Formación - Asesorías al Programa Ondas',\
+'Actividades de Formación - Asesorías al Programa Ondas',\
+'Asesorías al Programa Ondas');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+115, \
+'Actividades de Formación - Curso de Corta Duración Dictados - Perfeccionamiento',\
+'Curso de Corta Duración Dictados - Perfeccionamiento',\
+'Perfeccionamiento');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+116, \
+'Actividades de Formación - Curso de Corta Duración Dictados - Extensión Extracurricular',\
+'Curso de Corta Duración Dictados - Extensión Extracurricular',\
+'Extensión Extracurricular');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+117, \
+'Actividades de Formación - Trabajos dirigidos/turorías - Monografía de conclusión de curso',\
+'Trabajos dirigidos/turorías - Monografía de conclusión de curso',\
+'Monografía de conclusión de curso');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+118, \
+'Actividades de Formación - Curso de Corta Duración Dictados - Otro',\
+'Curso de Corta Duración Dictados - Otro',\
+'Otro');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+119, \
+'Proyectos - Investigación, desarrollo e innovación - Proyectos',\
+'Investigación, desarrollo e innovación - Proyectos',\
+'Proyectos');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+120, \
+'Apropiación social y circularción del conocimiento - Revista',\
+'Investigación, desarrollo e innovación - Revista',\
+'Revista');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+121, \
+'Apropiación social y circularción del conocimiento - Cartilla',\
+'Contenidos Impresos - Cartilla',\
+'Cartilla');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+122, \
+'Actividades de Formación - Cursos de Corta Duración - Especialización',\
+'Cursos de Corta Duración - Especialización',\
+'Especialización');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+123, \
+'Apropiación - Contenidos Multimedia - Otro',\
+'Contenidos Multimedia - Otro',\
+'Otro');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+124, \
+'Apropiación - Contenidos Virtuales - Blog',\
+'Contenidos Virtuales - Blog',\
+'Blog');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+125, \
+'Apropiación - Contenidos Virtuales - Aplicativo',\
+'Contenidos Virtuales - Aplicativo',\
+'Aplicativo');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
 91, \
 'Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Curso de perfeccionamiento/especialización',\
 'Jurado Especial',\
-'Comités',\
-null,\
-null);\n"]
+'Comités');\n"]
 
     inv_colciencias_tipo_evento = [ "REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
-`tipo_evento_col`,\
-`tipo_evento_uapa`,\
-`tipo_pregrado`,\
-`tipo_posgrado`) VALUES (\
+`tipo_evento_col`) VALUES (\
 0,\
-'Sin Información',\
-'Sin información',\
-null,\
-null);\n\
+'Sin Información');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
-`tipo_evento_col`,\
-`tipo_evento_uapa`,\
-`tipo_pregrado`,\
-`tipo_posgrado`) VALUES (\
+`tipo_evento_col`) VALUES (\
 1,\
-'Otro',\
-'Otro',\
-null,\
-null);\n\
+'Otro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
-`tipo_evento_col`,\
-`tipo_evento_uapa`,\
-`tipo_pregrado`,\
-`tipo_posgrado`) VALUES (\
+`tipo_evento_col`) VALUES (\
 2,\
-'Taller',\
-'Taller',\
-null,\
-null);\n\
+'Taller');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
-`tipo_evento_col`,\
-`tipo_evento_uapa`,\
-`tipo_pregrado`,\
-`tipo_posgrado`) VALUES (\
+`tipo_evento_col`) VALUES (\
 3,\
-'Congreso',\
-'Congreso',\
-null,\
-null);\n\
+'Congreso');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
-`tipo_evento_col`,\
-`tipo_evento_uapa`,\
-`tipo_pregrado`,\
-`tipo_posgrado`) VALUES (\
+`tipo_evento_col`) VALUES (\
 4,\
-'Encuentro',\
-'Encuentro',\
-null,\
-null);\n\
+'Encuentro');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
-`tipo_evento_col`,\
-`tipo_evento_uapa`,\
-`tipo_pregrado`,\
-`tipo_posgrado`) VALUES (\
+`tipo_evento_col`) VALUES (\
 5,\
-'Seminario',\
-'Seminario',\
-null,\
-null);\n\
+'Seminario');\n\
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( \
 `cod_tipo_evento`,\
-`tipo_evento_col`,\
-`tipo_evento_uapa`,\
-`tipo_pregrado`,\
-`tipo_posgrado`) VALUES (\
+`tipo_evento_col`) VALUES (\
 6,\
-'Simposio',\
-'Simposio',\
-null,\
-null);\n"]
+'Simposio');\n"]
 
 #     inrel_persona_colciencias = [ "SET unique_checks = 0;\n\
 # SET foreign_key_checks = 0;\n"]
