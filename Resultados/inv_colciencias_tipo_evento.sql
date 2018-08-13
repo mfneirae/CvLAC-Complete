@@ -1,4 +1,4 @@
-REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( `cod_tipo_evento`,`tipo_evento_col`) VALUES (0,'Sin InformaciÃ³n');
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( `cod_tipo_evento`,`tipo_evento_col`) VALUES (0,'Sin Información');
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( `cod_tipo_evento`,`tipo_evento_col`) VALUES (1,'Otro');
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( `cod_tipo_evento`,`tipo_evento_col`) VALUES (2,'Taller');
 REPLACE INTO `uapa_db`.`v_colciencias_tipo_evento` ( `cod_tipo_evento`,`tipo_evento_col`) VALUES (3,'Congreso');

@@ -206,7 +206,7 @@ def ptsoftwareextract():
             + "');\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Sofwares Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Sofwares Asociados')
     contptsoftware = [COD_PRODUCTO]
 
 def ptproductoextract():
@@ -391,7 +391,7 @@ def ptproductoextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Producciones Técnicas Asociadas')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Producciones Técnicas Asociadas')
     contptproducto = [COD_PRODUCTO]
 
 def ptdiseñoextract():
@@ -569,7 +569,7 @@ def ptdiseñoextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Diseños Industriales Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Diseños Industriales Asociados')
     contptdiseño = [COD_PRODUCTO]
 
 def ptcircuitosextract():
@@ -748,7 +748,7 @@ def ptcircuitosextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Esquemas de Circuitos Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Esquemas de Circuitos Asociados')
     contptcircuitos = [COD_PRODUCTO]
 
 def ptinnovaextract():
@@ -929,7 +929,7 @@ def ptinnovaextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Innovaciones en Empresas Asociadas')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Innovaciones en Empresas Asociadas')
     contptinnova = [COD_PRODUCTO]
 
 def ptvaranimalextract():
@@ -1110,7 +1110,7 @@ def ptvaranimalextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Variedades Animales Registradas')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Variedades Animales Registradas')
     contptvaranimal = [COD_PRODUCTO]
 
 def ptprocesoextract():
@@ -1291,7 +1291,7 @@ def ptprocesoextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Innovaciones en Procesos Registradas')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Innovaciones en Procesos Registradas')
     contptproceso = [COD_PRODUCTO]
 
 def ptcartasextract():
@@ -1478,7 +1478,7 @@ def ptcartasextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Cartas o Mapas Registrados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Cartas o Mapas Registrados')
     contptcartas = [COD_PRODUCTO]
 
 def ptvegetalextract():
@@ -1667,7 +1667,7 @@ def ptvegetalextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Variedades Vegetales Registradas"')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Variedades Vegetales Registradas"')
     contptvegetal = [COD_PRODUCTO]
 
 def pttratecextract():
@@ -1726,6 +1726,8 @@ def pttratecextract():
                 tipo = "60"
             elif tipo.strip() == "Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Servicios de Proyectos de I+D+I":
                 tipo = "76"
+            elif tipo.strip() == "Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Consultoría en artes, arquitectura y diseño":
+                tipo = "127"
             else:
                 logging.critical('Añadir: ' + tipo)
                 print ("ALERTA: Revisar el archivo Registros.log")
@@ -1873,7 +1875,7 @@ def pttratecextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Trabajos Técnicos Registradas')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Trabajos Técnicos Registradas')
     contpttratec = [COD_PRODUCTO]
 
 def ptnormaextract():
@@ -1930,6 +1932,8 @@ def ptnormaextract():
                 tipo = "75"
             elif tipo.strip() == "Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Proceso":
                 tipo = "77"
+            elif tipo.strip() == "Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Proceso":
+                tipo = "128"
             else:
                 logging.critical('Añadir: ' + tipo)
                 print ("ALERTA: Revisar el archivo Registros.log")
@@ -2078,7 +2082,7 @@ def ptnormaextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Normas o Regulaciones Asociadas')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Normas o Regulaciones Asociadas')
     contptnorma = [COD_PRODUCTO]
 
 def ptreglamentoextract():
@@ -2269,7 +2273,7 @@ def ptreglamentoextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Reglamentos Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Reglamentos Asociados')
     contptreglamento = [COD_PRODUCTO]
 
 def ptempresaextract():
@@ -2442,7 +2446,7 @@ def ptempresaextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Empresas de Base Tecnológica Asociadas"')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Empresas de Base Tecnológica Asociadas"')
     contptempresa = [COD_PRODUCTO]
 
 def demastrabajosextract():
@@ -2594,7 +2598,7 @@ def demastrabajosextract():
             + "null" + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Demás Trabajos Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Demás Trabajos Asociados')
     contdemastrabajos = [COD_PRODUCTO]
 def ptsignosextract():
     from settings import my_url, name, doc, last, RH, COD_PRODUCTO
@@ -2730,5 +2734,5 @@ def ptsignosextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Signos Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Signos Asociados')
     contptsignos = [COD_PRODUCTO]

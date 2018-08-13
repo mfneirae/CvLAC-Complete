@@ -23,6 +23,24 @@ def idiomasearch(idioma):
     for x in range(0,len(idiomas)):
         if idiomas[x]==idioma:
             idiomaf = x
+        elif idioma == "Holandés":
+            idiomaf = 117
+        elif idioma == "Noruego":
+            idiomaf = 119
+        elif idioma == "Chino":
+            idiomaf = 35
+        elif idioma == "Indonesio":
+            idiomaf = 14
+        elif idioma == "Tamil":
+            idiomaf = 194
+        elif idioma == "Telegu":
+            idiomaf = 195
+        elif idioma == "Malayalam":
+            idiomaf = 196
+        elif idioma == "Afar":
+            idiomaf = 197
+        elif idioma == "Outros":
+            idiomaf = 198
     return idiomaf;
 
 
@@ -100,5 +118,5 @@ def idiomasextract():
 
             COD_IDIOMA = COD_IDIOMA + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene idiomas Asociado')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene idiomas Asociado')
     contidiomas = [COD_IDIOMA]

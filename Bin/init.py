@@ -1858,6 +1858,33 @@ REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
 `TIPO_PRODUCTO_COL`,\
 `SUB_TIPO_PRODUCTO_COL`,\
 `TIPO_UAPA`) VALUES (\
+126, \
+'Producción bibliográfica - Otro artículo publicado - Reseña de libro',\
+'Otro artículo publicado - Reseña de libro',\
+'Reseña de libro');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+127, \
+'Producción técnica - Consultoría Científico Tecnológica e Informe Técnico - Consultoría en artes, arquitectura y diseño',\
+'Consultoría Científico Tecnológica e Informe Técnico - Consultoría en artes, arquitectura y diseño',\
+'Consultoría en artes, arquitectura y diseño');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
+128, \
+'Producción técnica - Regulación, norma, reglamento o legislación - Técnica - Terminología',\
+'Regulación, norma, reglamento o legislación - Técnica - Terminología',\
+'Terminología');\n\
+REPLACE INTO `uapa_db`.`v_colciencias_tipo_producto` ( \
+`COD_TIPO_PRODUCTO`,\
+`TIPO_PRODUCTO_COL`,\
+`SUB_TIPO_PRODUCTO_COL`,\
+`TIPO_UAPA`) VALUES (\
 91, \
 'Datos complementarios - Jurado/Comisiones evaluadoras de trabajo de grado - Curso de perfeccionamiento/especialización',\
 'Jurado Especial',\

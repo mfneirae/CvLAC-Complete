@@ -193,7 +193,7 @@ def artiextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Artículos Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Artículos Asociados')
 
     contarticulo = [COD_PRODUCTO]
 
@@ -391,7 +391,7 @@ def libextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Libros Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Libros Asociados')
     contlibro = [COD_PRODUCTO]
 
 def caplibroextract():
@@ -596,7 +596,7 @@ def caplibroextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Capítulos de Libro Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Capítulos de Libro Asociados')
 
     contcaplibro = [COD_PRODUCTO]
 
@@ -656,6 +656,8 @@ def texnocienextract():
                 tipo = "25"
             elif tipo.strip() == "Producción bibliográfica - Otro artículo publicado - Columna de opinión":
                 tipo = "26"
+            elif tipo.strip() == "Producción bibliográfica - Otro artículo publicado - Columna de opinión":
+                tipo = "126"
             else:
                 logging.critical('Añadir: ' + tipo)
                 print ("ALERTA: Revisar el archivo Textos No Cientificos.log")
@@ -805,7 +807,7 @@ def texnocienextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Textos no Cientificos Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Textos no Cientificos Asociados')
     conttexnocien = [COD_PRODUCTO]
 
 def workpextract():
@@ -988,7 +990,7 @@ def workpextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Documentos de Trabajo Asociados')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Documentos de Trabajo Asociados')
     contworkp = [COD_PRODUCTO]
 
 def traduccionextract():
@@ -1188,7 +1190,7 @@ def traduccionextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Traducciones Asociadas')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Traducciones Asociadas')
     conttraduccion = [COD_PRODUCTO]
 
 def otrapbextract():
@@ -1369,5 +1371,5 @@ def otrapbextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Otras Producciones Asociadas')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Otras Producciones Asociadas')
     contotrapb = [COD_PRODUCTO]

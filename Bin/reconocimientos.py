@@ -86,5 +86,5 @@ def reconocimientosextract():
 
             COD_RECONOCIMIENTO = COD_RECONOCIMIENTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Reconocimientos Asociado')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Reconocimientos Asociado')
     contreconocimientos = [COD_RECONOCIMIENTO]

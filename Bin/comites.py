@@ -184,7 +184,7 @@ def pcomitesextract():
             + ");\n")
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene Participaciones en Comités Asociadas')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene Participaciones en Comités Asociadas')
     contpcomites = [COD_PRODUCTO]
 
 def pjcomitesextract():
@@ -368,5 +368,5 @@ def pjcomitesextract():
 
             COD_PRODUCTO = COD_PRODUCTO + 1
     else:
-        logging.info(' El Docente ' + name + ' ' + last + 'no tiene registros como Jurado en Comités Asociadas')
+        logging.info(' El Docente ' + name + ' ' + last + ' no tiene registros como Jurado en Comités Asociadas')
     contpjcomites = [COD_PRODUCTO]
